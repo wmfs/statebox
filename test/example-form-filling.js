@@ -85,7 +85,7 @@ describe('Form-filling', () => {
           setTimeout(done, 250)
         })
 
-        it('heartbeat context has been updated', async () =>  {
+        it('heartbeat context has been updated', async () => {
           const executionDescription = await statebox.describeExecution(executionName)
 
           expect(executionDescription.status).to.eql('RUNNING')
