@@ -42,17 +42,14 @@ describe('Form-filling', () => {
       })
 
       describe('successfully fill in a form', () => {
-        it('start form-filling state machine', function (done) {
-          statebox.startExecution(
+        it('start form-filling state machine', async () => {
+          const executionDescription = await statebox.startExecution(
             {}, // input
             'formFilling', // state machine name
-            {}, // options
-            function (err, result) {
-              expect(err).to.eql(null)
-              executionName = result.executionName
-              done()
-            }
+            {} // options
           )
+
+          executionName = executionDescription.executionName
         })
 
         it('wait', function (done) {
@@ -124,17 +121,14 @@ describe('Form-filling', () => {
       })
 
       describe('form filling failure', () => {
-        it('start form-filling state machine', function (done) {
-          statebox.startExecution(
+        it('start form-filling state machine', async () => {
+          const executionDescription = await statebox.startExecution(
             {}, // input
             'formFilling', // state machine name
-            {}, // options
-            function (err, result) {
-              expect(err).to.eql(null)
-              executionName = result.executionName
-              done()
-            }
+            {} // options
           )
+
+          executionName = executionDescription.executionName
         })
 
         it('wait', function (done) {
@@ -176,23 +170,20 @@ describe('Form-filling', () => {
       })
 
       describe('cancel form-filling', () => {
-        it('start form-filling state machine', function (done) {
-          statebox.startExecution(
+        it('start form-filling state machine', async () => {
+          const executionDescription = await statebox.startExecution(
             {}, // input
             'formFilling', // state machine name
             {
               sendResponse: 'AFTER_RESOURCE_CALLBACK.TYPE:formFilling'
-            }, // options
-            function (err, executionDescription) {
-              expect(err).to.eql(null)
-              executionName = executionDescription.executionName
-              expect(executionDescription.status).to.eql('RUNNING')
-              expect(executionDescription.stateMachineName).to.eql('formFilling')
-              expect(executionDescription.currentStateName).to.eql('FormFilling')
-              expect(executionDescription.currentResource).to.eql('module:formFilling')
-              done()
-            }
+            } // options
           )
+
+          executionName = executionDescription.executionName
+          expect(executionDescription.status).to.eql('RUNNING')
+          expect(executionDescription.stateMachineName).to.eql('formFilling')
+          expect(executionDescription.currentStateName).to.eql('FormFilling')
+          expect(executionDescription.currentResource).to.eql('module:formFilling')
         })
 
         it('stopExecution (i.e. simulates a user clicking cancel on this execution)', function (done) {

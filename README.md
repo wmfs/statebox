@@ -111,7 +111,7 @@ const info = statebox.createStateMachines(
 // Start a new execution on a state machine
 // ----------------------------------------
 
-statebox.startExecution(
+executionDescription = await statebox.startExecution(
   {
     numbers: {
       number1: 3,
@@ -120,52 +120,48 @@ statebox.startExecution(
     operator: '-'
   },  // input
   'calculator', // state machine name
-  {}, // options
-  function (err, result) {
-    // Result object
-    // -------------
-    //  {
-    //    executionName: '01e1e288-9533-11e7-8fec-54d168e2e610',
-    //    ctx: {
-    //      numbers: {
-    //        number1: 3,
-    //        number2: 2
-    //      },
-    //      operator: '-'
-    //    },
-    //    currentStateName: 'OperatorChoice',
-    //    stateMachineName: 'calculator',
-    //    status: 'RUNNING',
-    //    startDate: '2017-09-10T09:40:22.589Z'
-    //  }
-  }
+  {} // options
 )
+// Result object
+// -------------
+//  {
+//    executionName: '01e1e288-9533-11e7-8fec-54d168e2e610',
+//    ctx: {
+//      numbers: {
+//        number1: 3,
+//        number2: 2
+//      },
+//      operator: '-'
+//    },
+//    currentStateName: 'OperatorChoice',
+//    stateMachineName: 'calculator',
+//    status: 'RUNNING',
+//    startDate: '2017-09-10T09:40:22.589Z'
+//  }
 
 // STEP 4:
 // Look at the results...
 // ----------------------
-statebox.describeExecution(
-  '01e1e288-9533-11e7-8fec-54d168e2e610',
-  function (err, result) {
-    //  Result object
-    //  -------------
-    // {
-    //   executionName: '01e1e288-9533-11e7-8fec-54d168e2e610',
-    //   ctx: {
-    //     numbers': {
-    //       number1: 3,
-    //       number2: 2
-    //     },
-    //     operator: '-',
-    //     result: 1 <--- The important bit :-)
-    //   },
-    //   currentStateName: 'Subtract',
-    //   stateMachineName: 'calculator',
-    //   status: 'SUCCEEDED',
-    //   startDate: '2017-09-10T09:59:50.711Z'
-    // }
-  }
-)  
+executionDescription = await statebox.describeExecution(
+  '01e1e288-9533-11e7-8fec-54d168e2e610'
+)
+//  Result object
+//  -------------
+// {
+//   executionName: '01e1e288-9533-11e7-8fec-54d168e2e610',
+//   ctx: {
+//     numbers': {
+//       number1: 3,
+//       number2: 2
+//     },
+//     operator: '-',
+//     result: 1 <--- The important bit :-)
+//   },
+//   currentStateName: 'Subtract',
+//   stateMachineName: 'calculator',
+//   status: 'SUCCEEDED',
+//   startDate: '2017-09-10T09:59:50.711Z'
+// }
 ```
 
 ## <a name='test'></a>Testing
