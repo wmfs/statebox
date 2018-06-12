@@ -1,0 +1,19 @@
+language: node_js
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: false
+node_js:
+  - '9'
+install:
+  - npm install
+test:
+  - npm test
+after_success:
+  - npm run coverage
+deploy:
+  provider: script
+  script_cleanup: true
+  script:
+    - npx semantic-release
