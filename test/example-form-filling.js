@@ -143,17 +143,12 @@ describe('Form-filling', () => {
           expect(executionDescription.stateMachineName).to.eql('formFilling')
         })
 
-        it('sendTaskFailure', function (done) {
-          statebox.sendTaskFailure(
+        it('sendTaskFailure', async () => {
+          await statebox.sendTaskFailure(
             executionName,
             {
               error: 'BIGFAIL',
               cause: 'Due to some bad thing happening'
-            }, // options
-            {}, // executionOptions
-            function (err) {
-              expect(err).to.eql(null)
-              done()
             }
           )
         })
@@ -220,20 +215,17 @@ describe('Form-filling', () => {
             .catch(() => done())
         })
 
-        it('sendTaskFailure on a stopped state machine', function (done) {
+        it('sendTaskFailure on a stopped state machine', (done) => {
           statebox.sendTaskFailure(
             executionName,
             {
               formData: {
                 name: 'Rupert'
               }
-            }, // output
-            {}, // executionOptions
-            function (err) {
-              expect(err).to.be.an('error')
-              done()
             }
           )
+            .then(() => done(new Error('expected an error')))
+            .catch(() => done())
         })
 
         it('sendTaskHeartbeat on a stopped state machine', function (done) {
