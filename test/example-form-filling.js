@@ -59,18 +59,12 @@ describe('Form-filling', () => {
           setTimeout(done, 250)
         })
 
-        it('state machine is running (i.e. waiting for an external heartbeat update)', function (done) {
-          statebox.describeExecution(
-            executionName,
-            {},
-            function (err, executionDescription) {
-              expect(err).to.eql(null)
-              expect(executionDescription.status).to.eql('RUNNING')
-              expect(executionDescription.ctx).to.eql({formId: 'fillThisFormInHuman!'})
-              expect(executionDescription.stateMachineName).to.eql('formFilling')
-              done()
-            }
-          )
+        it('state machine is running (i.e. waiting for an external heartbeat update)', async () => {
+          const executionDescription = await statebox.describeExecution(executionName)
+
+          expect(executionDescription.status).to.eql('RUNNING')
+          expect(executionDescription.ctx).to.eql({formId: 'fillThisFormInHuman!'})
+          expect(executionDescription.stateMachineName).to.eql('formFilling')
         })
 
         it('send in a heartbeat update (i.e. some part-filled form data)', function (done) {
@@ -91,18 +85,12 @@ describe('Form-filling', () => {
           setTimeout(done, 250)
         })
 
-        it('heartbeat context has been updated', function (done) {
-          statebox.describeExecution(
-            executionName,
-            {},
-            function (err, executionDescription) {
-              expect(err).to.eql(null)
-              expect(executionDescription.status).to.eql('RUNNING')
-              expect(executionDescription.ctx.some).to.eql('payload')
-              expect(executionDescription.stateMachineName).to.eql('formFilling')
-              done()
-            }
-          )
+        it('heartbeat context has been updated', async () =>  {
+          const executionDescription = await statebox.describeExecution(executionName)
+
+          expect(executionDescription.status).to.eql('RUNNING')
+          expect(executionDescription.ctx.some).to.eql('payload')
+          expect(executionDescription.stateMachineName).to.eql('formFilling')
         })
 
         it('sendTaskSuccess (i.e. some completed form data)', async () => {
@@ -153,18 +141,12 @@ describe('Form-filling', () => {
           setTimeout(done, 250)
         })
 
-        it('state machine is running (i.e. waiting for an external update)', function (done) {
-          statebox.describeExecution(
-            executionName,
-            {},
-            function (err, executionDescription) {
-              expect(err).to.eql(null)
-              expect(executionDescription.status).to.eql('RUNNING')
-              expect(executionDescription.ctx).to.eql({formId: 'fillThisFormInHuman!'})
-              expect(executionDescription.stateMachineName).to.eql('formFilling')
-              done()
-            }
-          )
+        it('state machine is running (i.e. waiting for an external update)', async () => {
+          const executionDescription = await statebox.describeExecution(executionName)
+
+          expect(executionDescription.status).to.eql('RUNNING')
+          expect(executionDescription.ctx).to.eql({formId: 'fillThisFormInHuman!'})
+          expect(executionDescription.stateMachineName).to.eql('formFilling')
         })
 
         it('sendTaskFailure', function (done) {
@@ -226,18 +208,12 @@ describe('Form-filling', () => {
           )
         })
 
-        it('form-filling is stopped (i.e. cancelled by a user)', function (done) {
-          statebox.describeExecution(
-            executionName,
-            {},
-            function (err, executionDescription) {
-              expect(err).to.eql(null)
-              expect(executionDescription.status).to.eql('STOPPED')
-              expect(executionDescription.ctx).to.eql({formId: 'fillThisFormInHuman!'})
-              expect(executionDescription.stateMachineName).to.eql('formFilling')
-              done()
-            }
-          )
+        it('form-filling is stopped (i.e. cancelled by a user)', async () => {
+          const executionDescription = await statebox.describeExecution(executionName)
+
+          expect(executionDescription.status).to.eql('STOPPED')
+          expect(executionDescription.ctx).to.eql({formId: 'fillThisFormInHuman!'})
+          expect(executionDescription.stateMachineName).to.eql('formFilling')
         })
 
         it('reject sendTaskSuccess on a stopped state machine', (done) => {

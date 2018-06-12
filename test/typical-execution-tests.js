@@ -253,20 +253,14 @@ describe('State machines', () => {
           expect(executionDescription.ctx.result).to.eql(1)
         })
 
-        it('describeExecution', function (done) {
-          statebox.describeExecution(
-            executionName,
-            {},
-            function (err, executionDescription) {
-              expect(err).to.eql(null)
-              expect(executionDescription.status).to.eql('SUCCEEDED')
-              expect(executionDescription.stateMachineName).to.eql('calculatorWithInputPaths')
-              expect(executionDescription.currentStateName).to.eql('Subtract')
-              expect(executionDescription.currentResource).to.eql('module:subtract')
-              expect(executionDescription.ctx.result).to.eql(1)
-              done()
-            }
-          )
+        it('describeExecution', async () => {
+          const executionDescription = await statebox.describeExecution(executionName)
+
+          expect(executionDescription.status).to.eql('SUCCEEDED')
+          expect(executionDescription.stateMachineName).to.eql('calculatorWithInputPaths')
+          expect(executionDescription.currentStateName).to.eql('Subtract')
+          expect(executionDescription.currentResource).to.eql('module:subtract')
+          expect(executionDescription.ctx.result).to.eql(1)
         })
       })
 
