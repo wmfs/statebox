@@ -91,7 +91,7 @@ describe('Form-filling', () => {
         })
 
         it('sendTaskSuccess (i.e. some completed form data)', async () => {
-          await statebox.sendTaskSuccess(
+          const execDesc = await statebox.sendTaskSuccess(
             executionName,
             {
               formData: {
@@ -99,6 +99,8 @@ describe('Form-filling', () => {
               }
             } // output
           )
+
+          expect(execDesc.status).to.eql('RUNNING')
         })
 
         it('form-filling completed', async () => {
@@ -144,13 +146,15 @@ describe('Form-filling', () => {
         })
 
         it('sendTaskFailure', async () => {
-          await statebox.sendTaskFailure(
+          const execDesc = await statebox.sendTaskFailure(
             executionName,
             {
               error: 'BIGFAIL',
               cause: 'Due to some bad thing happening'
             }
           )
+
+          expect(execDesc.status).to.eql('FAILED')
         })
 
         it('form-filling in failed state', async () => {
