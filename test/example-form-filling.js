@@ -64,18 +64,16 @@ describe('Form-filling', () => {
           expect(executionDescription.stateMachineName).to.eql('formFilling')
         })
 
-        it('send in a heartbeat update (i.e. some part-filled form data)', function (done) {
-          statebox.sendTaskHeartbeat(
+        it('send in a heartbeat update (i.e. some part-filled form data)', async () => {
+          const execDesc = await statebox.sendTaskHeartbeat(
             executionName,
             {
               some: 'payload'
             }, // output
-            {}, // executionOptions
-            function (err, executionDescription) {
-              expect(err).to.eql(null)
-              done()
-            }
+            {}
           )
+
+          expect(execDesc.status).to.eql('RUNNING')
         })
 
         it('wait again', function (done) {
@@ -185,16 +183,12 @@ describe('Form-filling', () => {
           expect(executionDescription.currentResource).to.eql('module:formFilling')
         })
 
-        it('stopExecution (i.e. simulates a user clicking cancel on this execution)', function (done) {
-          statebox.stopExecution(
+        it('stopExecution (i.e. simulates a user clicking cancel on this execution)', async () => {
+          await statebox.stopExecution(
             'Form flow cancelled by user',
             'CANCELLED',
             executionName,
-            {},
-            function (err) {
-              expect(err).to.eql(null)
-              done()
-            }
+            {}
           )
         })
 
@@ -232,7 +226,7 @@ describe('Form-filling', () => {
             .catch(() => done())
         })
 
-        it('sendTaskHeartbeat on a stopped state machine', function (done) {
+        it('sendTaskHeartbeat on a stopped state machine', (done) => {
           statebox.sendTaskHeartbeat(
             executionName,
             {
@@ -240,12 +234,10 @@ describe('Form-filling', () => {
                 name: 'Rupert'
               }
             }, // output
-            {}, // executionOptions
-            function (err) {
-              expect(err).to.be.an('error')
-              done()
-            }
+            {} // executionOptions
           )
+            .then(() => done(new Error('expected an error')))
+            .catch(() => done())
         })
       })
     })

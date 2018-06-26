@@ -49,7 +49,6 @@ describe('State machines', () => {
             {} // options
           )
 
-          expect(executionDescription.status).to.eql('RUNNING')
           executionName = executionDescription.executionName
         })
 
