@@ -7,7 +7,7 @@ notifications:
 node_js:
   - '9'
 install:
-  - npm install
+  - travis_retry npm install
 test:
   - npm test
 after_success:
