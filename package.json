@@ -59,8 +59,7 @@
     "analyzeCommits": {
       "preset": "angular",
       "releaseRules": [
-        {"type": "build", "scope":"deps", "release": "minor"},
-        {"type": "build", "scope":"deps-dev", "release": "patch"}
+        {"type": "build", "scope":"deps", "release": "minor"}
       ]
     }
   }
