@@ -1,7 +1,4 @@
 language: node_js
-cache:
-  directories:
-    - ~/.npm
 notifications:
   email: false
 node_js:
@@ -12,8 +9,11 @@ test:
   - npm test
 after_success:
   - npm run coverage
+before_deploy:
+  - npm run coverage
 deploy:
-  provider: script
-  script_cleanup: true
-  script:
-    - npx semantic-release
+  - provider: script
+    skip_cleanup: true
+    script: npx semantic-release
+    on:
+      branch: master
