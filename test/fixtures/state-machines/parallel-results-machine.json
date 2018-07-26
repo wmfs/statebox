@@ -1,0 +1,31 @@
+{
+  "StartAt": "FG",
+  "States": {
+    "FG": {
+      "Type": "Parallel",
+      "End": true,
+      "Branches": [
+        {
+          "StartAt": "F",
+          "States": {
+            "F": {
+              "Type": "Task",
+              "Resource": "module:f",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "G",
+          "States": {
+            "G": {
+              "Type": "Task",
+              "Resource": "module:g",
+              "End": true
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -293,6 +293,30 @@ describe('State machines', () => {
         })
       })
 
+      describe('parallel - state machine with parallel states and results', () => {
+        it('startExecution', async () => {
+          const executionDescription = await statebox.startExecution(
+            {
+              results: []
+            },
+            'parallelResults',
+            {}
+          )
+
+          executionName = executionDescription.executionName
+        })
+
+        it('waitUntilStoppedRunning', async () => {
+          const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
+
+          expect(executionDescription.status).to.eql('SUCCEEDED')
+          expect(executionDescription.stateMachineName).to.eql('parallelResults')
+          expect(executionDescription.currentStateName).to.eql('FG')
+          expect(executionDescription.ctx.results).to.include('G')
+          expect(executionDescription.ctx.results).to.include('F')
+        })
+      })
+
       describe('parallel - state machine with multiple parallel branches', () => {
         //
         //                        |

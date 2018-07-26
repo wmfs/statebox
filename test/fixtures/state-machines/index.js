@@ -11,5 +11,6 @@ module.exports = {
   fail: require('./fail-state-machine.json'),
   parallel: require('./parallel-state-machine.json'),
   parallelFail: require('./parallel-fail-state-machine.json'),
+  parallelResults: require('./parallel-results-machine.json'),
   waitState: require('./wait-state-machine.json')
 }
