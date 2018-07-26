@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/wmfs/statebox/compare/v1.3.0...v1.3.1) (2018-07-26)
+
+
+### 🐛 Bug Fixes
+
+* Issue [#20](https://github.com/wmfs/statebox/issues/20): Parallel States and aggregated results ([97dab42](https://github.com/wmfs/statebox/commit/97dab42))
+
 # [1.3.0](https://github.com/wmfs/statebox/compare/v1.2.1...v1.3.0) (2018-07-19)
 
 
