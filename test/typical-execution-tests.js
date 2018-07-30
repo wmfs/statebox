@@ -293,28 +293,29 @@ describe('State machines', () => {
         })
       })
 
-      describe('parallel - state machine with parallel states and results', () => {
-        it('startExecution', async () => {
-          const executionDescription = await statebox.startExecution(
-            {
-              results: []
-            },
-            'parallelResults',
-            {}
-          )
+      describe('parallel - state machine with parallel states and results - run multiple times', () => {
+        for (let i = 0; i < 3; i++) {
+          it(`startExecution ${i}`, async () => {
+            const executionDescription = await statebox.startExecution(
+              {results: []},
+              'parallelResults',
+              {}
+            )
 
-          executionName = executionDescription.executionName
-        })
+            executionName = executionDescription.executionName
+          })
 
-        it('waitUntilStoppedRunning', async () => {
-          const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
+          it(`waitUntilStoppedRunning ${i}`, async () => {
+            const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
 
-          expect(executionDescription.status).to.eql('SUCCEEDED')
-          expect(executionDescription.stateMachineName).to.eql('parallelResults')
-          expect(executionDescription.currentStateName).to.eql('FG')
-          expect(executionDescription.ctx.results).to.include('G')
-          expect(executionDescription.ctx.results).to.include('F')
-        })
+            expect(executionDescription.status).to.eql('SUCCEEDED')
+            expect(executionDescription.stateMachineName).to.eql('parallelResults')
+            expect(executionDescription.currentStateName).to.eql('FG')
+            expect(executionDescription.ctx.results).to.include('G')
+            expect(executionDescription.ctx.results).to.include('F')
+            expect(executionDescription.ctx.results).to.have.lengthOf(2)
+          })
+        }
       })
 
       describe('parallel - state machine with multiple parallel branches', () => {
@@ -357,6 +358,7 @@ describe('State machines', () => {
           expect(executionDescription.stateMachineName).to.eql('parallel')
           expect(executionDescription.currentStateName).to.eql('G')
           expect(executionDescription.currentResource).to.eql('module:g')
+          console.log('>>>>', executionDescription.ctx.results)
         })
       })
 
