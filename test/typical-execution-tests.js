@@ -358,7 +358,6 @@ describe('State machines', () => {
           expect(executionDescription.stateMachineName).to.eql('parallel')
           expect(executionDescription.currentStateName).to.eql('G')
           expect(executionDescription.currentResource).to.eql('module:g')
-          console.log('>>>>', executionDescription.ctx.results)
         })
       })
 
