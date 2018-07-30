@@ -1,3 +1,20 @@
+## [1.3.2](https://github.com/wmfs/statebox/compare/v1.3.1...v1.3.2) (2018-07-30)
+
+
+### 🐛 Bug Fixes
+
+* Parallel States and aggregated results Issue [#20](https://github.com/wmfs/statebox/issues/20) ([f31b19a](https://github.com/wmfs/statebox/commit/f31b19a))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update semantic-release requirement to 15.9.1 ([fc37ddd](https://github.com/wmfs/statebox/commit/fc37ddd))
+
+
+### 📦 Code Refactoring
+
+* Remove log ([b17eb0f](https://github.com/wmfs/statebox/commit/b17eb0f))
+
 ## [1.3.1](https://github.com/wmfs/statebox/compare/v1.3.0...v1.3.1) (2018-07-26)
 
 
