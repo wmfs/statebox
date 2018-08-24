@@ -2,7 +2,7 @@ const StorageDao = require('../lib/dao/StorageService-dao')
 
 let messages = null
 try {
-  messages = require('../../tymly/lib/startup-messages/index')()
+  messages = require('../../tymly-core/lib/startup-messages/index')()
 } catch (err) {
   console.log('Startup messages not available')
 }
@@ -12,7 +12,7 @@ function DaosToTest () {
 
   // Memory Storage?
   try {
-    const MemoryModel = require('../../tymly/lib/plugin/components/services/storage/Memory-model')
+    const MemoryModel = require('../../tymly-core/lib/plugin/components/services/storage/Memory-model')
     const model = new MemoryModel(StorageDao.ExecutionModelDefinition)
     daos.push([
       'in-memory storage dao', new StorageDao(model), null
@@ -21,7 +21,7 @@ function DaosToTest () {
     console.log('MemoryModel not available')
   }
   try {
-    const MemoryStorageServiceClass = require('../../tymly/lib/plugin/components/services/storage/index').serviceClass
+    const MemoryStorageServiceClass = require('../../tymly-core/lib/plugin/components/services/storage/index').serviceClass
     const memoryStorageService = new MemoryStorageServiceClass()
     memoryStorageService.boot({ blueprintComponents: {}, messages: messages }, () => {})
     daos.push([
