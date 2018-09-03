@@ -301,7 +301,7 @@ describe('State machines', () => {
         for (let i = 0; i < 3; i++) {
           it(`startExecution ${i}`, async () => {
             const executionDescription = await statebox.startExecution(
-              {results: []},
+              { results: [] },
               'parallelResults',
               {}
             )

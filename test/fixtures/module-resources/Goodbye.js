@@ -3,8 +3,8 @@
 const schema = {
   type: 'object',
   properties: {
-    message: {type: 'string'},
-    somethingElse: {type: 'string'}
+    message: { type: 'string' },
+    somethingElse: { type: 'string' }
   },
   required: ['message']
 }

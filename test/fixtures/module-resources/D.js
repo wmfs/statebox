@@ -9,6 +9,6 @@ module.exports = class D {
     const list = event.results
     console.log('D')
     list.push('D')
-    context.sendTaskSuccess({results: list})
+    context.sendTaskSuccess({ results: list })
   }
 }

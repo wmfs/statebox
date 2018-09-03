@@ -11,7 +11,7 @@ module.exports = class C {
       function () {
         console.log('C')
         list.push('C')
-        context.sendTaskSuccess({results: list})
+        context.sendTaskSuccess({ results: list })
       },
       250
     )

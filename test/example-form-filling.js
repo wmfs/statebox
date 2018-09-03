@@ -56,7 +56,7 @@ describe('Form-filling', () => {
           const executionDescription = await statebox.describeExecution(executionName)
 
           expect(executionDescription.status).to.eql('RUNNING')
-          expect(executionDescription.ctx).to.eql({formId: 'fillThisFormInHuman!'})
+          expect(executionDescription.ctx).to.eql({ formId: 'fillThisFormInHuman!' })
           expect(executionDescription.stateMachineName).to.eql('formFilling')
         })
 
@@ -135,7 +135,7 @@ describe('Form-filling', () => {
           const executionDescription = await statebox.describeExecution(executionName)
 
           expect(executionDescription.status).to.eql('RUNNING')
-          expect(executionDescription.ctx).to.eql({formId: 'fillThisFormInHuman!'})
+          expect(executionDescription.ctx).to.eql({ formId: 'fillThisFormInHuman!' })
           expect(executionDescription.stateMachineName).to.eql('formFilling')
         })
 
@@ -158,7 +158,7 @@ describe('Form-filling', () => {
           expect(executionDescription.stateMachineName).to.eql('formFilling')
           expect(executionDescription.currentStateName).to.eql('FormFilling')
           expect(executionDescription.currentResource).to.eql('module:formFilling')
-          expect(executionDescription.ctx).to.eql({formId: 'fillThisFormInHuman!'})
+          expect(executionDescription.ctx).to.eql({ formId: 'fillThisFormInHuman!' })
         })
       })
 
@@ -192,7 +192,7 @@ describe('Form-filling', () => {
           const executionDescription = await statebox.describeExecution(executionName)
 
           expect(executionDescription.status).to.eql('STOPPED')
-          expect(executionDescription.ctx).to.eql({formId: 'fillThisFormInHuman!'})
+          expect(executionDescription.ctx).to.eql({ formId: 'fillThisFormInHuman!' })
           expect(executionDescription.stateMachineName).to.eql('formFilling')
         })
 
