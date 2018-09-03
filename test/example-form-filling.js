@@ -29,14 +29,10 @@ describe('Form-filling', () => {
           statebox.createModuleResources(moduleResources)
         })
 
-        it('add some state machines', function (done) {
-          statebox.createStateMachines(
-            stateMachines,
-            {},
-            function (err) {
-              expect(err).to.eql(null)
-              done()
-            }
+        it('add some state machines', () => {
+          return Promise.all(
+            Object.entries(stateMachines)
+              .map(([name, definition]) => statebox.createStateMachine(name, definition, {}))
           )
         })
       })

@@ -29,14 +29,10 @@ describe('State machines', () => {
           statebox.createModuleResources(moduleResources)
         })
 
-        it('add state machines', function (done) {
-          statebox.createStateMachines(
+        it('add state machines', () => {
+          return statebox.createStateMachines(
             stateMachines,
-            {},
-            function (err) {
-              expect(err).to.eql(null)
-              done()
-            }
+            {}
           )
         })
       })

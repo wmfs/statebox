@@ -27,15 +27,16 @@ describe('Resource Config tests', () => {
         statebox.createModuleResources(moduleResources)
       })
 
-      it('add some state machines and ensure it fails due to bad resource config', function (done) {
-        statebox.createStateMachines(
-          stateMachines,
-          {},
-          function (err) {
-            expect(err.message).to.eql(`Resource Config missing required properties in stateMachine 'goodbyeInvalid'`)
-            done()
-          }
-        )
+      it('add some state machines and ensure it fails due to bad resource config', async () => {
+        try {
+          await statebox.createStateMachines(
+            stateMachines,
+            {}
+          )
+          expect.fail('Expected to fail')
+        } catch (err) {
+          expect(err.message).to.eql(`Resource Config missing required properties in stateMachine 'goodbyeInvalid'`)
+        }
       })
     })
   })
