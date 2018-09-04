@@ -27,20 +27,23 @@ $ npm install statebox --save
 ## <a name='usage'></a>Usage
 
 ```javascript
-const Statebox = require('statebox')
-const statebox = new Statebox()
+const Statebox = require('@wmfs/statebox')
+const statebox = new Statebox({})
 
-// STEP 1:
-// Create some 'module' resources (i.e. Javascript 
-// classes with 'run' and optional 'init' methods) 
-// that state machines can then refer to...
-// -------------------------------------------------
+const main = async
 
-statebox.createModuleResources(
-  {
+function() {
+
+  // STEP 1:
+  // Create some 'module' resources (i.e. Javascript 
+  // classes with 'run' and optional 'init' methods) 
+  // that state machines can then refer to...
+  // -------------------------------------------------
+  await statebox.ready
+  statebox.createModuleResources({
     // Simple module to add two numbers together
     add: class Add {
-      run (event, context) {
+      run(event, context) {
         context.sendTaskSuccess(event.number1 + event.number2)
       }
     },
@@ -48,120 +51,96 @@ statebox.createModuleResources(
     subtract: class Subtract {
       // Init methods are optional, but all allow  
       // resource-instances to be configured...
-      init (resourceConfig, env, callback) {
-          callback(null)
-        }
-      run (event, context) {
+      init(resourceConfig, env, callback) {
+        callback(null)
+      }
+      run(event, context) {
         context.sendTaskSuccess(event.number1 - event.number2)
-      }      
+      }
     }
-  }
-)
+  })
 
-// STEP 2:
-// Next create a new 'calculator' state
-// machine using Amazon States Language...
-// ---------------------------------------
-
-const info = statebox.createStateMachines(
-  {
-    'calculator': {
-      Comment: 'A simple calculator',
-      StartAt: 'OperatorChoice',
-      States: {
-        OperatorChoice: {
-          Type: 'Choice',
-          Choices: [
-            {
+  // STEP 2:
+  // Next create a new 'calculator' state
+  // machine using Amazon States Language...
+  // ---------------------------------------
+  await statebox.createStateMachines({
+      'calculator': {
+        Comment: 'A simple calculator',
+        StartAt: 'OperatorChoice',
+        States: {
+          OperatorChoice: {
+            Type: 'Choice',
+            Choices: [{
               Variable: '$.operator',
               StringEquals: '+',
               Next: 'Add'
-            },
-            {
+            }, {
               Variable: '$.operator',
               StringEquals: '-',
               Next: 'Subtract'
-            }
-          ]
-        },
-        Add: {
-          Type: 'Task',
-          InputPath: '$.numbers',
-          Resource: 'module:add', // See createModuleResources()
-          ResultPath : '$.result',
-          End: true
-        },
-        Subtract: {
-          Type: 'Task',
-          InputPath: '$.numbers',
-          Resource: 'module:subtract',
-          ResultPath : '$.result',
-          End: true
+            }]
+          },
+          Add: {
+            Type: 'Task',
+            InputPath: '$.numbers',
+            Resource: 'module:add', // See createModuleResources()
+            ResultPath: '$.result',
+            End: true
+          },
+          Subtract: {
+            Type: 'Task',
+            InputPath: '$.numbers',
+            Resource: 'module:subtract',
+            ResultPath: '$.result',
+            End: true
+          }
         }
       }
-    }  
-  },
-  {}, // 'env': An environment/context/sandbox
-  function (err) {
-    // All good-to-go!
-  }    
-)
+    }, {}, // 'env': An environment/context/sandbox
+  )
 
-// STEP 3:
-// Start a new execution on a state machine
-// ----------------------------------------
+  // STEP 3:
+  // Start a new execution on a state machine
+  // ----------------------------------------
+  const executionDescription = await statebox.startExecution({
+      numbers: {
+        number1: 3,
+        number2: 2
+      },
+      operator: '-'
+    }, // input
+    'calculator', // state machine name
+    {} // options
+  )
 
-executionDescription = await statebox.startExecution(
-  {
-    numbers: {
-      number1: 3,
-      number2: 2
-    },
-    operator: '-'
-  },  // input
-  'calculator', // state machine name
-  {} // options
-)
-// Result object
-// -------------
-//  {
-//    executionName: '01e1e288-9533-11e7-8fec-54d168e2e610',
-//    ctx: {
-//      numbers: {
-//        number1: 3,
-//        number2: 2
-//      },
-//      operator: '-'
-//    },
-//    currentStateName: 'OperatorChoice',
-//    stateMachineName: 'calculator',
-//    status: 'RUNNING',
-//    startDate: '2017-09-10T09:40:22.589Z'
-//  }
+  // STEP 4:
+  // Look at the results...
+  // ----------------------
+  const executionDescription2 = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+  console.log(executionDescription2)
+    //  Result object
+    //  -------------
+    // {
+    //   executionName: '...',
+    //   ctx: {
+    //     numbers': {
+    //       number1: 3,
+    //       number2: 2
+    //     },
+    //     operator: '-',
+    //     result: 1 <--- The important bit :-)
+    //   },
+    //   currentStateName:'Subtract',
+    //   currentResource:'module:subtract',
+    //   stateMachineName:'calculator',
+    //   startDate: '2018-09-03T21:58:04.287Z'
+    // }
+}
 
-// STEP 4:
-// Look at the results...
-// ----------------------
-executionDescription = await statebox.describeExecution(
-  '01e1e288-9533-11e7-8fec-54d168e2e610'
-)
-//  Result object
-//  -------------
-// {
-//   executionName: '01e1e288-9533-11e7-8fec-54d168e2e610',
-//   ctx: {
-//     numbers': {
-//       number1: 3,
-//       number2: 2
-//     },
-//     operator: '-',
-//     result: 1 <--- The important bit :-)
-//   },
-//   currentStateName: 'Subtract',
-//   stateMachineName: 'calculator',
-//   status: 'SUCCEEDED',
-//   startDate: '2017-09-10T09:59:50.711Z'
-// }
+if (require.main === module) {
+  main();
+}
 ```
 
 ## <a name='test'></a>Testing
