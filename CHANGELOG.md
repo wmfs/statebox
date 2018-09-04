@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/wmfs/statebox/compare/v1.4.0...v1.4.1) (2018-09-04)
+
+
+### 🐛 Bug Fixes
+
+* Beef up is object check to avoid trying work with a null ([fd60fa1](https://github.com/wmfs/statebox/commit/fd60fa1))
+
 # [1.4.0](https://github.com/wmfs/statebox/compare/v1.3.2...v1.4.0) (2018-09-03)
 
 
