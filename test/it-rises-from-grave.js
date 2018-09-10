@@ -37,10 +37,10 @@ describe('It lives again!', () => {
         })
 
         it('check states', () => {
-          const states = statebox.findStates({resourceToFind: 'module:hello'})
+          const states = statebox.findStates({ resourceToFind: 'module:hello' })
           expect(states.length).to.eql(8)
 
-          const notfound = statebox.findStates({resourceToFind: 'module:dummy'})
+          const notfound = statebox.findStates({ resourceToFind: 'module:dummy' })
           expect(notfound.length).to.eql(0)
         })
       })
@@ -64,7 +64,7 @@ describe('It lives again!', () => {
           expect(executionDescription.currentStateName).to.eql('Failure')
         })
 
-        it ('start heart beat', async () => {
+        it('start heart beat', async () => {
           await statebox.sendTaskRevivification(
             executionName
           )
@@ -98,7 +98,7 @@ describe('It lives again!', () => {
           expect(executionDescription.currentStateName).to.eql('Stuttery')
         })
 
-        it ('raise from the grave', async () => {
+        it('raise from the grave', async () => {
           await statebox.sendTaskRevivification(
             executionName
           )
