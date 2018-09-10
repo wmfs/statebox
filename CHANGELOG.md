@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/wmfs/statebox/compare/v1.5.0...v1.6.0) (2018-09-10)
+
+
+### ✨ Features
+
+* Added error details onto executionOptions so they get persisted to storage ([c100290](https://github.com/wmfs/statebox/commit/c100290))
+
 # [1.5.0](https://github.com/wmfs/statebox/compare/v1.4.1...v1.5.0) (2018-09-10)
 
 
