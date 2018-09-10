@@ -1,3 +1,27 @@
+# [1.5.0](https://github.com/wmfs/statebox/compare/v1.4.1...v1.5.0) (2018-09-10)
+
+
+### ✨ Features
+
+* Add sendTaskRevivifaction method to restart failed state machines ([afc3e09](https://github.com/wmfs/statebox/commit/afc3e09))
+
+
+### 🐛 Bug Fixes
+
+* Added some console logging to context.sendTaskFailure ([7f51266](https://github.com/wmfs/statebox/commit/7f51266))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update codecov requirement from 3.0.4 to 3.1.0 ([3c4d8d8](https://github.com/wmfs/statebox/commit/3c4d8d8))
+* **deps-dev:** update semantic-release requirement ([da0f6d5](https://github.com/wmfs/statebox/commit/da0f6d5))
+* **deps-dev:** update semantic-release requirement ([731db75](https://github.com/wmfs/statebox/commit/731db75))
+
+
+### 🚨 Tests
+
+* corrected test and standards fixes ([4ae1f3d](https://github.com/wmfs/statebox/commit/4ae1f3d))
+
 ## [1.4.1](https://github.com/wmfs/statebox/compare/v1.4.0...v1.4.1) (2018-09-04)
 
 
