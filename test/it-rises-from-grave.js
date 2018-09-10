@@ -2,6 +2,7 @@
 'use strict'
 
 const chai = require('chai')
+chai.use(require('dirty-chai'))
 const expect = chai.expect
 const DaosToTest = require('./daosToTest')
 
@@ -96,6 +97,10 @@ describe('It lives again!', () => {
           expect(executionDescription.status).to.eql('FAILED')
           expect(executionDescription.stateMachineName).to.eql('helloFailButLiveAgain')
           expect(executionDescription.currentStateName).to.eql('Stuttery')
+          expect(expect(executionDescription.executionOptions.error).to.eql({
+            'error': 'SomethingBadHappened',
+            'cause': 'But at least it was expected'
+          }))
         })
 
         it('raise from the grave', async () => {
@@ -110,6 +115,7 @@ describe('It lives again!', () => {
           expect(executionDescription.status).to.eql('SUCCEEDED')
           expect(executionDescription.stateMachineName).to.eql('helloFailButLiveAgain')
           expect(executionDescription.currentStateName).to.eql('IT-LIVES')
+          expect(executionDescription.executionOptions.error).to.be.null()
         })
       })
     })
