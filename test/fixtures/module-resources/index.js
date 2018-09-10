@@ -8,6 +8,8 @@ module.exports = {
   add: require('./Add'),
   subtract: require('./Subtract'),
   failure: require('./Failure'),
+  stuttery: require('./Stuttery'),
+  ilive: require('./Ilive'),
   a: require('./A'),
   b: require('./B'),
   c: require('./C'),

@@ -1,0 +1,29 @@
+{
+  "Comment": "A simple two-state machine, which will fail on the second state",
+  "StartAt": "Hello",
+  "States": {
+    "Hello": {
+      "Type": "Task",
+      "Resource": "module:hello",
+      "Next": "Stuttery"
+    },
+    "Stuttery": {
+      "Type": "Task",
+      "Resource": "module:stuttery",
+      "Next": "IT-LIVES"
+    },
+    "IT-LIVES": {
+      "Type": "Task",
+      "Resource": "module:ilive",
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "$authenticated",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

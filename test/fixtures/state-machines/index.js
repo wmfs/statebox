@@ -5,6 +5,7 @@ module.exports = {
   helloThenWorldThroughException: require('./hello-world-with-caught-failures.json'),
   helloThenFailure: require('./hello-then-failure.json'),
   helloThenUncaughtFailure: require('./hello-then-uncaught-failure.json'),
+  helloFailButLiveAgain: require('./hello-fail-but-live-again'),
   calculator: require('./calculator.json'),
   calculatorWithInputPaths: require('./calculator-with-input-paths.json'),
   pass: require('./pass-state-machine.json'),
