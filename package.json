@@ -24,7 +24,7 @@
   "dependencies": {
     "async": "2.6.1",
     "boom": "7.2.0",
-    "debug": "3.2.1",
+    "debug": "3.2.3",
     "deepmerge": "2.1.1",
     "dottie": "2.0.0",
     "jsonpath": "1.0.0",
