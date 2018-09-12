@@ -1,0 +1,10 @@
+{
+  "StartAt": "Failure",
+  "States": {
+    "Failure": {
+      "Type": "Task",
+      "Resource": "module:httpCantConnect",
+      "End": true
+    }
+  }
+}
