@@ -1,3 +1,20 @@
+# [1.13.0](https://github.com/wmfs/statebox/compare/v1.12.0...v1.13.0) (2018-09-12)
+
+
+### ✨ Features
+
+* Improve sendTaskFailure handling ([30e730a](https://github.com/wmfs/statebox/commit/30e730a))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update semantic-release requirement ([623c8ef](https://github.com/wmfs/statebox/commit/623c8ef))
+
+
+### 💎 Styles
+
+* Flipped order of failExecution parameters so they are more natural ([c48bb19](https://github.com/wmfs/statebox/commit/c48bb19))
+
 # [1.12.0](https://github.com/wmfs/statebox/compare/v1.11.0...v1.12.0) (2018-09-11)
 
 
