@@ -21,7 +21,7 @@
 
 ## <a name='install'></a>Install
 ```bash
-$ npm install statebox --save
+$ npm install @wmfs/statebox --save
 ```
 
 ## <a name='usage'></a>Usage
@@ -117,25 +117,24 @@ function() {
   // STEP 4:
   // Look at the results...
   // ----------------------
-  const executionDescription2 = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
-  console.log(executionDescription2)
-    //  Result object
-    //  -------------
-    // {
-    //   executionName: '...',
-    //   ctx: {
-    //     numbers': {
-    //       number1: 3,
-    //       number2: 2
-    //     },
-    //     operator: '-',
-    //     result: 1 <--- The important bit :-)
-    //   },
-    //   currentStateName:'Subtract',
-    //   currentResource:'module:subtract',
-    //   stateMachineName:'calculator',
-    //   startDate: '2018-09-03T21:58:04.287Z'
-    // }
+  console.log(executionDescription)
+  //  Result object
+  //  -------------
+  // {
+  //   executionName: '...',
+  //   ctx: {
+  //     numbers': {
+  //       number1: 3,
+  //       number2: 2
+  //     },
+  //     operator: '-',
+  //     result: 1 <--- The important bit :-)
+  //   },
+  //   currentStateName:'Subtract',
+  //   currentResource:'module:subtract',
+  //   stateMachineName:'calculator',
+  //   startDate: '2018-09-03T21:58:04.287Z'
+  // }
 }
 
 if (require.main === module) {
