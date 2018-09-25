@@ -1,3 +1,20 @@
+# [1.16.0](https://github.com/wmfs/statebox/compare/v1.15.0...v1.16.0) (2018-09-25)
+
+
+### ✨ Features
+
+* **$browser!:** Switch from process.nextTick to Promise.resolve().then ... ([0b974b4](https://github.com/wmfs/statebox/commit/0b974b4))
+
+
+### 🐛 Bug Fixes
+
+* **Memory-dao:** Remove unused getBranchSummary method ([c582019](https://github.com/wmfs/statebox/commit/c582019))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update semantic-release requirement ([c755da4](https://github.com/wmfs/statebox/commit/c755da4))
+
 # [1.15.0](https://github.com/wmfs/statebox/compare/v1.14.0...v1.15.0) (2018-09-12)
 
 
