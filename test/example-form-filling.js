@@ -84,8 +84,8 @@ describe('Form-filling', () => {
           expect(executionDescription.stateMachineName).to.eql('formFilling')
         })
 
-        it('sendTaskSuccess (i.e. some completed form data)', async () => {
-          const execDesc = await statebox.sendTaskSuccess(
+        it('sendTaskSuccess (i.e. some completed form data)', () => {
+          return statebox.sendTaskSuccess(
             executionName,
             {
               formData: {
@@ -93,8 +93,6 @@ describe('Form-filling', () => {
               }
             } // output
           )
-
-          expect(execDesc.status).to.eql('RUNNING')
         })
 
         it('form-filling completed', async () => {
