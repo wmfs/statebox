@@ -1,0 +1,18 @@
+{
+  "Comment": "Example of the Succeed State",
+  "StartAt": "SucceedState",
+  "States": {
+    "SucceedState": {
+      "Type": "Succeed",
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "$authenticated",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

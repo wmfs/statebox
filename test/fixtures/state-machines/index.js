@@ -15,6 +15,7 @@ module.exports = {
   calculatorWithInputPaths: require('./calculator-with-input-paths.json'),
   pass: require('./pass-state-machine.json'),
   fail: require('./fail-state-machine.json'),
+  succeed: require('./succeed-state-machine.json'),
   parallel: require('./parallel-state-machine.json'),
   parallelFail: require('./parallel-fail-state-machine.json'),
   parallelResults: require('./parallel-results-machine.json'),
