@@ -1,3 +1,15 @@
+# [1.17.0](https://github.com/wmfs/statebox/compare/v1.16.0...v1.17.0) (2018-09-26)
+
+
+### ✨ Features
+
+* Complete Succeed state implmentation ([59f14c5](https://github.com/wmfs/statebox/commit/59f14c5))
+
+
+### 💎 Styles
+
+* Standards fix ([df7c60b](https://github.com/wmfs/statebox/commit/df7c60b))
+
 # [1.16.0](https://github.com/wmfs/statebox/compare/v1.15.0...v1.16.0) (2018-09-25)
 
 
