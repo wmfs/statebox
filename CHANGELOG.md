@@ -1,3 +1,11 @@
+# [1.18.0](https://github.com/wmfs/statebox/compare/v1.17.0...v1.18.0) (2018-10-03)
+
+
+### 🛠 Builds
+
+* **deps:** update deepmerge requirement from 2.1.1 to 2.2.0 ([2fdf054](https://github.com/wmfs/statebox/commit/2fdf054))
+* **deps-dev:** update chai requirement from 4.1.2 to 4.2.0 ([cf9a8ab](https://github.com/wmfs/statebox/commit/cf9a8ab))
+
 # [1.17.0](https://github.com/wmfs/statebox/compare/v1.16.0...v1.17.0) (2018-09-26)
 
 
