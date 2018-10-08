@@ -1,3 +1,11 @@
+# [1.20.0](https://github.com/wmfs/statebox/compare/v1.19.0...v1.20.0) (2018-10-08)
+
+
+### 🛠 Builds
+
+* **deps:** update debug requirement from 4.0.1 to 4.1.0 ([9b3c05e](https://github.com/wmfs/statebox/commit/9b3c05e))
+* **deps-dev:** update semantic-release requirement ([74e2f23](https://github.com/wmfs/statebox/commit/74e2f23))
+
 # [1.19.0](https://github.com/wmfs/statebox/compare/v1.18.0...v1.19.0) (2018-10-03)
 
 
