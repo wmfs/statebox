@@ -42,7 +42,7 @@
     "conventional-changelog-metahub": "2.0.2",
     "cz-conventional-changelog": "2.1.0",
     "dirty-chai": "2.0.1",
-    "express": "4.16.3",
+    "express": "4.16.4",
     "mocha": "5.2.0",
     "nyc": "13.0.1",
     "request-promise-native": "1.0.5",
