@@ -1,4 +1,6 @@
-# statebox
+
+![Statebox Logo](/images/statebox-logo.png)
+
 [![Tymly Package](https://img.shields.io/badge/tymly-package-blue.svg)](https://tymly.io/)
 [![npm (scoped)](https://img.shields.io/npm/v/@wmfs/statebox.svg)](https://www.npmjs.com/package/@wmfs/statebox)
 [![Build Status](https://travis-ci.org/wmfs/statebox.svg?branch=master)](https://travis-ci.org/wmfs/statebox)
@@ -35,8 +37,8 @@ const main = async
 function() {
 
   // STEP 1:
-  // Create some 'module' resources (i.e. Javascript 
-  // classes with 'run' and optional 'init' methods) 
+  // Create some 'module' resources (i.e. Javascript
+  // classes with 'run' and optional 'init' methods)
   // that state machines can then refer to...
   // -------------------------------------------------
   await statebox.ready
@@ -49,7 +51,7 @@ function() {
     },
     // Simple module to subtract one number from another
     subtract: class Subtract {
-      // Init methods are optional, but all allow  
+      // Init methods are optional, but all allow
       // resource-instances to be configured...
       init(resourceConfig, env, callback) {
         callback(null)
