@@ -7,13 +7,5 @@
       "Resource": "module:helloWorld",
       "End": true
     }
-  },
-  "restrictions": [
-    {
-      "roleId": "$authenticated",
-      "allows": [
-        "*"
-      ]
-    }
-  ]
+  }
 }

@@ -11,13 +11,5 @@
       "ResultPath": "$.coords",
       "End": true
     }
-  },
-  "restrictions": [
-    {
-      "roleId": "$authenticated",
-      "allows": [
-        "*"
-      ]
-    }
-  ]
+  }
 }

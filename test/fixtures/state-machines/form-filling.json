@@ -17,13 +17,5 @@
       "Resource": "module:world",
       "End": true
     }
-  },
-  "restrictions": [
-    {
-      "roleId": "$authenticated",
-      "allows": [
-        "*"
-      ]
-    }
-  ]
+  }
 }

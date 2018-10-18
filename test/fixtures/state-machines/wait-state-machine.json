@@ -17,13 +17,5 @@
       "Resource": "module:hello",
       "End": true
     }
-  },
-  "restrictions": [
-    {
-      "roleId": "$authenticated",
-      "allows": [
-        "*"
-      ]
-    }
-  ]
+  }
 }

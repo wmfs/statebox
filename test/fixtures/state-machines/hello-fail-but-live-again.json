@@ -17,13 +17,5 @@
       "Resource": "module:ilive",
       "End": true
     }
-  },
-  "restrictions": [
-    {
-      "roleId": "$authenticated",
-      "allows": [
-        "*"
-      ]
-    }
-  ]
+  }
 }

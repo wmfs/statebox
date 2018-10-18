@@ -7,13 +7,5 @@
       "Cause": "Invalid response.",
       "Error": "ErrorA"
     }
-  },
-  "restrictions": [
-    {
-      "roleId": "$authenticated",
-      "allows": [
-        "*"
-      ]
-    }
-  ]
+  }
 }
