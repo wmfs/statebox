@@ -3,6 +3,7 @@
 
 const chai = require('chai')
 const expect = chai.expect
+const { DateTime, Duration, Interval } = require('luxon')
 
 // Module Resources
 const moduleResources = require('./fixtures/module-resources')
@@ -33,14 +34,6 @@ describe('State machines', function () {
         {}
       )
     })
-
-    it('check states', () => {
-      const states = statebox.findStates({resourceToFind: 'module:hello'})
-      expect(states.length).to.eql(8)
-
-      const notfound = statebox.findStates({resourceToFind: 'module:dummy'})
-      expect(notfound.length).to.eql(0)
-    })
   })
 
   describe('pass state', () => {
@@ -66,29 +59,23 @@ describe('State machines', function () {
     }
 
     for (const [name, result] of Object.entries(passStates)) {
-      describe(name, () => {
-        it('startExecution', async () => {
-          const executionDescription = await statebox.startExecution(
-            {
-              georefOf: 'Home'
-            },
-            name,
-            {} // options
-          )
+      it(name, async () => {
+        let executionDescription = await statebox.startExecution(
+          {
+            georefOf: 'Home'
+          },
+          name,
+          {} // options
+        )
 
-          executionName = executionDescription.executionName
-        })
+        executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
 
-        it('waitUntilStoppedRunning', async () => {
-          const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
-
-          expect(executionDescription.status).to.eql('SUCCEEDED')
-          expect(executionDescription.stateMachineName).to.eql(name)
-          expect(executionDescription.currentStateName).to.eql('PassState')
-          expect(executionDescription.currentResource).to.eql(undefined)
-          expect(executionDescription.ctx).to.eql(result)
-        })
-      }) // describe
+        expect(executionDescription.status).to.eql('SUCCEEDED')
+        expect(executionDescription.stateMachineName).to.eql(name)
+        expect(executionDescription.currentStateName).to.eql('PassState')
+        expect(executionDescription.currentResource).to.eql(undefined)
+        expect(executionDescription.ctx).to.eql(result)
+      }) // it ...
     } // for ...
   })
 
@@ -97,23 +84,75 @@ describe('State machines', function () {
   // Choice
 
   describe('wait state', () => {
-    it('startExecution', async () => {
-      const executionDescription = await statebox.startExecution(
-        {},
-        'waitState',
+    const waitStates = {
+      waitWithSeconds: 2,
+      waitWithSecondsPath: 3,
+      waitWithTimestampPath: 4
+    }
+
+    for (const [name, delay] of Object.entries(waitStates)) {
+      it(name, async () => {
+        const waitUntil = DateTime.local().plus(Duration.fromMillis(delay*1000))
+        let executionDescription = await statebox.startExecution(
+          {
+            waitFor: 3,
+            waitUntil: waitUntil.toISO()
+          },
+          name,
+          {}
+        )
+
+        expect(executionDescription.stateMachineName).to.eql(name)
+        expect(executionDescription.status).to.eql('RUNNING')
+
+        executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+
+        const startedAt = DateTime.fromISO(executionDescription.startDate)
+        const now = DateTime.local()
+        const diff = now.diff(startedAt).as('seconds')
+        expect(diff).to.be.above(delay)
+        expect(executionDescription.status).to.eql('SUCCEEDED')
+      })
+    } // for ...
+
+    it('waitWithTimestamp', async () => {
+      const name = 'waitWithTimestamp'
+      const delay = 2
+
+      const waitWithTimestampSM = {
+        Comment: 'A simple state machine to loop using the wait state',
+        StartAt: 'Pause',
+        States: {
+          Pause: {
+            Type: 'Wait',
+            Timestamp: DateTime.local().plus(Duration.fromMillis(delay*1000)).toISO(),
+            End: true
+          }
+        }
+      }
+
+      await statebox.createStateMachines(
+        {
+          [name]: waitWithTimestampSM
+        },
         {}
       )
 
-      expect(executionDescription.stateMachineName).to.eql('waitState')
+      let executionDescription = await statebox.startExecution(
+        {},
+        name,
+        {}
+      )
+
+      expect(executionDescription.stateMachineName).to.eql(name)
       expect(executionDescription.status).to.eql('RUNNING')
-      executionName = executionDescription.executionName
-    })
 
-    it('verify elapsed time', async () => {
-      const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
+      executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
 
-      const diff = new Date().getTime() - new Date(executionDescription.startDate).getTime()
-      expect(diff).to.be.above(3000)
+      const startedAt = DateTime.fromISO(executionDescription.startDate)
+      const now = DateTime.local()
+      const diff = now.diff(startedAt).as('seconds')
+      expect(diff).to.be.above(delay)
       expect(executionDescription.status).to.eql('SUCCEEDED')
     })
   })

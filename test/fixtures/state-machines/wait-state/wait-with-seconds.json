@@ -4,17 +4,17 @@
   "States": {
     "Hello": {
       "Type": "Task",
-      "Resource": "module:hello",
-      "Next": "WaitForThreeSeconds"
+      "Resource": "module:now",
+      "Next": "Pause"
     },
-    "WaitForThreeSeconds": {
+    "Pause": {
       "Type": "Wait",
-      "Seconds": 3,
+      "Seconds": 2,
       "Next": "Hello2"
     },
     "Hello2": {
       "Type": "Task",
-      "Resource": "module:hello",
+      "Resource": "module:now",
       "End": true
     }
   }

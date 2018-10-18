@@ -22,6 +22,7 @@
   },
   "main": "./lib/index.js",
   "dependencies": {
+    "@wmfs/asl-choice-processor": "1.8.0",
     "async": "2.6.1",
     "boom": "7.2.0",
     "debug": "4.1.0",
@@ -29,8 +30,8 @@
     "dottie": "2.0.0",
     "jsonpath": "1.0.0",
     "lodash": "4.17.11",
-    "uuid": "3.3.2",
-    "@wmfs/asl-choice-processor": "1.8.0"
+    "luxon": "1.4.3",
+    "uuid": "3.3.2"
   },
   "devDependencies": {
     "@semantic-release/changelog": "3.0.1",
