@@ -15,7 +15,7 @@ const stateMachines = require('./fixtures/state-machines')
 
 const Statebox = require('./../lib')
 
-describe('task failure handling', () => {
+describe('Task failure handling', () => {
   DaosToTest.forEach(([name, options]) => {
     describe(`Using ${name}`, function () {
       this.timeout(process.env.TIMEOUT || 5000)

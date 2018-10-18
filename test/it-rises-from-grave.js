@@ -13,7 +13,7 @@ const stateMachines = require('./fixtures/state-machines')
 
 const Statebox = require('./../lib')
 
-describe('It lives again!', () => {
+describe('Reviving failed state machines', () => {
   DaosToTest.forEach(([name, options]) => {
     describe(`Using ${name}`, function () {
       this.timeout(process.env.TIMEOUT || 5000)
