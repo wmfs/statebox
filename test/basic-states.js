@@ -44,35 +44,52 @@ describe('State machines', function () {
   })
 
   describe('pass state', () => {
-    it('startExecution', async () => {
-      const executionDescription = await statebox.startExecution(
-        {
-          georefOf: 'Home'
-        },
-        'pass', // state machine name
-        {} // options
-      )
-
-      executionName = executionDescription.executionName
-    })
-
-    it('waitUntilStoppedRunning', async () => {
-      const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
-
-      expect(executionDescription.status).to.eql('SUCCEEDED')
-      expect(executionDescription.stateMachineName).to.eql('pass')
-      expect(executionDescription.currentStateName).to.eql('PassState')
-      expect(executionDescription.currentResource).to.eql(undefined)
-      expect(executionDescription.ctx).to.eql(
-        {
-          georefOf: 'Home',
-          coords: {
-            'x-datum': 0,
-            'y-datum': 600
-          }
+    const passStates = {
+      pass: {
+        georefOf: 'Home',
+      },
+      passWithResult: {
+        georefOf: 'Home',
+        'x-datum': 0,
+        'y-datum': 600
+      },
+      passWithResultPath: {
+        georefOf: 'Home',
+      },
+      passWithResultAndResultPath: {
+        georefOf: 'Home',
+        coords: {
+          'x-datum': 0,
+          'y-datum': 600
         }
-      )
-    })
+      }
+    }
+
+    for (const [name, result] of Object.entries(passStates)) {
+      describe(name, () => {
+        it('startExecution', async () => {
+          const executionDescription = await statebox.startExecution(
+            {
+              georefOf: 'Home'
+            },
+            name,
+            {} // options
+          )
+
+          executionName = executionDescription.executionName
+        })
+
+        it('waitUntilStoppedRunning', async () => {
+          const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
+
+          expect(executionDescription.status).to.eql('SUCCEEDED')
+          expect(executionDescription.stateMachineName).to.eql(name)
+          expect(executionDescription.currentStateName).to.eql('PassState')
+          expect(executionDescription.currentResource).to.eql(undefined)
+          expect(executionDescription.ctx).to.eql(result)
+        })
+      }) // describe
+    } // for ...
   })
 
   describe('fail state', () => {

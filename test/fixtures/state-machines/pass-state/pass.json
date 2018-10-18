@@ -1,0 +1,10 @@
+{
+  "Comment": "Example of the Pass State",
+  "StartAt": "PassState",
+  "States": {
+    "PassState": {
+      "Type": "Pass",
+      "End": true
+    }
+  }
+}
