@@ -13,7 +13,7 @@ const stateMachines = require('./fixtures/state-machines')
 
 const Statebox = require('./../lib')
 
-describe('State machines', () => {
+describe('Typical State Machine execution', () => {
   DaosToTest.forEach(([name, options]) => {
     describe(`Using ${name}`, function () {
       this.timeout(process.env.TIMEOUT || 5000)
@@ -242,82 +242,6 @@ describe('State machines', () => {
         })
       })
 
-      describe('pass state', () => {
-        it('startExecution', async () => {
-          const executionDescription = await statebox.startExecution(
-            {
-              georefOf: 'Home'
-            },
-            'pass', // state machine name
-            {} // options
-          )
-
-          executionName = executionDescription.executionName
-        })
-
-        it('waitUntilStoppedRunning', async () => {
-          const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
-
-          expect(executionDescription.status).to.eql('SUCCEEDED')
-          expect(executionDescription.stateMachineName).to.eql('pass')
-          expect(executionDescription.currentStateName).to.eql('PassState')
-          expect(executionDescription.currentResource).to.eql(undefined)
-          expect(executionDescription.ctx).to.eql(
-            {
-              georefOf: 'Home',
-              coords: {
-                'x-datum': 0,
-                'y-datum': 600
-              }
-            }
-          )
-        })
-      })
-
-      describe('fail state', () => {
-        it('startExecution', async () => {
-          const executionDescription = await statebox.startExecution(
-            {},
-            'fail', // state machine name
-            {} // options
-          )
-
-          executionName = executionDescription.executionName
-        })
-
-        it('waitUntilStoppedRunning reports failure', async () => {
-          const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
-
-          expect(executionDescription.status).to.eql('FAILED')
-          expect(executionDescription.stateMachineName).to.eql('fail')
-          expect(executionDescription.currentStateName).to.eql('FailState')
-          expect(executionDescription.currentResource).to.eql(undefined)
-          expect(executionDescription.errorMessage).to.eql('Invalid response.')
-          expect(executionDescription.errorCode).to.eql('ErrorA')
-        })
-      })
-
-      describe('succeed state', () => {
-        it('startExecution', async () => {
-          const executionDescription = await statebox.startExecution(
-            {},
-            'succeed', // state machine name
-            {} // options
-          )
-
-          executionName = executionDescription.executionName
-        })
-
-        it('waitUntilStoppedRunning reports success', async () => {
-          const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
-
-          expect(executionDescription.status).to.eql('SUCCEEDED')
-          expect(executionDescription.stateMachineName).to.eql('succeed')
-          expect(executionDescription.currentStateName).to.eql('SucceedState')
-          expect(executionDescription.currentResource).to.eql(undefined)
-        })
-      })
-
       describe('parallel - state machine with parallel states and results - run multiple times', () => {
         for (let i = 0; i < 3; i++) {
           it(`startExecution ${i}`, async () => {
@@ -408,28 +332,6 @@ describe('State machines', () => {
           expect(executionDescription.currentResource).to.eql(undefined)
           expect(executionDescription.errorCause).to.eql('States.BranchFailed')
           expect(executionDescription.errorCode).to.eql('Failed because a state in a parallel branch has failed')
-        })
-      })
-
-      describe('wait state', () => {
-        it('startExecution', async () => {
-          const executionDescription = await statebox.startExecution(
-            {},
-            'waitState',
-            {}
-          )
-
-          expect(executionDescription.stateMachineName).to.eql('waitState')
-          expect(executionDescription.status).to.eql('RUNNING')
-          executionName = executionDescription.executionName
-        })
-
-        it('verify elapsed time', async () => {
-          const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
-
-          const diff = new Date().getTime() - new Date(executionDescription.startDate).getTime()
-          expect(diff).to.be.above(3000)
-          expect(executionDescription.status).to.eql('SUCCEEDED')
         })
       })
 
