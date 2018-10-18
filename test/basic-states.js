@@ -155,6 +155,36 @@ describe('State machines', function () {
       expect(diff).to.be.above(delay)
       expect(executionDescription.status).to.eql('SUCCEEDED')
     })
+
+    const waitStatesInThePast = [
+      'waitWithSecondsPath',
+      'waitWithTimestampPath',
+      'waitWithTimestamp'
+    ]
+    for (const name of waitStatesInThePast) {
+      it(`${name} with value in the past`, async () => {
+        let executionDescription = await statebox.startExecution(
+          {
+            waitFor: -3,
+            waitUntil: '2018-10-18T10:15:00Z'
+          },
+          name,
+          {}
+        )
+
+        expect(executionDescription.stateMachineName).to.eql(name)
+        expect(executionDescription.status).to.eql('RUNNING')
+
+        executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+
+        const startedAt = DateTime.fromISO(executionDescription.startDate)
+        const now = DateTime.local()
+        const diff = Math.round(now.diff(startedAt).as('seconds'))
+        expect(diff).to.eql(0)
+        expect(executionDescription.status).to.eql('SUCCEEDED')
+      })
+    } // for ...
+
   })
 
   describe('succeed state', () => {
