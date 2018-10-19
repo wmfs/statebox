@@ -16,7 +16,6 @@ module.exports = {
   choice: require('./choice-state/choice.json'),
   choiceWithInputPath: require('./choice-state/choice-with-input-path.json'),
   fail: require('./fail-state-machine.json'),
-  succeed: require('./succeed-state-machine.json'),
   parallel: require('./parallel-state-machine.json'),
   parallelFail: require('./parallel-fail-state-machine.json'),
   parallelResults: require('./parallel-results-machine.json'),
