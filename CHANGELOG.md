@@ -1,3 +1,53 @@
+# [1.22.0](https://github.com/wmfs/statebox/compare/v1.21.0...v1.22.0) (2018-10-19)
+
+
+### ✨ Features
+
+* Choice state respects InputPath. Support InputPath === null in Choice and Task. ([640f7cf](https://github.com/wmfs/statebox/commit/640f7cf))
+* Implement Wait with SecondsPath, Timestamp, and TimestampPath ([784cf18](https://github.com/wmfs/statebox/commit/784cf18))
+
+
+### 🐛 Bug Fixes
+
+* Default options to {}, so new Statebox() works ([527f79b](https://github.com/wmfs/statebox/commit/527f79b))
+* Further work on InputPath and ResultPath behaviour ([42d6f83](https://github.com/wmfs/statebox/commit/42d6f83))
+* Handle ResultPath === null correctly ([865a75d](https://github.com/wmfs/statebox/commit/865a75d))
+* Wait state properly applies InputPath ([4595da9](https://github.com/wmfs/statebox/commit/4595da9))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/changelog requirement ([eea1a9b](https://github.com/wmfs/statebox/commit/eea1a9b))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([237936e](https://github.com/wmfs/statebox/commit/237936e))
+* **deps-dev:** update express requirement from 4.16.3 to 4.16.4 ([f7b997b](https://github.com/wmfs/statebox/commit/f7b997b))
+* **deps-dev:** update nyc requirement from 13.0.1 to 13.1.0 ([0931951](https://github.com/wmfs/statebox/commit/0931951))
+* **deps-dev:** update semantic-release requirement ([7cc7d5d](https://github.com/wmfs/statebox/commit/7cc7d5d))
+
+
+### 📚 Documentation
+
+* **README:** Add logo to README ([f9d1398](https://github.com/wmfs/statebox/commit/f9d1398))
+
+
+### 🚨 Tests
+
+* Better Top-level test names ([a13819f](https://github.com/wmfs/statebox/commit/a13819f))
+* Commented out test cases which capture Spec behaviour we don't currently support. ([d170cfc](https://github.com/wmfs/statebox/commit/d170cfc))
+* Correct test now wait tests aren't using module:hello ([e5cb7c7](https://github.com/wmfs/statebox/commit/e5cb7c7))
+* Ensure statebox is properly initialised ([3fec7a8](https://github.com/wmfs/statebox/commit/3fec7a8))
+* Move tests of core states out into separate test file ([dabe237](https://github.com/wmfs/statebox/commit/dabe237))
+* Remove restrictions element from all state machine fixtures ([dda54c2](https://github.com/wmfs/statebox/commit/dda54c2))
+* Reorder state tests to match the state type order in the spec ([5f20452](https://github.com/wmfs/statebox/commit/5f20452))
+* Split Pass tests out into a separate file ([8e115f4](https://github.com/wmfs/statebox/commit/8e115f4))
+* Test Pass with all combinations of Result and ResultPath ([a155bb3](https://github.com/wmfs/statebox/commit/a155bb3))
+* Test Wait with timestamp in the past, or with -ve SecondsPath value ([1a8b656](https://github.com/wmfs/statebox/commit/1a8b656))
+
+
+### 💎 Styles
+
+* standard.js fixes ([9152da3](https://github.com/wmfs/statebox/commit/9152da3))
+* Standards fix ([6cb5a39](https://github.com/wmfs/statebox/commit/6cb5a39))
+
 # [1.21.0](https://github.com/wmfs/statebox/compare/v1.20.0...v1.21.0) (2018-10-08)
 
 
