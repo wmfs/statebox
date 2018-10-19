@@ -4,7 +4,7 @@
   "States": {
     "SucceedState": {
       "Type": "Succeed",
-      "InputPath": "$.address"
+      "InputPath": "$.person.address"
     }
   }
 }
