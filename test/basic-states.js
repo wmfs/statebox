@@ -58,11 +58,7 @@ describe('State machines', function () {
       },
       passWithResultAndNullResultPath: {
         georefOf: 'Home'
-      } /*,
-      passWithResultAndNullInputPath: {
-        'x-datum': 0,
-        'y-datum': 600
-      },
+      }/*,
       passWithResultAndNullOutputPath: {
       } */
     }
@@ -91,6 +87,33 @@ describe('State machines', function () {
   // Task
 
   // Choice
+  describe('choice state', () => {
+    const choiceStates = [ 'choice', 'choiceWithInputPath' ]
+
+    const branches = [
+      [ 'first', { calc: { operator: '+' } }, { calc: { operator: '+' }, result: 'add' } ],
+      [ 'second', { calc: { operator: '-' } }, { calc: { operator: '-' }, result: 'subtract' } ]
+    ]
+
+    for (const [ branch, input, output ] of branches) {
+      for (const name of choiceStates) {
+        it(`${name} ${branch} branch`, async () => {
+          let executionDescription = await statebox.startExecution(
+            input,
+            name,
+            {} // options
+          )
+
+          executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+
+          expect(executionDescription.status).to.eql('SUCCEEDED')
+          expect(executionDescription.stateMachineName).to.eql(name)
+          expect(executionDescription.ctx).to.eql(output)
+        }) // it ...
+      } // for choice state machines...
+    } // for branches ...
+  })
+
 
   describe('wait state', () => {
     const waitStates = {

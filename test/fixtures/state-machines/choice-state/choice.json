@@ -1,0 +1,33 @@
+{
+  "Comment": "A simple calculator",
+  "StartAt": "OperatorChoice",
+  "States": {
+    "OperatorChoice": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.calc.operator",
+          "StringEquals": "+",
+          "Next": "Add"
+        },
+        {
+          "Variable": "$.calc.operator",
+          "StringEquals": "-",
+          "Next": "Subtract"
+        }
+      ]
+    },
+    "Add": {
+      "Type": "Pass",
+      "Result": "add",
+      "ResultPath" : "$.result",
+      "End": true
+    },
+    "Subtract": {
+      "Type": "Pass",
+      "Result": "subtract",
+      "ResultPath" : "$.result",
+      "End": true
+    }
+  }
+}
