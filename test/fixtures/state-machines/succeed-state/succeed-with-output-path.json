@@ -1,0 +1,10 @@
+{
+  "Comment": "Example of the Succeed State",
+  "StartAt": "SucceedState",
+  "States": {
+    "SucceedState": {
+      "Type": "Succeed",
+      "OutputPath": "$.person.address"
+    }
+  }
+}

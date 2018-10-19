@@ -46,10 +46,12 @@ describe('Pass State', function () {
     passWithNullInputPathAndResultPath: {
       georefOf: 'Home',
       place: { }
+    },
+    passWithResultAndNullOutputPath: { },
+    passWithResultResultPathAndOutputPath: {
+      'x-datum': 0,
+      'y-datum': 600
     }
-    /*,
-    passWithResultAndNullOutputPath: {
-    } */
   }
 
   for (const [name, result] of Object.entries(passStates)) {

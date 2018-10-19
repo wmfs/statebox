@@ -29,9 +29,11 @@ describe('Success State', function () {
   }
 
   const passStates = {
-    succeed: blobOfStuff
+    succeed: blobOfStuff,
     // succeedWithInputPath: address,
     // succeedWithNullInputPath: { },
+    succeedWithOutputPath: address,
+    succeedWithNullOutputPath: { }
   }
 
   for (const [name, result] of Object.entries(passStates)) {
