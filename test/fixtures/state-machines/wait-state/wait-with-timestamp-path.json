@@ -5,6 +5,7 @@
     "Hello": {
       "Type": "Task",
       "Resource": "module:now",
+      "ResultPath": null,
       "Next": "Pause"
     },
     "Pause": {
@@ -15,6 +16,7 @@
     "Hello2": {
       "Type": "Task",
       "Resource": "module:now",
+      "ResultPath": null,
       "End": true
     }
   }

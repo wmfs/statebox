@@ -21,10 +21,10 @@ describe('Pass State', function () {
 
   const passStates = {
     pass: georefOf,
-    //passWithResult: {
+    // passWithResult: {
     //  'x-datum': 0,
     //  'y-datum': 600
-    //},
+    // },
     passWithResultPath: {
       georefOf: 'Home',
       where: { georefOf: 'Home' }
