@@ -20,8 +20,9 @@ describe('State machines', function () {
   let executionName
 
   describe('set up', () => {
-    it('create a new Statebox', function () {
+    it('create a new Statebox', async () => {
       statebox = new Statebox()
+      await statebox.ready
     })
 
     it('add module resources', function () {
