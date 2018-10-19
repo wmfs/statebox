@@ -3,7 +3,7 @@
 
 const chai = require('chai')
 const expect = chai.expect
-const { DateTime, Duration, Interval } = require('luxon')
+const { DateTime, Duration } = require('luxon')
 
 // Module Resources
 const moduleResources = require('./fixtures/module-resources')
@@ -39,7 +39,7 @@ describe('State machines', function () {
   describe('pass state', () => {
     const passStates = {
       pass: {
-        georefOf: 'Home',
+        georefOf: 'Home'
       },
       passWithResult: {
         georefOf: 'Home',
@@ -114,7 +114,6 @@ describe('State machines', function () {
     } // for branches ...
   })
 
-
   describe('wait state', () => {
     const waitStates = {
       waitWithSeconds: 2,
@@ -124,7 +123,7 @@ describe('State machines', function () {
 
     for (const [name, delay] of Object.entries(waitStates)) {
       it(name, async () => {
-        const waitUntil = DateTime.local().plus(Duration.fromMillis(delay*1000))
+        const waitUntil = DateTime.local().plus(Duration.fromMillis(delay * 1000))
         let executionDescription = await statebox.startExecution(
           {
             waitFor: 3,
@@ -157,7 +156,7 @@ describe('State machines', function () {
         States: {
           Pause: {
             Type: 'Wait',
-            Timestamp: DateTime.local().plus(Duration.fromMillis(delay*1000)).toISO(),
+            Timestamp: DateTime.local().plus(Duration.fromMillis(delay * 1000)).toISO(),
             End: true
           }
         }
@@ -216,7 +215,6 @@ describe('State machines', function () {
         expect(executionDescription.status).to.eql('SUCCEEDED')
       })
     } // for ...
-
   })
 
   describe('succeed state', () => {
@@ -268,7 +266,7 @@ describe('State machines', function () {
       for (let i = 0; i < 3; i++) {
         it(`startExecution ${i}`, async () => {
           const executionDescription = await statebox.startExecution(
-            {results: []},
+            { results: [] },
             'parallelResults',
             {}
           )

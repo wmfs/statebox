@@ -18,7 +18,7 @@ module.exports = {
   passWithResultPath: require('./pass-state/pass-with-result-path.json'),
   passWithResultAndResultPath: require('./pass-state/pass-with-result-and-result-path.json'),
   passWithResultAndNullResultPath: require('./pass-state/pass-with-result-and-null-result-path.json'),
-  //passWithResultAndNullOutputPath: require('./pass-state/pass-with-result-and-null-output-path.json'),
+  // passWithResultAndNullOutputPath: require('./pass-state/pass-with-result-and-null-output-path.json'),
   choice: require('./choice-state/choice.json'),
   choiceWithInputPath: require('./choice-state/choice-with-input-path.json'),
   fail: require('./fail-state-machine.json'),
