@@ -22,5 +22,5 @@ module.exports = {
   parallelResults: require('./parallel-results-machine.json'),
   waitWithSeconds: require('./wait-state/wait-with-seconds.json'),
   waitWithSecondsPath: require('./wait-state/wait-with-seconds-path.json'),
-  waitWithTimestampPath: require('./wait-state/wait-with-timestamp-path.json'),
+  waitWithTimestampPath: require('./wait-state/wait-with-timestamp-path.json')
 }
