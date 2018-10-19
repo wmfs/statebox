@@ -4,7 +4,11 @@
   "States": {
     "PassState": {
       "Type": "Pass",
-      "ResultPath": "$.where",
+      "Result": {
+        "x-datum": 0,
+        "y-datum": 600
+      },
+      "OutputPath": null,
       "End": true
     }
   }

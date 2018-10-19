@@ -4,7 +4,7 @@ const chai = require('chai')
 const expect = chai.expect
 
 // stateMachines
-const stateMachines = require('./fixtures/state-machines')
+const passStateMachines = require('./fixtures/state-machines/pass-state')
 
 const Statebox = require('./../lib')
 
@@ -14,20 +14,20 @@ describe('Pass State', function () {
   before('setup statebox', async () => {
     statebox = new Statebox()
     await statebox.ready
-    await statebox.createStateMachines(stateMachines.pass, {})
+    await statebox.createStateMachines(passStateMachines, {})
   })
 
+  const georefOf = { georefOf: 'Home' }
+
   const passStates = {
-    pass: {
-      georefOf: 'Home'
-    },
+    pass: georefOf,
     passWithResult: {
-      georefOf: 'Home',
       'x-datum': 0,
       'y-datum': 600
     },
     passWithResultPath: {
-      georefOf: 'Home'
+      georefOf: 'Home',
+      where: { georefOf: 'Home' }
     },
     passWithResultAndResultPath: {
       georefOf: 'Home',
@@ -36,9 +36,18 @@ describe('Pass State', function () {
         'y-datum': 600
       }
     },
-    passWithResultAndNullResultPath: {
-      georefOf: 'Home'
-    }/*,
+    passWithResultAndNullResultPath: georefOf,
+    passWithInputPath: 'Home',
+    passWithInputPathAndResultPath: {
+      georefOf: 'Home',
+      place: 'Home'
+    },
+    passWithNullInputPath: { },
+    passWithNullInputPathAndResultPath: {
+      georefOf: 'Home',
+      place: { }
+    }
+    /*,
     passWithResultAndNullOutputPath: {
     } */
   }
@@ -47,7 +56,7 @@ describe('Pass State', function () {
     test(
       name,
       name,
-      { georefOf: 'Home' },
+      georefOf,
       result
     )
   } // for ...
@@ -56,7 +65,7 @@ describe('Pass State', function () {
 function test (label, statemachine, input, result) {
   it(label, async () => {
     let executionDescription = await statebox.startExecution(
-      input,
+      Object.assign({}, input),
       statemachine,
       {} // options
     )

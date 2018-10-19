@@ -4,7 +4,8 @@
   "States": {
     "PassState": {
       "Type": "Pass",
-      "ResultPath": "$.where",
+      "InputPath": "$.georefOf",
+      "ResultPath": "$.place",
       "End": true
     }
   }

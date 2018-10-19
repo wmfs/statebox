@@ -23,13 +23,4 @@ module.exports = {
   waitWithSeconds: require('./wait-state/wait-with-seconds.json'),
   waitWithSecondsPath: require('./wait-state/wait-with-seconds-path.json'),
   waitWithTimestampPath: require('./wait-state/wait-with-timestamp-path.json'),
-
-  pass: {
-    pass: require('./pass-state/pass.json'),
-    passWithResult: require('./pass-state/pass-with-result.json'),
-    passWithResultPath: require('./pass-state/pass-with-result-path.json'),
-    passWithResultAndResultPath: require('./pass-state/pass-with-result-and-result-path.json'),
-    passWithResultAndNullResultPath: require('./pass-state/pass-with-result-and-null-result-path.json'),
-    // passWithResultAndNullOutputPath: require('./pass-state/pass-with-result-and-null-output-path.json'),
-  }
 }
