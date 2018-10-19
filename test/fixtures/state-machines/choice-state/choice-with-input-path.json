@@ -19,14 +19,14 @@
       ]
     },
     "Add": {
-      "Type": "Task",
-      "Resource": "module:add",
+      "Type": "Pass",
+      "Result": "add",
       "ResultPath" : "$.result",
       "End": true
     },
     "Subtract": {
-      "Type": "Task",
-      "Resource": "module:subtract",
+      "Type": "Pass",
+      "Result": "subtract",
       "ResultPath" : "$.result",
       "End": true
     }
