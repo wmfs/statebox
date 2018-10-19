@@ -35,14 +35,6 @@ describe('Typical State Machine execution', () => {
             {}
           )
         })
-
-        it('check states', () => {
-          const states = statebox.findStates({ resourceToFind: 'module:hello' })
-          expect(states.length).to.eql(8)
-
-          const notfound = statebox.findStates({ resourceToFind: 'module:dummy' })
-          expect(notfound.length).to.eql(0)
-        })
       })
 
       describe('helloWorld - state machine with a single state', () => {

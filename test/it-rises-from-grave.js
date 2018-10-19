@@ -38,7 +38,7 @@ describe('Reviving failed state machines', () => {
 
         it('check states', () => {
           const states = statebox.findStates({ resourceToFind: 'module:hello' })
-          expect(states.length).to.eql(8)
+          expect(states.length).to.eql(6)
 
           const notfound = statebox.findStates({ resourceToFind: 'module:dummy' })
           expect(notfound.length).to.eql(0)
