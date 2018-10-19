@@ -13,12 +13,6 @@ module.exports = {
   helloFailButLiveAgain: require('./hello-fail-but-live-again'),
   calculator: require('./calculator.json'),
   calculatorWithInputPaths: require('./calculator-with-input-paths.json'),
-  pass: require('./pass-state/pass.json'),
-  passWithResult: require('./pass-state/pass-with-result.json'),
-  passWithResultPath: require('./pass-state/pass-with-result-path.json'),
-  passWithResultAndResultPath: require('./pass-state/pass-with-result-and-result-path.json'),
-  passWithResultAndNullResultPath: require('./pass-state/pass-with-result-and-null-result-path.json'),
-  // passWithResultAndNullOutputPath: require('./pass-state/pass-with-result-and-null-output-path.json'),
   choice: require('./choice-state/choice.json'),
   choiceWithInputPath: require('./choice-state/choice-with-input-path.json'),
   fail: require('./fail-state-machine.json'),
@@ -28,5 +22,14 @@ module.exports = {
   parallelResults: require('./parallel-results-machine.json'),
   waitWithSeconds: require('./wait-state/wait-with-seconds.json'),
   waitWithSecondsPath: require('./wait-state/wait-with-seconds-path.json'),
-  waitWithTimestampPath: require('./wait-state/wait-with-timestamp-path.json')
+  waitWithTimestampPath: require('./wait-state/wait-with-timestamp-path.json'),
+
+  pass: {
+    pass: require('./pass-state/pass.json'),
+    passWithResult: require('./pass-state/pass-with-result.json'),
+    passWithResultPath: require('./pass-state/pass-with-result-path.json'),
+    passWithResultAndResultPath: require('./pass-state/pass-with-result-and-result-path.json'),
+    passWithResultAndNullResultPath: require('./pass-state/pass-with-result-and-null-result-path.json'),
+    // passWithResultAndNullOutputPath: require('./pass-state/pass-with-result-and-null-output-path.json'),
+  }
 }
