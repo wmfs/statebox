@@ -286,25 +286,5 @@ describe('State machines', function () {
         expect(executionDescription.errorCode).to.eql('Failed because a state in a parallel branch has failed')
       })
     })
-    describe('succeed state', () => {
-      it('startExecution', async () => {
-        const executionDescription = await statebox.startExecution(
-          {},
-          'succeed', // state machine name
-          {} // options
-        )
-
-        executionName = executionDescription.executionName
-      })
-
-      it('waitUntilStoppedRunning reports success', async () => {
-        const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
-
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        expect(executionDescription.stateMachineName).to.eql('succeed')
-        expect(executionDescription.currentStateName).to.eql('SucceedState')
-        expect(executionDescription.currentResource).to.eql(undefined)
-      })
-    })
   })
 })
