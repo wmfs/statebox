@@ -1,3 +1,10 @@
+# [1.23.0](https://github.com/wmfs/statebox/compare/v1.22.0...v1.23.0) (2018-10-19)
+
+
+### 🛠 Builds
+
+* **deps:** update luxon requirement from 1.4.3 to 1.4.4 ([fa431b4](https://github.com/wmfs/statebox/commit/fa431b4))
+
 # [1.22.0](https://github.com/wmfs/statebox/compare/v1.21.0...v1.22.0) (2018-10-19)
 
 
