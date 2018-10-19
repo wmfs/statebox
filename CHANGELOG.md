@@ -1,3 +1,23 @@
+## [1.23.1](https://github.com/wmfs/statebox/compare/v1.23.0...v1.23.1) (2018-10-19)
+
+
+### 🐛 Bug Fixes
+
+* Ensure Succeed states end the state machine ([92fb5b5](https://github.com/wmfs/statebox/commit/92fb5b5))
+* InputPath is applied to all state types. ([2b9eab6](https://github.com/wmfs/statebox/commit/2b9eab6))
+* OutputPath is applied to all state types ([d87dc11](https://github.com/wmfs/statebox/commit/d87dc11))
+
+
+### 📦 Code Refactoring
+
+* Reordered BaseState methods. Moved updateCurrentStateName into Choice. ([b33f03e](https://github.com/wmfs/statebox/commit/b33f03e))
+
+
+### 🚨 Tests
+
+* Commented out test cases which capture Spec behaviour we don't currently support. ([1fad6c0](https://github.com/wmfs/statebox/commit/1fad6c0))
+* Succeed State tests ([f5011c8](https://github.com/wmfs/statebox/commit/f5011c8))
+
 # [1.23.0](https://github.com/wmfs/statebox/compare/v1.22.0...v1.23.0) (2018-10-19)
 
 
