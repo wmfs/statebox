@@ -47,7 +47,7 @@ describe('State machines', function () {
         'y-datum': 600
       },
       passWithResultPath: {
-        georefOf: 'Home',
+        georefOf: 'Home'
       },
       passWithResultAndResultPath: {
         georefOf: 'Home',
@@ -55,7 +55,16 @@ describe('State machines', function () {
           'x-datum': 0,
           'y-datum': 600
         }
-      }
+      },
+      passWithResultAndNullResultPath: {
+        georefOf: 'Home'
+      } /*,
+      passWithResultAndNullInputPath: {
+        'x-datum': 0,
+        'y-datum': 600
+      },
+      passWithResultAndNullOutputPath: {
+      } */
     }
 
     for (const [name, result] of Object.entries(passStates)) {
