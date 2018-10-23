@@ -1,3 +1,17 @@
+# [1.24.0](https://github.com/wmfs/statebox/compare/v1.23.1...v1.24.0) (2018-10-23)
+
+
+### 🛠 Builds
+
+* **deps:** update dottie requirement from 2.0.0 to 2.0.1 ([4ca1490](https://github.com/wmfs/statebox/commit/4ca1490))
+* **deps-dev:** update semantic-release requirement ([2b34863](https://github.com/wmfs/statebox/commit/2b34863))
+* **deps-dev:** update semantic-release requirement ([5f1fe12](https://github.com/wmfs/statebox/commit/5f1fe12))
+
+
+### 🚨 Tests
+
+* Pull Choice Tests out into their own file ([76e832a](https://github.com/wmfs/statebox/commit/76e832a))
+
 ## [1.23.1](https://github.com/wmfs/statebox/compare/v1.23.0...v1.23.1) (2018-10-19)
 
 
