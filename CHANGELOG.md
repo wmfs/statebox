@@ -1,3 +1,11 @@
+# [1.25.0](https://github.com/wmfs/statebox.git/compare/v1.24.0...v1.25.0) (2018-10-31)
+
+
+### 🛠 Builds
+
+* **deps:** update luxon requirement from 1.4.4 to 1.4.5 ([46930df](https://github.com/wmfs/statebox.git/commit/46930df))
+* **deps-dev:** update semantic-release requirement ([8fb3564](https://github.com/wmfs/statebox.git/commit/8fb3564))
+
 # [1.24.0](https://github.com/wmfs/statebox/compare/v1.23.1...v1.24.0) (2018-10-23)
 
 
