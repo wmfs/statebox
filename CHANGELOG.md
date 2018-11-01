@@ -1,3 +1,10 @@
+# [1.26.0](https://github.com/wmfs/statebox/compare/v1.25.0...v1.26.0) (2018-11-01)
+
+
+### 🛠 Builds
+
+* **deps:** update boom requirement from 7.2.0 to 7.2.1 ([a69fe59](https://github.com/wmfs/statebox/commit/a69fe59))
+
 # [1.25.0](https://github.com/wmfs/statebox.git/compare/v1.24.0...v1.25.0) (2018-10-31)
 
 
