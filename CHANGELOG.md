@@ -1,3 +1,10 @@
+# [1.34.0](https://github.com/wmfs/statebox/compare/v1.33.0...v1.34.0) (2018-11-10)
+
+
+### 🛠 Builds
+
+* **deps:** update luxon requirement from 1.6.1 to 1.6.2 ([3590bfb](https://github.com/wmfs/statebox/commit/3590bfb))
+
 # [1.33.0](https://github.com/wmfs/statebox/compare/v1.32.0...v1.33.0) (2018-11-10)
 
 
