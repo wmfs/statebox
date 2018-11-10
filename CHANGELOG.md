@@ -1,3 +1,11 @@
+# [1.32.0](https://github.com/wmfs/statebox/compare/v1.31.0...v1.32.0) (2018-11-10)
+
+
+### 🛠 Builds
+
+* **deps:** update luxon requirement from 1.5.0 to 1.6.0 ([6309ecc](https://github.com/wmfs/statebox/commit/6309ecc))
+* **deps-dev:** update semantic-release requirement ([110837a](https://github.com/wmfs/statebox/commit/110837a))
+
 # [1.31.0](https://github.com/wmfs/statebox/compare/v1.30.0...v1.31.0) (2018-11-04)
 
 
