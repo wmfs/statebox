@@ -1,3 +1,11 @@
+## [1.34.1](https://github.com/wmfs/statebox/compare/v1.34.0...v1.34.1) (2018-11-12)
+
+
+### 🐛 Bug Fixes
+
+* **listStateMachines returns name, description:** Rather than direct access to the whole state machi ([276286c](https://github.com/wmfs/statebox/commit/276286c))
+* Added listModuleResources, providing the names of the available resources ([1fa9df4](https://github.com/wmfs/statebox/commit/1fa9df4))
+
 # [1.34.0](https://github.com/wmfs/statebox/compare/v1.33.0...v1.34.0) (2018-11-10)
 
 
