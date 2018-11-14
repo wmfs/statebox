@@ -1,3 +1,15 @@
+## [1.34.2](https://github.com/wmfs/statebox/compare/v1.34.1...v1.34.2) (2018-11-14)
+
+
+### 🐛 Bug Fixes
+
+* return more data on list state machines, as it was before ([049794c](https://github.com/wmfs/statebox/commit/049794c))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update semantic-release requirement ([8910bff](https://github.com/wmfs/statebox/commit/8910bff))
+
 ## [1.34.1](https://github.com/wmfs/statebox/compare/v1.34.0...v1.34.1) (2018-11-12)
 
 
