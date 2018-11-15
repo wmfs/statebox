@@ -1,3 +1,15 @@
+## [1.34.3](https://github.com/wmfs/statebox/compare/v1.34.2...v1.34.3) (2018-11-15)
+
+
+### 🐛 Bug Fixes
+
+* pass the state machine title out on list ([aa07c74](https://github.com/wmfs/statebox/commit/aa07c74))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update semantic-release requirement ([dd6c84c](https://github.com/wmfs/statebox/commit/dd6c84c))
+
 ## [1.34.2](https://github.com/wmfs/statebox/compare/v1.34.1...v1.34.2) (2018-11-14)
 
 
