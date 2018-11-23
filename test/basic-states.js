@@ -3,7 +3,6 @@
 
 const chai = require('chai')
 const expect = chai.expect
-const { DateTime, Duration } = require('luxon')
 
 // Module Resources
 const moduleResources = require('./fixtures/module-resources')
