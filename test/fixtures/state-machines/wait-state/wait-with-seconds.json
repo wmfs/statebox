@@ -1,20 +1,10 @@
 {
   "Comment": "A simple state machine to loop using the wait state",
-  "StartAt": "Hello",
+  "StartAt": "Pause",
   "States": {
-    "Hello": {
-      "Type": "Task",
-      "Resource": "module:now",
-      "Next": "Pause"
-    },
     "Pause": {
       "Type": "Wait",
-      "Seconds": 2,
-      "Next": "Hello2"
-    },
-    "Hello2": {
-      "Type": "Task",
-      "Resource": "module:now",
+      "Seconds": 0.2,
       "End": true
     }
   }
