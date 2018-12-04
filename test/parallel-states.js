@@ -2,7 +2,10 @@
 'use strict'
 
 const chai = require('chai')
+const dirtyChai = require('dirty-chai')
 const expect = chai.expect
+chai.use(dirtyChai)
+
 const DaosToTest = require('./daosToTest')
 
 // Module Resources
@@ -107,7 +110,7 @@ describe('Parallel State', function () {
         expect(executionDescription.stateMachineName).to.eql('parallelFail')
         expect(executionDescription.currentStateName).to.eql('Parallel1')
         expect(executionDescription.currentResource).to.not.exist()
-        expect(executionDescription.errorCause).to.eql('States.BranchFailed')
+        expect(executionDescription.errorMessage).to.eql('States.BranchFailed')
         expect(executionDescription.errorCode).to.eql('Failed because a state in a parallel branch has failed')
       })
     })
