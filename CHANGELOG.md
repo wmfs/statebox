@@ -1,3 +1,29 @@
+## [1.37.2](https://github.com/wmfs/statebox/compare/v1.37.1...v1.37.2) (2018-12-04)
+
+
+### 🐛 Bug Fixes
+
+* Return executionDescription back out of setTaskFailure ([e765f13](https://github.com/wmfs/statebox/commit/e765f13))
+* Round-trip errors through the Dao correctly. ([5c1c8c5](https://github.com/wmfs/statebox/commit/5c1c8c5))
+
+
+### 📦 Code Refactoring
+
+* convertJsonpathToDottie is always called with a valid jsonpath, and never supplied with a ([93f2aee](https://github.com/wmfs/statebox/commit/93f2aee))
+* Simplified implementation to avoid slicing strings multiple times ([d1044b0](https://github.com/wmfs/statebox/commit/d1044b0))
+
+
+### 🚨 Tests
+
+* Check for not existing rather than undefined ([04ec24a](https://github.com/wmfs/statebox/commit/04ec24a))
+* Move Fail State test into it's own file ([e7a3a09](https://github.com/wmfs/statebox/commit/e7a3a09))
+* Pulled Wait State tests out into their own file ([b4029ab](https://github.com/wmfs/statebox/commit/b4029ab))
+
+
+### 💎 Styles
+
+* standard.js fixes ([a62c51d](https://github.com/wmfs/statebox/commit/a62c51d))
+
 ## [1.37.1](https://github.com/wmfs/statebox/compare/v1.37.0...v1.37.1) (2018-12-04)
 
 
