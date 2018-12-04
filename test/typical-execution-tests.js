@@ -20,21 +20,14 @@ describe('Typical State Machine execution', () => {
       let statebox
       let executionName
 
-      describe('set up', () => {
-        it('create a new Statebox', function () {
-          statebox = new Statebox(options)
-        })
-
-        it('add module resources', function () {
-          statebox.createModuleResources(moduleResources)
-        })
-
-        it('add state machines', () => {
-          return statebox.createStateMachines(
-            stateMachines,
-            {}
-          )
-        })
+      before('setup statebox', async () => {
+        statebox = new Statebox(options)
+        await statebox.ready
+        statebox.createModuleResources(moduleResources)
+        await statebox.createStateMachines(
+          stateMachines,
+          {}
+        )
       })
 
       describe('helloWorld - state machine with a single state', () => {
@@ -55,28 +48,6 @@ describe('Typical State Machine execution', () => {
           expect(executionDescription.stateMachineName).to.eql('helloWorld')
           expect(executionDescription.currentStateName).to.eql('Hello World')
           expect(executionDescription.currentResource).to.eql('module:helloWorld')
-        })
-      })
-
-      describe('helloThenWorldThroughException, four-state machine which fails mid-way but recovers via catching exceptions', () => {
-        it('start', async () => {
-          const executionDescription = await statebox.startExecution(
-            {}, // input
-            'helloThenWorldThroughException', // state machine name
-            {} // options
-          )
-
-          expect(executionDescription.status).to.eql('RUNNING')
-          executionName = executionDescription.executionName
-        })
-
-        it('waitUntilStoppedRunning', async () => {
-          const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
-
-          expect(executionDescription.status).to.eql('SUCCEEDED')
-          expect(executionDescription.stateMachineName).to.eql('helloThenWorldThroughException')
-          expect(executionDescription.currentStateName).to.eql('World')
-          expect(executionDescription.currentResource).to.eql('module:world')
         })
       })
 
@@ -121,6 +92,28 @@ describe('Typical State Machine execution', () => {
           expect(executionDescription.currentResource).to.eql('module:failure')
           expect(executionDescription.errorCode).to.eql('SomethingBadHappened')
           expect(executionDescription.errorMessage).to.eql('But at least it was expected')
+        })
+      })
+
+      describe('helloThenWorldThroughException, four-state machine which fails mid-way but recovers via catching exceptions', () => {
+        it('start', async () => {
+          const executionDescription = await statebox.startExecution(
+            {}, // input
+            'helloThenWorldThroughException', // state machine name
+            {} // options
+          )
+
+          expect(executionDescription.status).to.eql('RUNNING')
+          executionName = executionDescription.executionName
+        })
+
+        it('waitUntilStoppedRunning', async () => {
+          const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
+
+          expect(executionDescription.status).to.eql('SUCCEEDED')
+          expect(executionDescription.stateMachineName).to.eql('helloThenWorldThroughException')
+          expect(executionDescription.currentStateName).to.eql('World')
+          expect(executionDescription.currentResource).to.eql('module:world')
         })
       })
 
