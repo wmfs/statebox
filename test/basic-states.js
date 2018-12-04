@@ -141,29 +141,6 @@ describe('State machines', function () {
     } // for ...
   })
 
-  describe('fail state', () => {
-    it('startExecution', async () => {
-      const executionDescription = await statebox.startExecution(
-        {},
-        'fail', // state machine name
-        {} // options
-      )
-
-      executionName = executionDescription.executionName
-    })
-
-    it('waitUntilStoppedRunning reports failure', async () => {
-      const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
-
-      expect(executionDescription.status).to.eql('FAILED')
-      expect(executionDescription.stateMachineName).to.eql('fail')
-      expect(executionDescription.currentStateName).to.eql('FailState')
-      expect(executionDescription.currentResource).to.eql(undefined)
-      expect(executionDescription.errorMessage).to.eql('Invalid response.')
-      expect(executionDescription.errorCode).to.eql('ErrorA')
-    })
-  })
-
   describe('parallel', () => {
     describe('parallel - state machine with parallel states and results - run multiple times', () => {
       for (let i = 0; i < 3; i++) {
