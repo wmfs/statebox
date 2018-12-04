@@ -20,21 +20,14 @@ describe('Form-filling', () => {
       let statebox
       let executionName
 
-      describe('set up', () => {
-        it('create a new Statebox', function () {
-          statebox = new Statebox(options)
-        })
-
-        it('add some module resources', function () {
-          statebox.createModuleResources(moduleResources)
-        })
-
-        it('add some state machines', () => {
-          return Promise.all(
-            Object.entries(stateMachines)
-              .map(([name, definition]) => statebox.createStateMachine(name, definition, {}))
-          )
-        })
+      before('setup statebox', async () => {
+        statebox = new Statebox(options)
+        await statebox.ready
+        statebox.createModuleResources(moduleResources)
+        await Promise.all(
+          Object.entries(stateMachines)
+            .map(([name, definition]) => statebox.createStateMachine(name, definition, {}))
+        )
       })
 
       describe('successfully fill in a form', () => {
