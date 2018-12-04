@@ -106,7 +106,7 @@ describe('Parallel State', function () {
         expect(executionDescription.status).to.eql('FAILED')
         expect(executionDescription.stateMachineName).to.eql('parallelFail')
         expect(executionDescription.currentStateName).to.eql('Parallel1')
-        expect(executionDescription.currentResource).to.eql(undefined)
+        expect(executionDescription.currentResource).to.not.exist()
         expect(executionDescription.errorCause).to.eql('States.BranchFailed')
         expect(executionDescription.errorCode).to.eql('Failed because a state in a parallel branch has failed')
       })
