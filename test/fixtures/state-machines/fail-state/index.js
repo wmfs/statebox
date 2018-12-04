@@ -1,3 +1,3 @@
 module.exports = {
-  fail: require('./fail')
+  fail: require('./fail-state-machine.json')
 }

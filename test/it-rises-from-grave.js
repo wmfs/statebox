@@ -20,29 +20,14 @@ describe('Reviving failed state machines', () => {
       let statebox
       let executionName
 
-      describe('set up', () => {
-        it('create a new Statebox', function () {
-          statebox = new Statebox(options)
-        })
-
-        it('add module resources', function () {
-          statebox.createModuleResources(moduleResources)
-        })
-
-        it('add state machines', () => {
-          return statebox.createStateMachines(
-            stateMachines,
-            {}
-          )
-        })
-
-        it('check states', () => {
-          const states = statebox.findStates({ resourceToFind: 'module:hello' })
-          expect(states.length).to.eql(6)
-
-          const notfound = statebox.findStates({ resourceToFind: 'module:dummy' })
-          expect(notfound.length).to.eql(0)
-        })
+      before('setup statebox', async () => {
+        statebox = new Statebox(options)
+        await statebox.ready
+        statebox.createModuleResources(moduleResources)
+        await statebox.createStateMachines(
+          stateMachines,
+          {}
+        )
       })
 
       describe('fail, come back to life, fail again', () => {

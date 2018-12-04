@@ -13,13 +13,5 @@ module.exports = {
   failure: require('./Failure'),
   failWithError: require('./FailWithError'),
   stuttery: require('./Stuttery'),
-  ilive: require('./Ilive'),
-  a: require('./A'),
-  b: require('./B'),
-  c: require('./C'),
-  d: require('./D'),
-  e: require('./E'),
-  f: require('./F'),
-  g: require('./G'),
-  now: require('./Now')
+  ilive: require('./Ilive')
 }

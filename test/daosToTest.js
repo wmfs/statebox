@@ -30,6 +30,16 @@ function DaosToTest () {
   } catch (err) {
     console.log('MemoryStorageService not available')
   }
+  try {
+    const PGStorageServiceClass = require('../../../plugins/tymly-pg-plugin/lib/components/services/storage/index').serviceClass
+    const pgStorageService = new PGStorageServiceClass()
+    pgStorageService.boot({ blueprintComponents: {}, messages: messages, config: {} }, () => {})
+    daos.push([
+      'Postgres storage service', null, pgStorageService
+    ])
+  } catch (err) {
+    console.log('PGStorageService not available')
+  }
 
   return daos
 }

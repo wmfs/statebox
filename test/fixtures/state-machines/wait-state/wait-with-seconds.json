@@ -4,7 +4,7 @@
   "States": {
     "Pause": {
       "Type": "Wait",
-      "Seconds": 0.2,
+      "Seconds": 2,
       "End": true
     }
   }
