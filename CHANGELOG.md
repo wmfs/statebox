@@ -1,3 +1,26 @@
+## [1.37.1](https://github.com/wmfs/statebox/compare/v1.37.0...v1.37.1) (2018-12-04)
+
+
+### 🐛 Bug Fixes
+
+* Propogate promise out of Task.processState so we can await of revivication ([0142233](https://github.com/wmfs/statebox/commit/0142233))
+
+
+### 📦 Code Refactoring
+
+* Switch out a couple of start up tests for before() { ... } ([eb52187](https://github.com/wmfs/statebox/commit/eb52187))
+* use before instead of tests ([6df08f3](https://github.com/wmfs/statebox/commit/6df08f3))
+* **test:** use before/after instead of tests ([eacb606](https://github.com/wmfs/statebox/commit/eacb606))
+* **test:** user before instead of setup tests ([bfd88dd](https://github.com/wmfs/statebox/commit/bfd88dd))
+
+
+### 🚨 Tests
+
+* Move Parallel State tests into separate file ([84e2ad1](https://github.com/wmfs/statebox/commit/84e2ad1))
+* Move Wait State tests into their own file ([da5b83e](https://github.com/wmfs/statebox/commit/da5b83e))
+* Pull Fail state out into own test file ([f8fc0c7](https://github.com/wmfs/statebox/commit/f8fc0c7))
+* Test with PGStorageService if available ([62a4b8b](https://github.com/wmfs/statebox/commit/62a4b8b))
+
 # [1.37.0](https://github.com/wmfs/statebox/compare/v1.36.0...v1.37.0) (2018-11-27)
 
 
