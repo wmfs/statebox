@@ -20,6 +20,5 @@ module.exports = {
   d: require('./D'),
   e: require('./E'),
   f: require('./F'),
-  g: require('./G'),
-  now: require('./Now')
+  g: require('./G')
 }

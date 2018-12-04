@@ -17,8 +17,5 @@ module.exports = {
   choiceWithInputPath: require('./choice-state/choice-with-input-path.json'),
   parallel: require('./parallel-state-machine.json'),
   parallelFail: require('./parallel-fail-state-machine.json'),
-  parallelResults: require('./parallel-results-machine.json'),
-  waitWithSeconds: require('./wait-state/wait-with-seconds.json'),
-  waitWithSecondsPath: require('./wait-state/wait-with-seconds-path.json'),
-  waitWithTimestampPath: require('./wait-state/wait-with-timestamp-path.json')
+  parallelResults: require('./parallel-results-machine.json')
 }
