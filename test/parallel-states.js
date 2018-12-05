@@ -7,6 +7,8 @@ const expect = chai.expect
 chai.use(dirtyChai)
 
 const DaosToTest = require('./daosToTest')
+DaosToTest.shift()
+DaosToTest.shift()
 
 // Module Resources
 const moduleResources = require('./fixtures/state-machines/parallel-state/resources')
@@ -32,7 +34,8 @@ describe('Parallel State', function () {
 
       describe('parallel - state machine with parallel states and results - run multiple times', () => {
         const names = []
-        for (let i = 0; i !== 50; ++i) {
+        const lots = 50
+        for (let i = 0; i !== lots; ++i) {
           it(`startExecution ${i}`, async () => {
             const executionDescription = await statebox.startExecution(
               { results: [] },
@@ -44,7 +47,7 @@ describe('Parallel State', function () {
           })
         }
 
-        for (let i = 49; i >= 0; --i) {
+        for (let i = lots-1; i >= 0; --i) {
           it(`waitUntilStoppedRunning ${i}`, async () => {
             const executionDescription = await statebox.waitUntilStoppedRunning(names[i])
 
