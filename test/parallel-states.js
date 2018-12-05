@@ -113,6 +113,19 @@ describe('Parallel State', function () {
         expect(executionDescription.errorMessage).to.eql('States.BranchFailed')
         expect(executionDescription.errorCode).to.eql('Failed because a state in a parallel branch has failed')
       })
+
+      it('fun-with-math - example from spec', async () => {
+        let executionDescription = await statebox.startExecution(
+          [ 3, 2 ],
+          'funWithMath', // state machine name
+          {} // options
+        )
+
+        executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+
+        expect(executionDescription.status).to.eql('SUCCEEDED')
+        expect(executionDescription.ctx).to.eql([5, 1])
+      })
     })
   }) // DaosToTest
 })

@@ -6,5 +6,7 @@ module.exports = {
   d: require('./D'),
   e: require('./E'),
   f: require('./F'),
-  g: require('./G')
+  g: require('./G'),
+  Add: require('./Add'),
+  Subtract: require('./Subtract')
 }
