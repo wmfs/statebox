@@ -6,8 +6,13 @@
       "End": true,
       "Branches": [
         {
-          "StartAt": "F",
+          "StartAt": "Wait",
           "States": {
+            "Wait": {
+              "Type": "Wait",
+              "Seconds": 1,
+              "Next": "F"
+            },
             "F": {
               "Type": "Task",
               "Resource": "module:f",
