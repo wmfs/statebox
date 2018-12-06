@@ -1,3 +1,10 @@
+# [1.39.0](https://github.com/wmfs/statebox/compare/v1.38.0...v1.39.0) (2018-12-06)
+
+
+### 🛠 Builds
+
+* **deps:** update deepmerge requirement from 2.2.1 to 3.0.0 ([b9de373](https://github.com/wmfs/statebox/commit/b9de373))
+
 # [1.38.0](https://github.com/wmfs/statebox/compare/v1.37.3...v1.38.0) (2018-12-06)
 
 
