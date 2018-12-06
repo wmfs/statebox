@@ -1,3 +1,12 @@
+# [1.38.0](https://github.com/wmfs/statebox/compare/v1.37.3...v1.38.0) (2018-12-06)
+
+
+### 🛠 Builds
+
+* **deps:** update boom requirement from 7.2.2 to 7.3.0 ([fc0246a](https://github.com/wmfs/statebox/commit/fc0246a))
+* **deps:** update luxon requirement from 1.8.1 to 1.8.2 ([19db482](https://github.com/wmfs/statebox/commit/19db482))
+* **deps-dev:** update semantic-release requirement ([930f7a6](https://github.com/wmfs/statebox/commit/930f7a6))
+
 ## [1.37.3](https://github.com/wmfs/statebox/compare/v1.37.2...v1.37.3) (2018-12-06)
 
 
