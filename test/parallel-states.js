@@ -141,7 +141,7 @@ describe('Parallel State', function () {
           })
         }
 
-        for (let i = lots-1; i >= 0; --i) {
+        for (let i = lots - 1; i >= 0; --i) {
           it(`waitUntilStoppedRunning ${i}`, async () => {
             const executionDescription = await statebox.waitUntilStoppedRunning(names[i])
 

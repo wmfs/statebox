@@ -9,7 +9,6 @@ const waitStateMachines = require('./fixtures/state-machines/wait-state')
 
 class Now {
   run (event, context) {
-    console.log(DateTime.local().toISO())
     context.sendTaskSuccess()
   }
 }

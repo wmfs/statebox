@@ -1,5 +1,3 @@
-'use strict'
-
 const schema = {
   type: 'object',
   properties: {

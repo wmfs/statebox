@@ -1,16 +1,9 @@
-'use strict'
-
 let fail = false
 
 module.exports = class Stuttery {
-  init (resourceConfig, env, callback) {
-    callback(null)
-  }
-
   run (event, context) {
     fail = !fail
     if (fail) {
-      console.log('Stuttery - NO')
       context.sendTaskFailure(
         {
           error: 'SomethingBadHappened',
@@ -18,7 +11,6 @@ module.exports = class Stuttery {
         }
       )
     } else {
-      console.log('Stuttery - YES')
       context.sendTaskSuccess({})
     }
   }
