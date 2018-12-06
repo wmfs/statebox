@@ -30,19 +30,47 @@ describe('Parallel State', function () {
         await statebox.createStateMachines(parallelStateMachines, {})
       })
 
-      it('fun-with-math - example from spec', async () => {
-        let executionDescription = await statebox.startExecution(
-          [ 3, 2 ],
-          'funWithMath', // state machine name
-          {} // options
-        )
+      const tests = [
+        {
+          label: 'fun-with-math - example from spec',
+          stateMachine: 'funWithMath',
+          input: [ 3, 2 ],
+          expected: [ 5, 1 ]
+        },
+        {
+          label: 'parallelling up',
+          stateMachine: 'parallellingUp',
+          input: { },
+          expected: [ 'A', [ 'B', [ 'C', [ 'D', [ 'E', [ 'F', [ 'G' ] ] ] ] ] ] ]
+        },
+        {
+          label: 'parallelling down',
+          stateMachine: 'parallellingDown',
+          input: { },
+          expected: [ [ [ [ [ [ [ 'A' ], 'B' ], 'C' ], 'D' ], 'E' ], 'F' ], 'G' ]
+        },
+        {
+          label: 'paralleling up and down',
+          stateMachine: 'parallellingUpAndDown',
+          input: { },
+          expected: [ 'A', [ 'B', [ 'C', [ 'D' ], 'E' ], 'F' ], 'G' ]
+        }
+      ]
 
-        executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+      for (const test of tests) {
+        it(test.label, async () => {
+          let executionDescription = await statebox.startExecution(
+            test.input,
+            test.stateMachine, // state machine name
+            {} // options
+          )
 
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        expect(executionDescription.ctx[0]).to.equal(5)
-        expect(executionDescription.ctx).to.eql([5, 1])
-      })
+          executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+
+          expect(executionDescription.status).to.eql('SUCCEEDED')
+          expect(executionDescription.ctx).to.eql(test.expected)
+        })
+      } // for ...
 
       it('parallel - state machine with multiple parallel branches', async () => {
         //
