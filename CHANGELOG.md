@@ -1,3 +1,10 @@
+## [1.37.3](https://github.com/wmfs/statebox/compare/v1.37.2...v1.37.3) (2018-12-06)
+
+
+### 🐛 Bug Fixes
+
+* Set Task Context stateMachineMeta ([237716b](https://github.com/wmfs/statebox/commit/237716b))
+
 ## [1.37.2](https://github.com/wmfs/statebox/compare/v1.37.1...v1.37.2) (2018-12-04)
 
 
