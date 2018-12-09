@@ -1,0 +1,148 @@
+{
+  "StartAt": "Top",
+  "States": {
+    "Top": {
+      "Type": "Parallel",
+      "End": true,
+      "Branches": [
+        {
+          "StartAt": "Level1",
+          "States": {
+            "Level1": {
+              "Type": "Parallel",
+              "End": true,
+              "Branches": [
+                {
+                  "StartAt": "Level2",
+                  "States": {
+                    "Level2": {
+                      "Type": "Parallel",
+                      "End": true,
+                      "Branches": [
+                        {
+                          "StartAt": "Level3",
+                          "States": {
+                            "Level3": {
+                              "Type": "Parallel",
+                              "End": true,
+                              "Branches": [
+                                {
+                                  "StartAt": "Level4",
+                                  "States": {
+                                    "Level4": {
+                                      "Type": "Parallel",
+                                      "End": true,
+                                      "Branches": [
+                                        {
+                                          "StartAt": "Level5",
+                                          "States": {
+                                            "Level5": {
+                                              "Type": "Parallel",
+                                              "End": true,
+                                              "Branches": [
+                                                {
+                                                  "StartAt": "Level6",
+                                                  "States": {
+                                                    "Level6": {
+                                                      "Type": "Parallel",
+                                                      "End": true,
+                                                      "Branches": [
+                                                        {
+                                                          "StartAt": "A",
+                                                          "States": {
+                                                            "A": {
+                                                              "Type": "Fail",
+                                                              "Cause": "Fail in parallel branch",
+                                                              "Error": "Error"
+                                                            }
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                },
+                                                {
+                                                  "StartAt": "B",
+                                                  "States": {
+                                                    "B": {
+                                                      "Type": "Task",
+                                                      "Resource": "module:b",
+                                                      "End": true
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "StartAt": "C",
+                                          "States": {
+                                            "C": {
+                                              "Type": "Task",
+                                              "Resource": "module:c",
+                                              "End": true
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "StartAt": "D",
+                                  "States": {
+                                    "D": {
+                                      "Type": "Task",
+                                      "Resource": "module:d",
+                                      "End": true
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "StartAt": "E",
+                          "States": {
+                            "E": {
+                              "Type": "Task",
+                              "Resource": "module:e",
+                              "End": true
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "StartAt": "F",
+                  "States": {
+                    "F": {
+                      "Type": "Task",
+                      "Resource": "module:f",
+                      "End": true
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "StartAt": "G",
+          "States": {
+            "G": {
+              "Type": "Task",
+              "Resource": "module:g",
+              "End": true
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+

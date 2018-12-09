@@ -9,9 +9,9 @@
           "StartAt": "A",
           "States": {
             "A": {
-              "Type": "Task",
-              "Resource": "module:a",
-              "End": true
+              "Type": "Fail",
+              "Cause": "Fail in parallel branch",
+              "Error": "Error"
             }
           }
         },

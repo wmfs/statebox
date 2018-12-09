@@ -30,100 +30,121 @@ describe('Parallel State', function () {
         await statebox.createStateMachines(parallelStateMachines, {})
       })
 
-      const tests = [
-        {
-          label: 'fun-with-math - example from spec',
-          stateMachine: 'funWithMath',
-          input: [ 3, 2 ],
-          expected: [ 5, 1 ]
-        },
-        {
-          label: 'parallelling up',
-          stateMachine: 'parallellingUp',
-          input: { },
-          expected: [ 'A', [ 'B', [ 'C', [ 'D', [ 'E', [ 'F', [ 'G' ] ] ] ] ] ] ]
-        },
-        {
-          label: 'parallelling down',
-          stateMachine: 'parallellingDown',
-          input: { },
-          expected: [ [ [ [ [ [ [ 'A' ], 'B' ], 'C' ], 'D' ], 'E' ], 'F' ], 'G' ]
-        },
-        {
-          label: 'paralleling up and down',
-          stateMachine: 'parallellingUpAndDown',
-          input: { },
-          expected: [ 'A', [ 'B', [ 'C', [ 'D' ], 'E' ], 'F' ], 'G' ]
-        }
-      ]
+      describe('parallel state machines', () => {
+        const tests = [
+          {
+            label: 'fun-with-math - example from spec',
+            stateMachine: 'funWithMath',
+            input: [ 3, 2 ],
+            expected: [ 5, 1 ]
+          },
+          {
+            label: 'parallelling up',
+            stateMachine: 'parallellingUp',
+            input: { },
+            expected: [ 'A', [ 'B', [ 'C', [ 'D', [ 'E', [ 'F', [ 'G' ] ] ] ] ] ] ]
+          },
+          {
+            label: 'parallelling down',
+            stateMachine: 'parallellingDown',
+            input: { },
+            expected: [ [ [ [ [ [ [ 'A' ], 'B' ], 'C' ], 'D' ], 'E' ], 'F' ], 'G' ]
+          },
+          {
+            label: 'paralleling up and down',
+            stateMachine: 'parallellingUpAndDown',
+            input: { },
+            expected: [ 'A', [ 'B', [ 'C', [ 'D' ], 'E' ], 'F' ], 'G' ]
+          }
+        ]
 
-      for (const test of tests) {
-        it(test.label, async () => {
+        for (const test of tests) {
+          it(test.label, async () => {
+            let executionDescription = await statebox.startExecution(
+              test.input,
+              test.stateMachine, // state machine name
+              {} // options
+            )
+
+            executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+
+            expect(executionDescription.status).to.eql('SUCCEEDED')
+            expect(executionDescription.ctx).to.eql(test.expected)
+          })
+        } // for ...
+
+        it('parallel - state machine with multiple parallel branches', async () => {
+          //
+          //                        |
+          //                    Parallel1
+          //                    |       |
+          //                    A       B
+          //                (+4 secs)   |
+          //                 |      Parallel2
+          //                 |      |       |
+          //                 |      C       D
+          //                 |  (+2 secs)   |
+          //                 |      |       E
+          //                 |      |       |
+          //                 |      ---------
+          //                 |          |
+          //                 |          F
+          //                 |          |
+          //                 ------------
+          //                       |
+          //                       G
+          // Expected order [Parallel1, B, Parallel2, D, E, C, F, A, G ]
           let executionDescription = await statebox.startExecution(
-            test.input,
-            test.stateMachine, // state machine name
+            {},
+            'parallel', // state machine name
             {} // options
           )
 
           executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
 
           expect(executionDescription.status).to.eql('SUCCEEDED')
-          expect(executionDescription.ctx).to.eql(test.expected)
+          expect(executionDescription.stateMachineName).to.eql('parallel')
+          expect(executionDescription.currentStateName).to.eql('G')
+          expect(executionDescription.currentResource).to.eql('module:g')
         })
-      } // for ...
-
-      it('parallel - state machine with multiple parallel branches', async () => {
-        //
-        //                        |
-        //                    Parallel1
-        //                    |       |
-        //                    A       B
-        //                (+4 secs)   |
-        //                 |      Parallel2
-        //                 |      |       |
-        //                 |      C       D
-        //                 |  (+2 secs)   |
-        //                 |      |       E
-        //                 |      |       |
-        //                 |      ---------
-        //                 |          |
-        //                 |          F
-        //                 |          |
-        //                 ------------
-        //                       |
-        //                       G
-        // Expected order [Parallel1, B, Parallel2, D, E, C, F, A, G ]
-        let executionDescription = await statebox.startExecution(
-          {},
-          'parallel', // state machine name
-          {} // options
-        )
-
-        executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
-
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        expect(executionDescription.stateMachineName).to.eql('parallel')
-        expect(executionDescription.currentStateName).to.eql('G')
-        expect(executionDescription.currentResource).to.eql('module:g')
       })
 
-      it('parallel-failing - state machine with multiple parallel branches with a failing branch', async () => {
-        let executionDescription = await statebox.startExecution(
+      describe('parallel state machines with failing branches', () => {
+        const failTests = [
           {
-            results: []
+            label: 'parallel-failing',
+            stateMachine: 'parallelFail'
           },
-          'parallelFail', // state machine name
-          {} // options
-        )
+          {
+            label: 'parallelling up fail',
+            stateMachine: 'parallellingUpFail'
+          },
+          {
+            label: 'parallelling down fail',
+            stateMachine: 'parallellingDownFail'
+          },
+          {
+            label: 'paralleling up and down fail',
+            stateMachine: 'parallellingUpAndDownFail'
+          }
+        ]
 
-        executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+        for (const test of failTests) {
+          it(test.label, async () => {
+            let executionDescription = await statebox.startExecution(
+              {},
+              test.stateMachine, // state machine name
+              {} // options
+            )
 
-        expect(executionDescription.status).to.eql('FAILED')
-        expect(executionDescription.stateMachineName).to.eql('parallelFail')
-        expect(executionDescription.currentStateName).to.eql('Parallel1')
-        expect(executionDescription.currentResource).to.not.exist()
-        expect(executionDescription.errorMessage).to.eql('States.BranchFailed')
-        expect(executionDescription.errorCode).to.eql('Failed because a state in a parallel branch has failed')
+            executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+
+            expect(executionDescription.status).to.eql('FAILED')
+            expect(executionDescription.currentResource).to.not.exist()
+            expect(executionDescription.errorMessage).to.eql('States.BranchFailed')
+            expect(executionDescription.errorCode).to.eql('Failed because a state in a parallel branch has failed')
+          })
+        } // for ...
       })
 
       describe('parallel - state machine with parallel states and results - run multiple times', () => {
