@@ -8,5 +8,8 @@ module.exports = {
   parallelFail: require('./parallel-fail-state-machine.json'),
   parallellingUpFail: require('./parallel-up-fail.json'),
   parallellingDownFail: require('./parallel-down-fail.json'),
-  parallellingUpAndDownFail: require('./parallel-up-and-down-fail.json')
+  parallellingUpAndDownFail: require('./parallel-up-and-down-fail.json'),
+  parallellingUpFailCatch: require('./parallel-up-fail-catch.json'),
+  parallellingDownFailCatch: require('./parallel-down-fail-catch.json'),
+  parallellingUpAndDownFailCatch: require('./parallel-up-and-down-fail-catch.json')
 }

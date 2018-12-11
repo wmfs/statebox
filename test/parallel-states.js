@@ -6,7 +6,7 @@ const dirtyChai = require('dirty-chai')
 const expect = chai.expect
 chai.use(dirtyChai)
 
-const DaosToTest = require('./daosToTest')
+const DaosToTest = [require('./daosToTest')[3]]
 
 // Module Resources
 const moduleResources = require('./fixtures/state-machines/parallel-state/resources')
@@ -113,19 +113,38 @@ describe('Parallel State', function () {
         const failTests = [
           {
             label: 'parallel-failing',
-            stateMachine: 'parallelFail'
+            stateMachine: 'parallelFail',
+            code: 'States.BranchFailed'
           },
           {
             label: 'parallelling up fail',
-            stateMachine: 'parallellingUpFail'
+            stateMachine: 'parallellingUpFail',
+            code: 'States.BranchFailed'
           },
           {
             label: 'parallelling down fail',
-            stateMachine: 'parallellingDownFail'
+            stateMachine: 'parallellingDownFail',
+            code: 'States.BranchFailed'
           },
           {
             label: 'paralleling up and down fail',
-            stateMachine: 'parallellingUpAndDownFail'
+            stateMachine: 'parallellingUpAndDownFail',
+            code: 'States.BranchFailed'
+          },
+          {
+            label: 'parallelling up fail and catch',
+            stateMachine: 'parallellingUpFailCatch',
+            code: 'Oh No'
+          },
+          {
+            label: 'parallelling down fail and catch',
+            stateMachine: 'parallellingDownFailCatch',
+            code: 'Oh No'
+          },
+          {
+            label: 'paralleling up and down fail and catch',
+            stateMachine: 'parallellingUpAndDownFailCatch',
+            code: 'Oh No'
           }
         ]
 
@@ -141,7 +160,7 @@ describe('Parallel State', function () {
 
             expect(executionDescription.status).to.eql('FAILED')
             expect(executionDescription.currentResource).to.not.exist()
-            expect(executionDescription.errorCode).to.eql('States.BranchFailed')
+            expect(executionDescription.errorCode).to.eql(test.code)
           })
         } // for ...
       })
