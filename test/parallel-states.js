@@ -6,7 +6,7 @@ const dirtyChai = require('dirty-chai')
 const expect = chai.expect
 chai.use(dirtyChai)
 
-const DaosToTest = [require('./daosToTest')[3]]
+const DaosToTest = require('./daosToTest')
 
 // Module Resources
 const moduleResources = require('./fixtures/state-machines/parallel-state/resources')
