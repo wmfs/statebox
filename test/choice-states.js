@@ -34,6 +34,14 @@ describe('Choice State', function () {
       )
     } // for ...
   }
+
+  for (const machine of choiceStates) {
+    failingTest(
+      `${machine} - no matching choice`,
+      machine,
+      { calc: { operator: 'farts' } }
+    )
+  } // for ...
 })
 
 function test (label, statemachine, input, result) {
@@ -50,5 +58,22 @@ function test (label, statemachine, input, result) {
     expect(executionDescription.stateMachineName).to.eql(statemachine)
     expect(executionDescription.currentResource).to.eql(undefined)
     expect(executionDescription.ctx).to.eql(result)
+  }) // it ...
+}
+
+function failingTest (label, statemachine, input) {
+  it(label, async () => {
+    let executionDescription = await statebox.startExecution(
+      Object.assign({}, input),
+      statemachine,
+      {} // options
+    )
+
+    executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+
+    expect(executionDescription.status).to.eql('FAILED')
+    expect(executionDescription.stateMachineName).to.eql(statemachine)
+    expect(executionDescription.errorMessage).to.eql('States.NoChoiceMatched')
+    expect(executionDescription.errorCode).to.eql(`No matching choice in ${executionDescription.executionName}.OperatorChoice`)
   }) // it ...
 }
