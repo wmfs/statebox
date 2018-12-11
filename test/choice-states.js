@@ -42,6 +42,13 @@ describe('Choice State', function () {
       { calc: { operator: 'farts' } }
     )
   } // for ...
+  for (const machine of choiceStates) {
+    failingTest(
+      `${machine} - empty input`,
+      machine,
+      { }
+    )
+  } // for ...
 })
 
 function test (label, statemachine, input, result) {
