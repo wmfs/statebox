@@ -1,3 +1,15 @@
+# [1.40.0](https://github.com/wmfs/statebox/compare/v1.39.1...v1.40.0) (2018-12-11)
+
+
+### 🐛 Bug Fixes
+
+* Pull in asl-choice-processor update so Choice doesn't explode on empty input. ([ee2d80d](https://github.com/wmfs/statebox/commit/ee2d80d))
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/asl-choice-processor requirement ([2fea4fe](https://github.com/wmfs/statebox/commit/2fea4fe))
+
 ## [1.39.1](https://github.com/wmfs/statebox/compare/v1.39.0...v1.39.1) (2018-12-11)
 
 
