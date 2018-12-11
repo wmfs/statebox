@@ -1,3 +1,15 @@
+## [1.39.1](https://github.com/wmfs/statebox/compare/v1.39.0...v1.39.1) (2018-12-11)
+
+
+### 🐛 Bug Fixes
+
+* When nothing matches in a Choice state, return a States.NoChoiceMatched error ([ab4a0b9](https://github.com/wmfs/statebox/commit/ab4a0b9))
+
+
+### 🚨 Tests
+
+* Remove duplicate fail state tests ([da119d3](https://github.com/wmfs/statebox/commit/da119d3))
+
 # [1.39.0](https://github.com/wmfs/statebox/compare/v1.38.0...v1.39.0) (2018-12-06)
 
 
