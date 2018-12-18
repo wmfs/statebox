@@ -1,0 +1,33 @@
+{
+  "Comment": "Example from https://states-language.net/spec.html#parallel-state",
+  "StartAt": "FunWithMath",
+  "States": {
+    "FunWithMath": {
+      "Type": "Parallel",
+      "Branches": [
+        {
+          "StartAt": "Add",
+          "States": {
+            "Add": {
+              "Type": "Task",
+              "Resource": "module:Add",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "Subtract",
+          "States": {
+            "Subtract": {
+              "Type": "Task",
+              "Resource": "module:Subtract",
+              "End": true
+            }
+          }
+        }
+      ],
+      "InputPath": "$.numbers",
+      "End": true
+    }
+  }
+}
