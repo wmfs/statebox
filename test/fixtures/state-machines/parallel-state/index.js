@@ -2,6 +2,7 @@ module.exports = {
   parallel: require('./parallel-state-machine.json'),
   parallelResults: require('./parallel-results-machine.json'),
   funWithMath: require('./fun-with-math-state-machine.json'),
+  funWithMathWithOutputPath: require('./fun-with-math-state-machine-with-output-path.json'),
   parallellingUp: require('./parallel-up.json'),
   parallellingDown: require('./parallel-down.json'),
   parallellingUpAndDown: require('./parallel-up-and-down.json'),

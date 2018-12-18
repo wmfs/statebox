@@ -39,6 +39,12 @@ describe('Parallel State', function () {
             expected: [ 5, 1 ]
           },
           {
+            label: 'fun-with-math-with-output-path',
+            stateMachine: 'funWithMathWithOutputPath',
+            input: [ 3, 2 ],
+            expected: 5
+          },
+          {
             label: 'parallelling up',
             stateMachine: 'parallellingUp',
             input: { },
