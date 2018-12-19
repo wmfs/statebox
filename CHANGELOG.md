@@ -1,3 +1,51 @@
+# [1.41.0](https://github.com/wmfs/statebox/compare/v1.40.0...v1.41.0) (2018-12-19)
+
+
+### ✨ Features
+
+* Parallel State works as per spec ([3554a27](https://github.com/wmfs/statebox/commit/3554a27))
+
+
+### 🐛 Bug Fixes
+
+* Correct implementation of failed branch handling ([3919a95](https://github.com/wmfs/statebox/commit/3919a95))
+* Handle Catch in Parallel branches properly. ([ebd3e75](https://github.com/wmfs/statebox/commit/ebd3e75))
+* Set Task Context stateMachineMeta ([1c95c7d](https://github.com/wmfs/statebox/commit/1c95c7d))
+* Strip out ParallelBranchTracker and fold into Base-state ([32a08c0](https://github.com/wmfs/statebox/commit/32a08c0))
+* Use per-branch parallel context ([48d767c](https://github.com/wmfs/statebox/commit/48d767c))
+* When a Parallel branch completes, run processTaskSuccess on the correct object ([c5c58d9](https://github.com/wmfs/statebox/commit/c5c58d9))
+
+
+### 🛠 Builds
+
+* **deps:** update boom requirement from 7.2.2 to 7.3.0 ([f8cff0a](https://github.com/wmfs/statebox/commit/f8cff0a))
+* **deps:** update deepmerge requirement from 2.2.1 to 3.0.0 ([ae08ba8](https://github.com/wmfs/statebox/commit/ae08ba8))
+* **deps:** update luxon requirement from 1.8.1 to 1.8.2 ([2f464a0](https://github.com/wmfs/statebox/commit/2f464a0))
+* **deps-dev:** update semantic-release requirement ([201d426](https://github.com/wmfs/statebox/commit/201d426))
+
+
+### 📦 Code Refactoring
+
+* Use const for number of state machines we run in the parallel tests ([af4b8c3](https://github.com/wmfs/statebox/commit/af4b8c3))
+
+
+### 🚨 Tests
+
+* Add FunWithMath test ([cfde7d7](https://github.com/wmfs/statebox/commit/cfde7d7))
+* Additional Parallel state tests with various levels of nesting. ([168ebbe](https://github.com/wmfs/statebox/commit/168ebbe))
+* Extra parallel state machine with failing branches tests ([f85cfa7](https://github.com/wmfs/statebox/commit/f85cfa7))
+* Remove some console.log output ([5965907](https://github.com/wmfs/statebox/commit/5965907))
+* Removed more console.log noise ([18e9e81](https://github.com/wmfs/statebox/commit/18e9e81))
+* Tests covering input and result path for Parallel states ([176f2d1](https://github.com/wmfs/statebox/commit/176f2d1))
+
+
+### ♻️ Chores
+
+* **release:** 1.37.2 [skip ci] ([ef61846](https://github.com/wmfs/statebox/commit/ef61846))
+* **release:** 1.37.3 [skip ci] ([1bac62c](https://github.com/wmfs/statebox/commit/1bac62c))
+* **release:** 1.38.0 [skip ci] ([9ef4715](https://github.com/wmfs/statebox/commit/9ef4715))
+* **release:** 1.39.0 [skip ci] ([ce6b51c](https://github.com/wmfs/statebox/commit/ce6b51c))
+
 # [1.40.0](https://github.com/wmfs/statebox/compare/v1.39.1...v1.40.0) (2018-12-11)
 
 
