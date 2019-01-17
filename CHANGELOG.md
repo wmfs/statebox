@@ -1,3 +1,21 @@
+# [1.42.0](https://github.com/wmfs/statebox/compare/v1.41.0...v1.42.0) (2019-01-17)
+
+
+### ✨ Features
+
+* Expose findModuleByName method. ([0acc380](https://github.com/wmfs/statebox/commit/0acc380))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([b06db72](https://github.com/wmfs/statebox/commit/b06db72))
+* **deps-dev:** update semantic-release requirement ([79c6183](https://github.com/wmfs/statebox/commit/79c6183))
+
+
+### 📦 Code Refactoring
+
+* in deserialise(), surround JSON.parse in try/catch in case the incoming ctx/executionOptions are strings ([3ea2de5](https://github.com/wmfs/statebox/commit/3ea2de5))
+
 # [1.41.0](https://github.com/wmfs/statebox/compare/v1.40.0...v1.41.0) (2018-12-19)
 
 
