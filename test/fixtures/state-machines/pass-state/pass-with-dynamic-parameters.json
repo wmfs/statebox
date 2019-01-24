@@ -7,7 +7,9 @@
       "Parameters": {
         "x-datum": 0,
         "y-datum": 600,
-        "where.$": "$.georefOf"
+        "input": {
+          "where.$": "$.georefOf"
+        }
       },
       "End": true
     }

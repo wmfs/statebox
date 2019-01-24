@@ -7,7 +7,7 @@
       "Parameters": {
         "x-datum": 0,
         "y-datum": 600,
-        "where.$": "$.georefOf"
+        "where.$": "$"
       },
       "ResultPath": "$.place",
       "End": true

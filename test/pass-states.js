@@ -89,7 +89,9 @@ describe('Pass State', function () {
       georefOf: 'Home',
       'x-datum': 0,
       'y-datum': 600,
-      where: 'Home'
+      input: {
+        where: 'Home'
+      }
     },
     passWithDynamicParametersAndResult: {
       georefOf: 'Home',
@@ -109,7 +111,9 @@ describe('Pass State', function () {
       place: {
         'x-datum': 0,
         'y-datum': 600,
-        where: 'Home'
+        where: {
+          georefOf: 'Home'
+        }
       }
     },
     passWithDynamicParametersResultPathAndOutputPath: {
