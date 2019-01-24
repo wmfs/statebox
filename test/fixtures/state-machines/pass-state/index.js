@@ -23,5 +23,6 @@ module.exports = {
   passWithDynamicParametersAndResultPath: require('./pass-with-dynamic-parameters-and-result-path'),
   passWithDynamicParametersAndResultResultPath: require('./pass-with-dynamic-parameters-and-result-result-path'),
   passWithDynamicParametersResultPathAndOutputPath: require('./pass-with-dynamic-parameters-result-path-and-output-path'),
-  passWithDynamicParametersResultResultPathAndOutputPath: require('./pass-with-dynamic-parameters-result-result-path-and-output-path')
+  passWithDynamicParametersResultResultPathAndOutputPath: require('./pass-with-dynamic-parameters-result-result-path-and-output-path'),
+  parametersSpecExample: require('./parameters-spec-example')
 }

@@ -135,6 +135,23 @@ describe('Pass State', function () {
       result
     )
   } // for ...
+
+  test(
+    'parameter spec example',
+    'parametersSpecExample',
+    {
+      flagged: 7,
+      vals: [0, 10, 20, 30, 40, 50]
+    },
+    {
+      flagged: true,
+      parts: {
+        first: 0,
+        last3: [30, 40, 50]
+      },
+      vals: [0, 10, 20, 30, 40, 50]
+    }
+  )
 })
 
 function test (label, statemachine, input, result) {
