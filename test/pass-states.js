@@ -84,6 +84,42 @@ describe('Pass State', function () {
     passWithFixedParametersResultResultPathAndOutputPath: {
       'x-datum': 1000,
       'y-datum': 1600
+    },
+    passWithDynamicParameters: {
+      georefOf: 'Home',
+      'x-datum': 0,
+      'y-datum': 600,
+      where: 'Home'
+    },
+    passWithDynamicParametersAndResult: {
+      georefOf: 'Home',
+      'x-datum': 1000,
+      'y-datum': 1600
+    },
+    passWithDynamicParametersAndResultResultPath: {
+      georefOf: 'Home',
+      place: {
+        'x-datum': 1000,
+        'y-datum': 1600
+      }
+    },
+    passWithDynamicParametersAndNullOutputPath: { },
+    passWithDynamicParametersAndResultPath: {
+      georefOf: 'Home',
+      place: {
+        'x-datum': 0,
+        'y-datum': 600,
+        where: 'Home'
+      }
+    },
+    passWithDynamicParametersResultPathAndOutputPath: {
+      'x-datum': 0,
+      'y-datum': 600,
+      where: 'Home'
+    },
+    passWithDynamicParametersResultResultPathAndOutputPath: {
+      'x-datum': 1000,
+      'y-datum': 1600
     }
   }
 
