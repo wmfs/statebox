@@ -37,7 +37,7 @@ describe('Pass State', function () {
       }
     },
     passWithResultAndNullResultPath: georefOf,
-    // passWithInputPath: 'Home',
+    passWithInputPath: 'Home',
     passWithInputPathAndResultPath: {
       georefOf: 'Home',
       place: 'Home'
@@ -53,14 +53,17 @@ describe('Pass State', function () {
       'y-datum': 600
     },
     passWithFixedParameters: {
+      georefOf: 'Home',
       'x-datum': 0,
       'y-datum': 600
     },
     passWithFixedParametersAndResult: {
+      georefOf: 'Home',
       'x-datum': 1000,
       'y-datum': 1600
     },
     passWithFixedParametersAndResultResultPath: {
+      georefOf: 'Home',
       place: {
         'x-datum': 1000,
         'y-datum': 1600
@@ -68,6 +71,7 @@ describe('Pass State', function () {
     },
     passWithFixedParametersAndNullOutputPath: { },
     passWithFixedParametersAndResultPath: {
+      georefOf: 'Home',
       place: {
         'x-datum': 0,
         'y-datum': 600
