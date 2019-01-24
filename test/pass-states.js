@@ -51,6 +51,35 @@ describe('Pass State', function () {
     passWithResultResultPathAndOutputPath: {
       'x-datum': 0,
       'y-datum': 600
+    },
+    passWithFixedParameters: {
+      'x-datum': 0,
+      'y-datum': 600
+    },
+    passWithFixedParametersAndResult: {
+      'x-datum': 1000,
+      'y-datum': 1600
+    },
+    passWithFixedParametersAndResultResultPath: {
+      place: {
+        'x-datum': 1000,
+        'y-datum': 1600
+      }
+    },
+    passWithFixedParametersAndNullOutputPath: { },
+    passWithFixedParametersAndResultPath: {
+      place: {
+        'x-datum': 0,
+        'y-datum': 600
+      }
+    },
+    passWithFixedParametersResultPathAndOutputPath: {
+      'x-datum': 0,
+      'y-datum': 600
+    },
+    passWithFixedParametersResultResultPathAndOutputPath: {
+      'x-datum': 1000,
+      'y-datum': 1600
     }
   }
 
