@@ -188,7 +188,7 @@ function negativeTest (label, statemachine, input, expectedErrorCode, expectedEr
   })
 }
 
-async function runStateMachine(statemachine, input) {
+async function runStateMachine (statemachine, input) {
   const executionDescription = await statebox.startExecution(
     Object.assign({}, input),
     statemachine,
