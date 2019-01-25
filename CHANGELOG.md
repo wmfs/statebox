@@ -1,3 +1,43 @@
+# [1.43.0](https://github.com/wmfs/statebox/compare/v1.42.0...v1.43.0) (2019-01-25)
+
+
+### ✨ Features
+
+* Initial Parameters implementation ([35fc6d5](https://github.com/wmfs/statebox/commit/35fc6d5))
+* Parameter implementation, including reference path evaluation and field replacement ([9e51a67](https://github.com/wmfs/statebox/commit/9e51a67))
+* Raise States.ParameterPathFailure if JSONPath returns no Extracted Value ([53b49fe](https://github.com/wmfs/statebox/commit/53b49fe))
+
+
+### 🐛 Bug Fixes
+
+* Parameters Extracted Value can be multi-valued arrays, as well as atomic values. ([1cd1d6c](https://github.com/wmfs/statebox/commit/1cd1d6c))
+* Use States.TaskFailed instead of literal ([ccd71f1](https://github.com/wmfs/statebox/commit/ccd71f1))
+
+
+### 📦 Code Refactoring
+
+* Pull out error states. ([915f339](https://github.com/wmfs/statebox/commit/915f339))
+* Simplify PathHandler import ([5567ac9](https://github.com/wmfs/statebox/commit/5567ac9))
+* Split input/result/output path handlers out from Base-state ([54a09b0](https://github.com/wmfs/statebox/commit/54a09b0))
+* Tidy up Task.Context.resolveInputPaths ([f9b7c47](https://github.com/wmfs/statebox/commit/f9b7c47))
+* Use ErrorStates instead of literals. ([3de299a](https://github.com/wmfs/statebox/commit/3de299a))
+
+
+### 📚 Documentation
+
+* Update README to reference statelint. ([26bdbe5](https://github.com/wmfs/statebox/commit/26bdbe5))
+
+
+### 🚨 Tests
+
+* Initial tests for Parameters field ([478342f](https://github.com/wmfs/statebox/commit/478342f))
+* Tests for Parameters with reference path evaluation ([5cf87b2](https://github.com/wmfs/statebox/commit/5cf87b2))
+
+
+### 💎 Styles
+
+* Lint fixes ([fdb6caf](https://github.com/wmfs/statebox/commit/fdb6caf))
+
 # [1.42.0](https://github.com/wmfs/statebox/compare/v1.41.0...v1.42.0) (2019-01-17)
 
 
