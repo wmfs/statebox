@@ -152,17 +152,22 @@ describe('Pass State', function () {
       vals: [0, 10, 20, 30, 40, 50]
     }
   )
+
+  negativeTest(
+    'parameter match failure',
+    'parametersSpecExample',
+    {
+      flagged: 7,
+      vals: 0
+    },
+    'States.ParameterPathFailure',
+    'JSONPath $.vals[0] did not match an input node'
+  )
 })
 
 function test (label, statemachine, input, result) {
   it(label, async () => {
-    let executionDescription = await statebox.startExecution(
-      Object.assign({}, input),
-      statemachine,
-      {} // options
-    )
-
-    executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+    const executionDescription = await runStateMachine(statemachine, input)
 
     expect(executionDescription.status).to.eql('SUCCEEDED')
     expect(executionDescription.stateMachineName).to.eql(statemachine)
@@ -170,4 +175,25 @@ function test (label, statemachine, input, result) {
     expect(executionDescription.currentResource).to.eql(undefined)
     expect(executionDescription.ctx).to.eql(result)
   }) // it ...
+}
+
+function negativeTest (label, statemachine, input, expectedErrorCode, expectedErrorMessage) {
+  it(label, async () => {
+    const executionDescription = await runStateMachine(statemachine, input)
+
+    expect(executionDescription.status).to.eql('FAILED')
+    expect(executionDescription.stateMachineName).to.eql(statemachine)
+    expect(executionDescription.errorMessage).to.eql(expectedErrorCode)
+    expect(executionDescription.errorCode).to.eql(expectedErrorMessage)
+  })
+}
+
+async function runStateMachine(statemachine, input) {
+  const executionDescription = await statebox.startExecution(
+    Object.assign({}, input),
+    statemachine,
+    {} // options
+  )
+
+  return statebox.waitUntilStoppedRunning(executionDescription.executionName)
 }
