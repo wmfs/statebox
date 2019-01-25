@@ -16,10 +16,10 @@
 
 ## Useful links
 
-* https://aws.amazon.com/step-functions/
-* http://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html
-* http://docs.aws.amazon.com/step-functions/latest/apireference/API_SendTaskSuccess.html
-
+* [AWS Step Functions](https://aws.amazon.com/step-functions/) - overview of Amazon States Language, use cases, etc
+* [statelint](https://npmjs.com/package/@wmfs/statelint) - a validator for Amazon States Language JSON files
+* https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html
+* https://docs.aws.amazon.com/step-functions/latest/apireference/API_SendTaskSuccess.html
 
 ## <a name='install'></a>Install
 ```bash
