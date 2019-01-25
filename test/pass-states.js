@@ -183,8 +183,8 @@ function negativeTest (label, statemachine, input, expectedErrorCode, expectedEr
 
     expect(executionDescription.status).to.eql('FAILED')
     expect(executionDescription.stateMachineName).to.eql(statemachine)
-    expect(executionDescription.errorMessage).to.eql(expectedErrorCode)
-    expect(executionDescription.errorCode).to.eql(expectedErrorMessage)
+    expect(executionDescription.errorCode).to.eql(expectedErrorCode)
+    expect(executionDescription.errorMessage).to.eql(expectedErrorMessage)
   })
 }
 

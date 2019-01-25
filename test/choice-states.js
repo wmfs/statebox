@@ -80,7 +80,7 @@ function failingTest (label, statemachine, input) {
 
     expect(executionDescription.status).to.eql('FAILED')
     expect(executionDescription.stateMachineName).to.eql(statemachine)
-    expect(executionDescription.errorMessage).to.eql('States.NoChoiceMatched')
-    expect(executionDescription.errorCode).to.eql(`No matching choice in ${executionDescription.executionName}.OperatorChoice`)
+    expect(executionDescription.errorCode).to.eql('States.NoChoiceMatched')
+    expect(executionDescription.errorMessage).to.eql(`No matching choice in ${executionDescription.executionName}.OperatorChoice`)
   }) // it ...
 }
