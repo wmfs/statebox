@@ -1,3 +1,19 @@
+# [1.44.0](https://github.com/wmfs/statebox/compare/v1.43.0...v1.44.0) (2019-01-26)
+
+
+### ✨ Features
+
+* Added Statebox.registerResourceResolver ([212f952](https://github.com/wmfs/statebox/commit/212f952))
+
+
+### 📦 Code Refactoring
+
+* Move resource resolution and ModuleResource into resources/ and out of Task completely ([7c38d3c](https://github.com/wmfs/statebox/commit/7c38d3c))
+* Pop Modules off by themselves ([e8fc5f1](https://github.com/wmfs/statebox/commit/e8fc5f1))
+* Pull all the module initialisation stuff out into a helper class ([4b907a0](https://github.com/wmfs/statebox/commit/4b907a0))
+* Pull resource resolution out of the Task constructor ([7aff1a1](https://github.com/wmfs/statebox/commit/7aff1a1))
+* Pulled module resolution out of resolve, paving way for additional resource resolvers ([9a0147f](https://github.com/wmfs/statebox/commit/9a0147f))
+
 # [1.43.0](https://github.com/wmfs/statebox/compare/v1.42.0...v1.43.0) (2019-01-25)
 
 
