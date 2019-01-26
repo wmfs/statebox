@@ -1,3 +1,16 @@
+## [1.44.1](https://github.com/wmfs/statebox/compare/v1.44.0...v1.44.1) (2019-01-26)
+
+
+### 🐛 Bug Fixes
+
+* Removed Statebox.validateStateMachineDefinition ([8a497d3](https://github.com/wmfs/statebox/commit/8a497d3))
+
+
+### 📦 Code Refactoring
+
+* Name tweaks ([89d6beb](https://github.com/wmfs/statebox/commit/89d6beb))
+* State Machine helpers to we make one call not two, and don't fish around inside StateMachi ([278aaf5](https://github.com/wmfs/statebox/commit/278aaf5))
+
 # [1.44.0](https://github.com/wmfs/statebox/compare/v1.43.0...v1.44.0) (2019-01-26)
 
 
