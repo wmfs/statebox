@@ -22,7 +22,7 @@ const Statebox = require('./../lib')
 
 let statebox
 
-describe('Additional Resource Types', function () {
+describe('StateBox with Additional Resource Type', function () {
   it('setup statebox without additional resolver', async () => {
     statebox = new Statebox()
     await statebox.ready
