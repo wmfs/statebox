@@ -1,0 +1,19 @@
+{
+  "Comment": "Example of the Pass State",
+  "StartAt": "PassState",
+  "States": {
+    "PassState": {
+      "Type": "Pass",
+      "Parameters": {
+        "x-datum": 0,
+        "y-datum": 600,
+        "where.$": "$.georefOf"
+      },
+      "Result": {
+        "x-datum": 1000,
+        "y-datum": 1600
+      },
+      "End": true
+    }
+  }
+}

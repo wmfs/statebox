@@ -1,0 +1,17 @@
+{
+  "Comment": "See https://states-language.net/spec.html#parameters",
+  "StartAt": "PassState",
+  "States": {
+    "PassState": {
+      "Type": "Pass",
+      "Parameters": {
+        "flagged": true,
+        "parts": {
+          "first.$": "$.vals[0]",
+          "last3.$": "$.vals[3:]"
+        }
+      },
+      "End": true
+    }
+  }
+}

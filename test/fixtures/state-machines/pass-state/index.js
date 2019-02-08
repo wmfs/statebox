@@ -9,5 +9,20 @@ module.exports = {
   passWithNullInputPath: require('./pass-with-null-input-path.json'),
   passWithNullInputPathAndResultPath: require('./pass-with-null-input-path-and-result-path.json'),
   passWithResultAndNullOutputPath: require('./pass-with-result-and-null-output-path'),
-  passWithResultResultPathAndOutputPath: require('./pass-with-result-result-path-and-output-path')
+  passWithResultResultPathAndOutputPath: require('./pass-with-result-result-path-and-output-path'),
+  passWithFixedParameters: require('./pass-with-fixed-parameters'),
+  passWithFixedParametersAndNullOutputPath: require('./pass-with-fixed-parameters-and-null-output-path'),
+  passWithFixedParametersAndResult: require('./pass-with-fixed-parameters-and-result'),
+  passWithFixedParametersAndResultPath: require('./pass-with-fixed-parameters-and-result-path'),
+  passWithFixedParametersAndResultResultPath: require('./pass-with-fixed-parameters-and-result-result-path'),
+  passWithFixedParametersResultPathAndOutputPath: require('./pass-with-fixed-parameters-result-path-and-output-path'),
+  passWithFixedParametersResultResultPathAndOutputPath: require('./pass-with-fixed-parameters-result-result-path-and-output-path'),
+  passWithDynamicParameters: require('./pass-with-dynamic-parameters'),
+  passWithDynamicParametersAndNullOutputPath: require('./pass-with-dynamic-parameters-and-null-output-path'),
+  passWithDynamicParametersAndResult: require('./pass-with-dynamic-parameters-and-result'),
+  passWithDynamicParametersAndResultPath: require('./pass-with-dynamic-parameters-and-result-path'),
+  passWithDynamicParametersAndResultResultPath: require('./pass-with-dynamic-parameters-and-result-result-path'),
+  passWithDynamicParametersResultPathAndOutputPath: require('./pass-with-dynamic-parameters-result-path-and-output-path'),
+  passWithDynamicParametersResultResultPathAndOutputPath: require('./pass-with-dynamic-parameters-result-result-path-and-output-path'),
+  parametersSpecExample: require('./parameters-spec-example')
 }

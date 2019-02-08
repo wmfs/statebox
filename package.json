@@ -25,7 +25,7 @@
     "@wmfs/asl-choice-processor": "1.10.1",
     "async": "2.6.1",
     "boom": "7.3.0",
-    "debug": "4.1.0",
+    "debug": "4.1.1",
     "deepmerge": "3.0.0",
     "dottie": "2.0.1",
     "jsonpath": "1.0.0",
@@ -34,7 +34,7 @@
     "uuid": "3.3.2"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "3.0.1",
+    "@semantic-release/changelog": "3.0.2",
     "@semantic-release/git": "7.0.8",
     "chai": "4.2.0",
     "chai-string": "1.5.0",
@@ -47,7 +47,7 @@
     "mocha": "5.2.0",
     "nyc": "13.1.0",
     "request-promise-native": "1.0.5",
-    "semantic-release": "15.13.1",
+    "semantic-release": "15.13.3",
     "standard": "12.0.1"
   },
   "scripts": {

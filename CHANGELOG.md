@@ -1,3 +1,108 @@
+## [1.44.2](https://github.com/wmfs/statebox/compare/v1.44.1...v1.44.2) (2019-02-08)
+
+
+### 🐛 Bug Fixes
+
+* Tightened up resource resolver error message ([d677c58](https://github.com/wmfs/statebox/commit/d677c58))
+
+
+### 📦 Code Refactoring
+
+* Stripped out unneeded code in Wait state ([deb855c](https://github.com/wmfs/statebox/commit/deb855c))
+
+
+### 🚨 Tests
+
+* Couple of tests covering resource resolver error cases ([b3403d5](https://github.com/wmfs/statebox/commit/b3403d5))
+* ErrorState method tests ([36fa5fd](https://github.com/wmfs/statebox/commit/36fa5fd))
+
+## [1.44.1](https://github.com/wmfs/statebox/compare/v1.44.0...v1.44.1) (2019-01-26)
+
+
+### 🐛 Bug Fixes
+
+* Removed Statebox.validateStateMachineDefinition ([8a497d3](https://github.com/wmfs/statebox/commit/8a497d3))
+
+
+### 📦 Code Refactoring
+
+* Name tweaks ([89d6beb](https://github.com/wmfs/statebox/commit/89d6beb))
+* State Machine helpers to we make one call not two, and don't fish around inside StateMachi ([278aaf5](https://github.com/wmfs/statebox/commit/278aaf5))
+
+# [1.44.0](https://github.com/wmfs/statebox/compare/v1.43.0...v1.44.0) (2019-01-26)
+
+
+### ✨ Features
+
+* Added Statebox.registerResourceResolver ([212f952](https://github.com/wmfs/statebox/commit/212f952))
+
+
+### 📦 Code Refactoring
+
+* Move resource resolution and ModuleResource into resources/ and out of Task completely ([7c38d3c](https://github.com/wmfs/statebox/commit/7c38d3c))
+* Pop Modules off by themselves ([e8fc5f1](https://github.com/wmfs/statebox/commit/e8fc5f1))
+* Pull all the module initialisation stuff out into a helper class ([4b907a0](https://github.com/wmfs/statebox/commit/4b907a0))
+* Pull resource resolution out of the Task constructor ([7aff1a1](https://github.com/wmfs/statebox/commit/7aff1a1))
+* Pulled module resolution out of resolve, paving way for additional resource resolvers ([9a0147f](https://github.com/wmfs/statebox/commit/9a0147f))
+
+# [1.43.0](https://github.com/wmfs/statebox/compare/v1.42.0...v1.43.0) (2019-01-25)
+
+
+### ✨ Features
+
+* Initial Parameters implementation ([35fc6d5](https://github.com/wmfs/statebox/commit/35fc6d5))
+* Parameter implementation, including reference path evaluation and field replacement ([9e51a67](https://github.com/wmfs/statebox/commit/9e51a67))
+* Raise States.ParameterPathFailure if JSONPath returns no Extracted Value ([53b49fe](https://github.com/wmfs/statebox/commit/53b49fe))
+
+
+### 🐛 Bug Fixes
+
+* Parameters Extracted Value can be multi-valued arrays, as well as atomic values. ([1cd1d6c](https://github.com/wmfs/statebox/commit/1cd1d6c))
+* Use States.TaskFailed instead of literal ([ccd71f1](https://github.com/wmfs/statebox/commit/ccd71f1))
+
+
+### 📦 Code Refactoring
+
+* Pull out error states. ([915f339](https://github.com/wmfs/statebox/commit/915f339))
+* Simplify PathHandler import ([5567ac9](https://github.com/wmfs/statebox/commit/5567ac9))
+* Split input/result/output path handlers out from Base-state ([54a09b0](https://github.com/wmfs/statebox/commit/54a09b0))
+* Tidy up Task.Context.resolveInputPaths ([f9b7c47](https://github.com/wmfs/statebox/commit/f9b7c47))
+* Use ErrorStates instead of literals. ([3de299a](https://github.com/wmfs/statebox/commit/3de299a))
+
+
+### 📚 Documentation
+
+* Update README to reference statelint. ([26bdbe5](https://github.com/wmfs/statebox/commit/26bdbe5))
+
+
+### 🚨 Tests
+
+* Initial tests for Parameters field ([478342f](https://github.com/wmfs/statebox/commit/478342f))
+* Tests for Parameters with reference path evaluation ([5cf87b2](https://github.com/wmfs/statebox/commit/5cf87b2))
+
+
+### 💎 Styles
+
+* Lint fixes ([fdb6caf](https://github.com/wmfs/statebox/commit/fdb6caf))
+
+# [1.42.0](https://github.com/wmfs/statebox/compare/v1.41.0...v1.42.0) (2019-01-17)
+
+
+### ✨ Features
+
+* Expose findModuleByName method. ([0acc380](https://github.com/wmfs/statebox/commit/0acc380))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([b06db72](https://github.com/wmfs/statebox/commit/b06db72))
+* **deps-dev:** update semantic-release requirement ([79c6183](https://github.com/wmfs/statebox/commit/79c6183))
+
+
+### 📦 Code Refactoring
+
+* in deserialise(), surround JSON.parse in try/catch in case the incoming ctx/executionOptions are strings ([3ea2de5](https://github.com/wmfs/statebox/commit/3ea2de5))
+
 # [1.41.0](https://github.com/wmfs/statebox/compare/v1.40.0...v1.41.0) (2018-12-19)
 
 
