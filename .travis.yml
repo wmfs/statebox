@@ -2,13 +2,11 @@ language: node_js
 notifications:
   email: false
 node_js:
-  - '9'
+  - lts/*
 install:
   - travis_retry npm install
 test:
   - npm test
-after_success:
-  - npm run coverage
 before_deploy:
   - npm run coverage
 deploy:
