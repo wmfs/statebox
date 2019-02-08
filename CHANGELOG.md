@@ -1,3 +1,21 @@
+## [1.44.2](https://github.com/wmfs/statebox/compare/v1.44.1...v1.44.2) (2019-02-08)
+
+
+### 🐛 Bug Fixes
+
+* Tightened up resource resolver error message ([d677c58](https://github.com/wmfs/statebox/commit/d677c58))
+
+
+### 📦 Code Refactoring
+
+* Stripped out unneeded code in Wait state ([deb855c](https://github.com/wmfs/statebox/commit/deb855c))
+
+
+### 🚨 Tests
+
+* Couple of tests covering resource resolver error cases ([b3403d5](https://github.com/wmfs/statebox/commit/b3403d5))
+* ErrorState method tests ([36fa5fd](https://github.com/wmfs/statebox/commit/36fa5fd))
+
 ## [1.44.1](https://github.com/wmfs/statebox/compare/v1.44.0...v1.44.1) (2019-01-26)
 
 
