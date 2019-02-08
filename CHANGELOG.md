@@ -1,3 +1,20 @@
+# [1.45.0](https://github.com/wmfs/statebox/compare/v1.44.2...v1.45.0) (2019-02-08)
+
+
+### 🛠 Builds
+
+* **deps:** update debug requirement from 4.1.0 to 4.1.1 ([109ce1b](https://github.com/wmfs/statebox/commit/109ce1b))
+* **deps:** update deepmerge requirement from 3.0.0 to 3.1.0 ([a89f407](https://github.com/wmfs/statebox/commit/a89f407))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/changelog requirement ([0495115](https://github.com/wmfs/statebox/commit/0495115))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([1dd5230](https://github.com/wmfs/statebox/commit/1dd5230))
+* **deps-dev:** update semantic-release requirement ([6256e70](https://github.com/wmfs/statebox/commit/6256e70))
+
+
+### ♻️ Chores
+
+* **deps:** update luxon requirement from 1.8.2 to 1.11.1 ([5f02149](https://github.com/wmfs/statebox/commit/5f02149))
+* **deps-dev:** update nyc requirement from 13.1.0 to 13.2.0 ([f4fc98a](https://github.com/wmfs/statebox/commit/f4fc98a))
+
 ## [1.44.2](https://github.com/wmfs/statebox/compare/v1.44.1...v1.44.2) (2019-02-08)
 
 
