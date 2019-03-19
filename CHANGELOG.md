@@ -1,3 +1,15 @@
+# [1.46.0](https://github.com/wmfs/statebox/compare/v1.45.0...v1.46.0) (2019-03-19)
+
+
+### ✨ Features
+
+* include instigatorsGroup, if instigators has user ([36f27a1](https://github.com/wmfs/statebox/commit/36f27a1))
+
+
+### ⚙️ Continuous Integrations
+
+* Update travis.yml ([528fc78](https://github.com/wmfs/statebox/commit/528fc78))
+
 # [1.45.0](https://github.com/wmfs/statebox/compare/v1.44.2...v1.45.0) (2019-02-08)
 
 
