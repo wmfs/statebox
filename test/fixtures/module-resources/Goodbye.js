@@ -8,9 +8,8 @@ const schema = {
 }
 
 module.exports = class Goodbye {
-  init (resourceConfig, env, callback) {
+  init (resourceConfig, env) {
     this.schema = schema
-    callback(null)
   }
 
   run (event, context) {

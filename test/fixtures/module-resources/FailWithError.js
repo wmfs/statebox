@@ -1,8 +1,7 @@
 'use strict'
 
 module.exports = class Failure {
-  init (resourceConfig, env, callback) {
-    callback(null)
+  init (resourceConfig, env) {
   }
 
   run (event, context) {
