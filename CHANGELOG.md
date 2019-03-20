@@ -1,3 +1,10 @@
+# [1.47.0](https://github.com/wmfs/statebox/compare/v1.46.0...v1.47.0) (2019-03-20)
+
+
+### ✨ Features
+
+* ModuleResources no longer need to take a callback, and maybe async. ([1f79e18](https://github.com/wmfs/statebox/commit/1f79e18))
+
 # [1.46.0](https://github.com/wmfs/statebox/compare/v1.45.0...v1.46.0) (2019-03-19)
 
 
