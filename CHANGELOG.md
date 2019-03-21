@@ -1,3 +1,10 @@
+## [1.47.3](https://github.com/wmfs/statebox/compare/v1.47.2...v1.47.3) (2019-03-21)
+
+
+### 🐛 Bug Fixes
+
+* Don't fail if a parameter extracted value path doesn't match. ([8cfde9f](https://github.com/wmfs/statebox/commit/8cfde9f))
+
 ## [1.47.2](https://github.com/wmfs/statebox/compare/v1.47.1...v1.47.2) (2019-03-21)
 
 
