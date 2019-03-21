@@ -1,3 +1,10 @@
+## [1.47.2](https://github.com/wmfs/statebox/compare/v1.47.1...v1.47.2) (2019-03-21)
+
+
+### 🐛 Bug Fixes
+
+* revert logs as the issue is not here ([a6731c9](https://github.com/wmfs/statebox/commit/a6731c9))
+
 ## [1.47.1](https://github.com/wmfs/statebox/compare/v1.47.0...v1.47.1) (2019-03-21)
 
 
