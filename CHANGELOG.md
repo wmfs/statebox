@@ -1,3 +1,10 @@
+## [1.47.1](https://github.com/wmfs/statebox/compare/v1.47.0...v1.47.1) (2019-03-21)
+
+
+### 🐛 Bug Fixes
+
+* added a console log for checking something on dev ([b6f17b5](https://github.com/wmfs/statebox/commit/b6f17b5))
+
 # [1.47.0](https://github.com/wmfs/statebox/compare/v1.46.0...v1.47.0) (2019-03-20)
 
 
