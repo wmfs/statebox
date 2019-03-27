@@ -1,3 +1,10 @@
+# [1.48.0](https://github.com/wmfs/statebox/compare/v1.47.3...v1.48.0) (2019-03-27)
+
+
+### ✨ Features
+
+* expose canBeStartedOffline property in statebox ([edeeb05](https://github.com/wmfs/statebox/commit/edeeb05))
+
 ## [1.47.3](https://github.com/wmfs/statebox/compare/v1.47.2...v1.47.3) (2019-03-21)
 
 
