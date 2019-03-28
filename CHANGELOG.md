@@ -1,3 +1,10 @@
+## [1.48.1](https://github.com/wmfs/statebox/compare/v1.48.0...v1.48.1) (2019-03-28)
+
+
+### 🐛 Bug Fixes
+
+* When a statemachine completes we always want to fire any callback ([0f97a08](https://github.com/wmfs/statebox/commit/0f97a08))
+
 # [1.48.0](https://github.com/wmfs/statebox/compare/v1.47.3...v1.48.0) (2019-03-27)
 
 
