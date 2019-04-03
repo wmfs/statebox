@@ -1,3 +1,10 @@
+# [1.49.0](https://github.com/wmfs/statebox/compare/v1.48.1...v1.49.0) (2019-04-03)
+
+
+### ✨ Features
+
+* try adding indexes to executions model ([9aceceb](https://github.com/wmfs/statebox/commit/9aceceb))
+
 ## [1.48.1](https://github.com/wmfs/statebox/compare/v1.48.0...v1.48.1) (2019-03-28)
 
 
