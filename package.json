@@ -23,7 +23,7 @@
   "main": "./lib/index.js",
   "dependencies": {
     "@wmfs/asl-choice-processor": "1.10.1",
-    "async": "2.6.1",
+    "async": "3.0.1",
     "boom": "7.3.0",
     "debug": "4.1.1",
     "deepmerge": "3.1.0",
