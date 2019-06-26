@@ -1,3 +1,16 @@
+# [1.50.0](https://github.com/wmfs/statebox/compare/v1.49.0...v1.50.0) (2019-06-26)
+
+
+### 🛠 Builds
+
+* **deps:** update async requirement from 2.6.1 to 3.1.0 ([d2f981c](https://github.com/wmfs/statebox/commit/d2f981c))
+* **deps:** update deepmerge requirement from 3.1.0 to 3.3.0 ([03cd25d](https://github.com/wmfs/statebox/commit/03cd25d))
+* **deps:** update jsonpath requirement from 1.0.0 to 1.0.2 ([83a098a](https://github.com/wmfs/statebox/commit/83a098a))
+* **deps:** update luxon requirement from 1.11.1 to 1.16.0 ([39e85c9](https://github.com/wmfs/statebox/commit/39e85c9))
+* **deps-dev:** update mocha requirement from 5.2.0 to 6.1.4 ([55af55f](https://github.com/wmfs/statebox/commit/55af55f))
+* **deps-dev:** update request-promise-native requirement ([91ec293](https://github.com/wmfs/statebox/commit/91ec293))
+* **deps-dev:** update semantic-release requirement ([5949955](https://github.com/wmfs/statebox/commit/5949955))
+
 # [1.49.0](https://github.com/wmfs/statebox/compare/v1.48.1...v1.49.0) (2019-04-03)
 
 
