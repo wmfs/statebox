@@ -1,0 +1,52 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  test:
+    docker:
+      # use node:lts
+      - image: circleci/node:lts
+        environment:
+           TZ: "Europe/London"
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: install
+          command: npm install
+      - run:
+          name: test
+          command: npm test
+      - run:
+          name: codecov
+          command: npm run coverage
+  release:
+    docker:
+    # use node:lts
+    - image: circleci/node:lts
+      environment:
+        TZ: "Europe/London"
+    working_directory: ~/repo
+    steps:
+    - checkout
+    - run:
+        name: install
+        command: npm install
+    - run:
+        name: release
+        command: npx semantic-release
+
+
+workflows:
+  version: 2
+  test_and_release:
+    jobs:
+    - test
+    - release:
+        requires:
+        - test
+        filters:
+          branches:
+            only: master
