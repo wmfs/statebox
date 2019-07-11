@@ -1,3 +1,24 @@
+# [1.52.0](https://github.com/wmfs/statebox/compare/v1.51.0...v1.52.0) (2019-07-11)
+
+
+### 🛠 Builds
+
+* **deps:** update lodash requirement from 4.17.11 to 4.17.14 ([7566571](https://github.com/wmfs/statebox/commit/7566571))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([7d11f6f](https://github.com/wmfs/statebox/commit/7d11f6f))
+* **deps-dev:** update nyc requirement from 13.2.0 to 14.1.1 ([7c433c7](https://github.com/wmfs/statebox/commit/7c433c7))
+* **deps-dev:** update semantic-release requirement ([e0b2754](https://github.com/wmfs/statebox/commit/e0b2754))
+
+
+### 📚 Documentation
+
+* Add CircleCI badge ([cda57d2](https://github.com/wmfs/statebox/commit/cda57d2))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** Add CircleCI config ([8eff1ac](https://github.com/wmfs/statebox/commit/8eff1ac))
+* **travis:** Remove Travis config ([0febd00](https://github.com/wmfs/statebox/commit/0febd00))
+
 # [1.51.0](https://github.com/wmfs/statebox/compare/v1.50.0...v1.51.0) (2019-06-27)
 
 
