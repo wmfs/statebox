@@ -1,3 +1,10 @@
+# [1.54.0](https://github.com/wmfs/statebox/compare/v1.53.0...v1.54.0) (2019-09-09)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/asl-choice-processor requirement ([2e7d775](https://github.com/wmfs/statebox/commit/2e7d775))
+
 # [1.53.0](https://github.com/wmfs/statebox/compare/v1.52.0...v1.53.0) (2019-09-09)
 
 
