@@ -1,3 +1,10 @@
+# [1.53.0](https://github.com/wmfs/statebox/compare/v1.52.0...v1.53.0) (2019-09-09)
+
+
+### 🛠 Builds
+
+* **deps:** update lodash requirement from 4.17.14 to 4.17.15 ([340c77f](https://github.com/wmfs/statebox/commit/340c77f))
+
 # [1.52.0](https://github.com/wmfs/statebox/compare/v1.51.0...v1.52.0) (2019-07-11)
 
 
