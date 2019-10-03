@@ -26,12 +26,12 @@
     "async": "3.1.0",
     "boom": "7.3.0",
     "debug": "4.1.1",
-    "deepmerge": "3.3.0",
+    "deepmerge": "4.0.0",
     "dottie": "2.0.1",
     "jsonpath": "1.0.2",
     "lodash": "4.17.15",
-    "luxon": "1.16.0",
-    "uuid": "3.3.2"
+    "luxon": "1.19.3",
+    "uuid": "3.3.3"
   },
   "devDependencies": {
     "@semantic-release/changelog": "3.0.4",
@@ -39,16 +39,16 @@
     "chai": "4.2.0",
     "chai-string": "1.5.0",
     "chai-subset": "1.6.0",
-    "codecov": "3.1.0",
+    "codecov": "3.6.1",
     "conventional-changelog-metahub": "2.0.2",
     "cz-conventional-changelog": "3.0.2",
     "dirty-chai": "2.0.1",
-    "express": "4.16.4",
-    "mocha": "6.2.0",
+    "express": "4.17.1",
+    "mocha": "6.2.1",
     "nyc": "14.1.1",
     "request-promise-native": "1.0.7",
     "semantic-release": "15.13.24",
-    "standard": "12.0.1"
+    "standard": "14.3.1"
   },
   "scripts": {
     "lint": "standard",
