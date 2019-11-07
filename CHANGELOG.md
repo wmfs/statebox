@@ -1,3 +1,18 @@
+## [1.54.1](https://github.com/wmfs/statebox/compare/v1.54.0...v1.54.1) (2019-11-07)
+
+
+### 🐛 Bug Fixes
+
+* Don't explode if we ask for a non-existant execution description ([](https://github.com/wmfs/statebox/commit/c6af563))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/changelog requirement ([](https://github.com/wmfs/statebox/commit/c39d673))
+* **deps-dev:** update cz-conventional-changelog requirement ([](https://github.com/wmfs/statebox/commit/12957b2))
+* **deps-dev:** update mocha requirement from 6.1.4 to 6.2.0 ([](https://github.com/wmfs/statebox/commit/9967e58))
+* **deps-dev:** update semantic-release requirement ([](https://github.com/wmfs/statebox/commit/48c248c))
+
 # [1.54.0](https://github.com/wmfs/statebox/compare/v1.53.0...v1.54.0) (2019-09-09)
 
 
