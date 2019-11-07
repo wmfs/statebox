@@ -22,10 +22,10 @@ describe('Fail states', function () {
     let executionDescription = await statebox.startExecution(
       {},
       'fail', // state machine name
-      {} // options
+      {
+        sendResponse: 'COMPLETED'
+      } // options
     )
-
-    executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
 
     expect(executionDescription.status).to.eql('FAILED')
     expect(executionDescription.stateMachineName).to.eql('fail')

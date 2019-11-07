@@ -51,10 +51,10 @@ function test (label, statemachine, input, result) {
     let executionDescription = await statebox.startExecution(
       Object.assign({}, input),
       statemachine,
-      {} // options
+      {
+        sendResponse: 'COMPLETED'
+      } // options
     )
-
-    executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
 
     expect(executionDescription.status).to.eql('SUCCEEDED')
     expect(executionDescription.stateMachineName).to.eql(statemachine)
