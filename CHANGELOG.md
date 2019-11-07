@@ -1,3 +1,10 @@
+## [1.54.2](https://github.com/wmfs/statebox/compare/v1.54.1...v1.54.2) (2019-11-07)
+
+
+### 🐛 Bug Fixes
+
+* Signal COMPLETED properly from failed executions. ([](https://github.com/wmfs/statebox/commit/625ca2b))
+
 ## [1.54.1](https://github.com/wmfs/statebox/compare/v1.54.0...v1.54.1) (2019-11-07)
 
 
