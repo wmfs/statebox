@@ -1,3 +1,10 @@
+## [1.54.3](https://github.com/wmfs/statebox/compare/v1.54.2...v1.54.3) (2019-11-07)
+
+
+### 🐛 Bug Fixes
+
+* Fix sendTaskHeartbeat so it respects resultPath and outputPath. ([](https://github.com/wmfs/statebox/commit/c958a5c))
+
 ## [1.54.2](https://github.com/wmfs/statebox/compare/v1.54.1...v1.54.2) (2019-11-07)
 
 
