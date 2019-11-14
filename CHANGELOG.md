@@ -1,3 +1,10 @@
+## [1.54.4](https://github.com/wmfs/statebox/compare/v1.54.3...v1.54.4) (2019-11-14)
+
+
+### 🐛 Bug Fixes
+
+* Deep merge the update with existing context in setTaskHeartbeat ([](https://github.com/wmfs/statebox/commit/8972da5))
+
 ## [1.54.3](https://github.com/wmfs/statebox/compare/v1.54.2...v1.54.3) (2019-11-07)
 
 
