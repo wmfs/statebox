@@ -1,3 +1,13 @@
+# [1.55.0](https://github.com/wmfs/statebox/compare/v1.54.4...v1.55.0) (2020-01-07)
+
+
+### 🛠 Builds
+
+* **deps:** bump luxon from 1.16.0 to 1.21.3 ([83f0213](https://github.com/wmfs/statebox/commit/83f0213bd195ca166818e1d94c57faf72f4c7c0e))
+* **deps-dev:** add request dependency ([bae682f](https://github.com/wmfs/statebox/commit/bae682ff991c9a7ccc7fab88c18c0ea69313edca))
+* **deps-dev:** bump mocha from 6.2.2 to 7.0.0 ([6f7de71](https://github.com/wmfs/statebox/commit/6f7de71d9dbb5b2297be65a36de45e457d44f724))
+* **deps-dev:** bump packages ([2f6a9f5](https://github.com/wmfs/statebox/commit/2f6a9f5cf22d5139df3a85f5089ae7bb29950a62))
+
 ## [1.54.4](https://github.com/wmfs/statebox/compare/v1.54.3...v1.54.4) (2019-11-14)
 
 
