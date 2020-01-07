@@ -1,3 +1,10 @@
+# [1.56.0](https://github.com/wmfs/statebox/compare/v1.55.0...v1.56.0) (2020-01-07)
+
+
+### 🛠 Builds
+
+* **deps:** bump dottie from 2.0.1 to 2.0.2 ([b63be9c](https://github.com/wmfs/statebox/commit/b63be9cf65cff0747425020c6b055a34e034b447))
+
 # [1.55.0](https://github.com/wmfs/statebox/compare/v1.54.4...v1.55.0) (2020-01-07)
 
 
