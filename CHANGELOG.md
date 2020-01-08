@@ -1,3 +1,10 @@
+# [1.57.0](https://github.com/wmfs/statebox/compare/v1.56.0...v1.57.0) (2020-01-08)
+
+
+### 🛠 Builds
+
+* **deps:** update uuid requirement from 3.3.2 to 3.3.3 ([97b65fc](https://github.com/wmfs/statebox/commit/97b65fcaf00261a24078d85a2f0628b758ca4702))
+
 # [1.56.0](https://github.com/wmfs/statebox/compare/v1.55.0...v1.56.0) (2020-01-07)
 
 
