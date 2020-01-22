@@ -1,3 +1,11 @@
+# [1.58.0](https://github.com/wmfs/statebox/compare/v1.57.0...v1.58.0) (2020-01-22)
+
+
+### 🛠 Builds
+
+* **deps:** bump uuid from 3.3.3 to 3.4.0 ([4475c03](https://github.com/wmfs/statebox/commit/4475c0312ee3f360437a741e5c4efbe5f1843f7b))
+* **deps-dev:** bump conventional-changelog-metahub from 3.0.0 to 4.0.0 ([9b9c617](https://github.com/wmfs/statebox/commit/9b9c617a63bd697e399421a73854c961916a6433))
+
 # [1.57.0](https://github.com/wmfs/statebox/compare/v1.56.0...v1.57.0) (2020-01-08)
 
 
