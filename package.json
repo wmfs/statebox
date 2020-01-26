@@ -30,7 +30,7 @@
     "dottie": "2.0.2",
     "jsonpath": "1.0.2",
     "lodash": "4.17.15",
-    "luxon": "1.21.3",
+    "luxon": "1.22.0",
     "uuid": "3.4.0"
   },
   "devDependencies": {
