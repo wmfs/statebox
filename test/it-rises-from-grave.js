@@ -82,8 +82,8 @@ describe('Reviving failed state machines', () => {
           expect(executionDescription.stateMachineName).to.eql('helloFailButLiveAgain')
           expect(executionDescription.currentStateName).to.eql('Stuttery')
           expect(expect(executionDescription.executionOptions.error).to.eql({
-            'error': 'SomethingBadHappened',
-            'cause': 'But at least it was expected'
+            error: 'SomethingBadHappened',
+            cause: 'But at least it was expected'
           }))
         })
 

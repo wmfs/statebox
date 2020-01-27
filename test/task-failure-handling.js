@@ -60,8 +60,8 @@ describe('Task failure handling', () => {
         expect(executionDescription.errorCode).to.eql('SomethingBadHappened')
         expect(executionDescription.errorMessage).to.eql('But at least it was expected')
         expect(executionDescription.executionOptions.error).to.eql({
-          'error': 'SomethingBadHappened',
-          'cause': 'But at least it was expected'
+          error: 'SomethingBadHappened',
+          cause: 'But at least it was expected'
         })
       })
 
@@ -71,8 +71,8 @@ describe('Task failure handling', () => {
         expect(executionDescription.errorCode).to.eql('ExceptionHandler')
         expect(executionDescription.errorMessage).to.eql('Cannot read property \'oh_dear\' of null')
         expect(executionDescription.executionOptions.error).contains({
-          'error': 'ExceptionHandler',
-          'cause': 'Cannot read property \'oh_dear\' of null'
+          error: 'ExceptionHandler',
+          cause: 'Cannot read property \'oh_dear\' of null'
         })
         expect(executionDescription.executionOptions.error.stack).exist()
       })
@@ -83,8 +83,8 @@ describe('Task failure handling', () => {
         expect(executionDescription.errorCode).to.eql('TypeError')
         expect(executionDescription.errorMessage).to.eql('obj.missingFn is not a function')
         expect(executionDescription.executionOptions.error).contains({
-          'error': 'TypeError',
-          'cause': 'obj.missingFn is not a function'
+          error: 'TypeError',
+          cause: 'obj.missingFn is not a function'
         })
         expect(executionDescription.executionOptions.error.stack).exist()
       })
@@ -94,8 +94,8 @@ describe('Task failure handling', () => {
         expect(executionDescription.errorCode).to.eql('StatusCodeError')
         expect(executionDescription.errorMessage).to.startWith('404 -')
         expect(executionDescription.executionOptions.error).contains({
-          'error': 'StatusCodeError',
-          'statusCode': 404
+          error: 'StatusCodeError',
+          statusCode: 404
         })
         expect(executionDescription.executionOptions.error.options).exist()
         expect(executionDescription.executionOptions.error.response).exist()
@@ -107,8 +107,8 @@ describe('Task failure handling', () => {
         expect(executionDescription.errorCode).to.eql('RequestError')
         expect(executionDescription.errorMessage).to.eql('Error: connect ECONNREFUSED 127.0.0.1:9999')
         expect(executionDescription.executionOptions.error).contains({
-          'error': 'RequestError',
-          'cause': 'Error: connect ECONNREFUSED 127.0.0.1:9999'
+          error: 'RequestError',
+          cause: 'Error: connect ECONNREFUSED 127.0.0.1:9999'
         })
         expect(executionDescription.executionOptions.error.options).not.exist()
         expect(executionDescription.executionOptions.error.response).not.exist()

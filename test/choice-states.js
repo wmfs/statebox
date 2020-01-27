@@ -17,11 +17,11 @@ describe('Choice State', function () {
     await statebox.createStateMachines(choiceStateMachines, {})
   })
 
-  const choiceStates = [ 'choice', 'choiceWithInputPath' ]
+  const choiceStates = ['choice', 'choiceWithInputPath']
 
   const branches = [
-    [ 'first', { calc: { operator: '+' } }, { calc: { operator: '+' }, result: 'add' } ],
-    [ 'second', { calc: { operator: '-' } }, { calc: { operator: '-' }, result: 'subtract' } ]
+    ['first', { calc: { operator: '+' } }, { calc: { operator: '+' }, result: 'add' }],
+    ['second', { calc: { operator: '-' } }, { calc: { operator: '-' }, result: 'subtract' }]
   ]
 
   for (const machine of choiceStates) {

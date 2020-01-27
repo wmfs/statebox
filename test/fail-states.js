@@ -19,7 +19,7 @@ describe('Fail states', function () {
   })
 
   it('fail state', async () => {
-    let executionDescription = await statebox.startExecution(
+    const executionDescription = await statebox.startExecution(
       {},
       'fail', // state machine name
       {

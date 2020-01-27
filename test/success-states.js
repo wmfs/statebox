@@ -48,7 +48,7 @@ describe('Success State', function () {
 
 function test (label, statemachine, input, result) {
   it(label, async () => {
-    let executionDescription = await statebox.startExecution(
+    const executionDescription = await statebox.startExecution(
       Object.assign({}, input),
       statemachine,
       {

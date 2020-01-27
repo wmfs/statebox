@@ -35,47 +35,47 @@ describe('Parallel State', function () {
           {
             label: 'fun-with-math - example from spec',
             stateMachine: 'funWithMath',
-            input: [ 3, 2 ],
-            expected: [ 5, 1 ]
+            input: [3, 2],
+            expected: [5, 1]
           },
           {
             label: 'fun-with-math-with-input-path',
             stateMachine: 'funWithMathWithInputPath',
-            input: { numbers: [ 3, 2 ] },
-            expected: [ 5, 1 ]
+            input: { numbers: [3, 2] },
+            expected: [5, 1]
           },
           {
             label: 'fun-with-math-with-output-path',
             stateMachine: 'funWithMathWithOutputPath',
-            input: [ 3, 2 ],
+            input: [3, 2],
             expected: 5
           },
           {
             label: 'fun-with-math-with-result-path',
             stateMachine: 'funWithMathWithResultPath',
-            input: { inputs: [ 3, 2 ] },
+            input: { inputs: [3, 2] },
             expected: {
-              inputs: [ 3, 2 ],
-              results: [ 5, 1 ]
+              inputs: [3, 2],
+              results: [5, 1]
             }
           },
           {
             label: 'parallelling up',
             stateMachine: 'parallellingUp',
             input: { },
-            expected: [ 'A', [ 'B', [ 'C', [ 'D', [ 'E', [ 'F', [ 'G' ] ] ] ] ] ] ]
+            expected: ['A', ['B', ['C', ['D', ['E', ['F', ['G']]]]]]]
           },
           {
             label: 'parallelling down',
             stateMachine: 'parallellingDown',
             input: { },
-            expected: [ [ [ [ [ [ [ 'A' ], 'B' ], 'C' ], 'D' ], 'E' ], 'F' ], 'G' ]
+            expected: [[[[[[['A'], 'B'], 'C'], 'D'], 'E'], 'F'], 'G']
           },
           {
             label: 'paralleling up and down',
             stateMachine: 'parallellingUpAndDown',
             input: { },
-            expected: [ 'A', [ 'B', [ 'C', [ 'D' ], 'E' ], 'F' ], 'G' ]
+            expected: ['A', ['B', ['C', ['D'], 'E'], 'F'], 'G']
           }
         ]
 
