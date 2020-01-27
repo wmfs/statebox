@@ -1,3 +1,10 @@
+# [1.60.0](https://github.com/wmfs/statebox/compare/v1.59.0...v1.60.0) (2020-01-27)
+
+
+### 🛠 Builds
+
+* **deps:** bump deepmerge from 3.3.0 to 4.2.2 ([76f358f](https://github.com/wmfs/statebox/commit/76f358fb8360fd70d54cddaf5501b0b9a378c493))
+
 # [1.59.0](https://github.com/wmfs/statebox/compare/v1.58.0...v1.59.0) (2020-01-27)
 
 
