@@ -1,3 +1,20 @@
+# [1.59.0](https://github.com/wmfs/statebox/compare/v1.58.0...v1.59.0) (2020-01-27)
+
+
+### 🛠 Builds
+
+* **deps:** bump async from 3.1.0 to 3.1.1 ([f08f0a6](https://github.com/wmfs/statebox/commit/f08f0a6c383fab743ece4e1a35bf5773a79543d9))
+* **deps:** bump luxon from 1.21.3 to 1.22.0 ([6bd3d93](https://github.com/wmfs/statebox/commit/6bd3d93434f795ce7d7c2ace5500202995f4f5e4))
+* **deps-dev:** bump codecov from 3.6.1 to 3.6.2 ([7148545](https://github.com/wmfs/statebox/commit/714854504c6b674fd3a1be8e083288565e27bfd1))
+* **deps-dev:** bump mocha from 7.0.0 to 7.0.1 ([94234c4](https://github.com/wmfs/statebox/commit/94234c4f82153e62357aa1b034678a3fe4649ef9))
+* **deps-dev:** update standard requirement from 12.0.1 to 14.3.1 ([b2a6649](https://github.com/wmfs/statebox/commit/b2a6649f9c633f4ac571fc25642d141e6b91d20c))
+
+
+### 💎 Styles
+
+* Do not access Object.prototype method 'hasOwnProperty' from target object ([355175a](https://github.com/wmfs/statebox/commit/355175aa629cddc53481104d7e6b7714e65f028e))
+* standard --fix ([e03d74c](https://github.com/wmfs/statebox/commit/e03d74c3eb7940e802c00623e4293d21d0161142))
+
 # [1.58.0](https://github.com/wmfs/statebox/compare/v1.57.0...v1.58.0) (2020-01-22)
 
 
