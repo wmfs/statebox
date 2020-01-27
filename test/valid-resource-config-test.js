@@ -35,7 +35,7 @@ describe('Resource Config tests', () => {
           )
           expect.fail('Expected to fail')
         } catch (err) {
-          expect(err.message).to.eql(`Resource Config missing required properties in stateMachine 'goodbyeInvalid'`)
+          expect(err.message).to.eql('Resource Config missing required properties in stateMachine \'goodbyeInvalid\'')
         }
       })
     })

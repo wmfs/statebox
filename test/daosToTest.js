@@ -8,7 +8,7 @@ try {
 }
 
 function DaosToTest () {
-  const daos = [ ['built in DAO', null, null] ]
+  const daos = [['built in DAO', null, null]]
 
   // Memory Storage?
   try {
