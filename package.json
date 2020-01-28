@@ -41,7 +41,7 @@
     "chai-subset": "1.6.0",
     "codecov": "3.6.2",
     "conventional-changelog-metahub": "4.0.0",
-    "cz-conventional-changelog": "3.0.2",
+    "cz-conventional-changelog": "3.1.0",
     "dirty-chai": "2.0.1",
     "express": "4.17.1",
     "mocha": "7.0.1",
