@@ -47,7 +47,7 @@
     "mocha": "7.0.1",
     "nyc": "15.0.0",
     "request-promise-native": "1.0.8",
-    "request": "2.88.0",
+    "request": "2.88.2",
     "semantic-release": "15.14.0",
     "standard": "14.3.1"
   },
