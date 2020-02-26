@@ -1,3 +1,18 @@
+# [1.61.0](https://github.com/wmfs/statebox/compare/v1.60.0...v1.61.0) (2020-02-26)
+
+
+### 🛠 Builds
+
+* **deps:** bump uuid from 3.4.0 to 7.0.1 ([5fdd8bf](https://github.com/wmfs/statebox/commit/5fdd8bfc1b138be4229d8d91a58751105efa7149))
+* **deps-dev:** bump [@semantic-release](https://github.com/semantic-release)/changelog from 3.0.6 to 5.0.0 ([15449aa](https://github.com/wmfs/statebox/commit/15449aaa7c615e6a092bd19a7ab25298327bf901))
+* **deps-dev:** bump [@semantic-release](https://github.com/semantic-release)/git from 7.0.18 to 9.0.0 ([15b18d0](https://github.com/wmfs/statebox/commit/15b18d0d73c66fc143ee98dfbe8d4b8a17e85cc4))
+* **deps-dev:** bump codecov from 3.6.2 to 3.6.3 ([d426fba](https://github.com/wmfs/statebox/commit/d426fbaaafce18875285a2a40639589d92071384))
+* **deps-dev:** bump codecov from 3.6.3 to 3.6.4 ([97a9066](https://github.com/wmfs/statebox/commit/97a906680d50983191f6eed30edb7273f15a90f5))
+* **deps-dev:** bump codecov from 3.6.4 to 3.6.5 ([8b4f5ff](https://github.com/wmfs/statebox/commit/8b4f5ff011b335645f796db32e7196f7215ba23f))
+* **deps-dev:** bump cz-conventional-changelog from 3.0.2 to 3.1.0 ([eac7b09](https://github.com/wmfs/statebox/commit/eac7b09009025a4b9d19414a75cafeb0741411e2))
+* **deps-dev:** bump request from 2.88.0 to 2.88.2 ([e5104dd](https://github.com/wmfs/statebox/commit/e5104dd23359eebcdc0252673d11923ce403e08a))
+* **deps-dev:** bump semantic-release from 15.14.0 to 17.0.4 ([7479e65](https://github.com/wmfs/statebox/commit/7479e65541e49fa283b70727f9d5a49ef83d0a08))
+
 # [1.60.0](https://github.com/wmfs/statebox/compare/v1.59.0...v1.60.0) (2020-01-27)
 
 
