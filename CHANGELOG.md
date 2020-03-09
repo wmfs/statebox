@@ -1,3 +1,16 @@
+## [1.61.1](https://github.com/wmfs/statebox/compare/v1.61.0...v1.61.1) (2020-03-09)
+
+
+### 🐛 Bug Fixes
+
+* Corrected uuid require for version 7.* ([5d134ae](https://github.com/wmfs/statebox/commit/5d134ae4d77fabee53ae46ec58caf0cf5fc7687f))
+
+
+### 🛠 Builds
+
+* **deps-dev:** bump conventional-changelog-metahub from 4.0.0 to 4.0.1 ([ec3ebbc](https://github.com/wmfs/statebox/commit/ec3ebbc58b56d5c7e55763d4eef87135f30fb6d9))
+* **deps-dev:** bump mocha from 7.0.1 to 7.1.0 ([8074214](https://github.com/wmfs/statebox/commit/80742141c37acb50f652c2895eec8491a73203b1))
+
 # [1.61.0](https://github.com/wmfs/statebox/compare/v1.60.0...v1.61.0) (2020-02-26)
 
 
