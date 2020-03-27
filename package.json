@@ -34,7 +34,7 @@
     "uuid": "7.0.1"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "5.0.0",
+    "@semantic-release/changelog": "5.0.1",
     "@semantic-release/git": "9.0.0",
     "chai": "4.2.0",
     "chai-string": "1.5.0",
