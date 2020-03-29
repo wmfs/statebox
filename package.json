@@ -31,7 +31,7 @@
     "jsonpath": "1.0.2",
     "lodash": "4.17.15",
     "luxon": "1.22.0",
-    "uuid": "7.0.1"
+    "uuid": "7.0.2"
   },
   "devDependencies": {
     "@semantic-release/changelog": "5.0.1",
