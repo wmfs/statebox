@@ -1,17 +1,8 @@
-'use strict'
-
-const requestPromise = require('request-promise-native')
+const axios = require('axios')
 
 module.exports = class Failure {
-  init (resourceConfig, env, callback) {
-    callback(null)
-  }
-
   run (event, context) {
-    const rp = requestPromise.defaults()
-    rp({
-      uri: 'http://localhost:9999/please-just-fail'
-    })
+    axios.get('http://localhost:9999/please-just-fail')
       .catch(err => context.sendTaskFailure(err))
   } // run
 }
