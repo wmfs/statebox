@@ -91,28 +91,14 @@ describe('Task failure handling', () => {
       it('StatusCodeError - HTTP not found', async () => {
         const executionDescription = await run('errorHttpNotFound')
 
-        expect(executionDescription.errorCode).to.eql('StatusCodeError')
-        expect(executionDescription.errorMessage).to.startWith('404 -')
-        expect(executionDescription.executionOptions.error).contains({
-          error: 'StatusCodeError',
-          statusCode: 404
-        })
-        expect(executionDescription.executionOptions.error.options).exist()
-        expect(executionDescription.executionOptions.error.response).exist()
-        expect(executionDescription.executionOptions.error.stack).not.exist()
+        expect(executionDescription.errorCode).to.eql('Error')
+        expect(executionDescription.errorMessage).to.contain('404')
       })
       it('StatusCodeError - HTTP can\'t connect', async () => {
         const executionDescription = await run('errorHttpCantConnect')
 
-        expect(executionDescription.errorCode).to.eql('RequestError')
-        expect(executionDescription.errorMessage).to.eql('Error: connect ECONNREFUSED 127.0.0.1:9999')
-        expect(executionDescription.executionOptions.error).contains({
-          error: 'RequestError',
-          cause: 'Error: connect ECONNREFUSED 127.0.0.1:9999'
-        })
-        expect(executionDescription.executionOptions.error.options).not.exist()
-        expect(executionDescription.executionOptions.error.response).not.exist()
-        expect(executionDescription.executionOptions.error.stack).exist()
+        expect(executionDescription.errorCode).to.eql('Error')
+        expect(executionDescription.errorMessage).to.eql('connect ECONNREFUSED 127.0.0.1:9999')
       })
     })
   })
