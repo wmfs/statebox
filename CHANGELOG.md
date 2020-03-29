@@ -1,3 +1,23 @@
+# [1.62.0](https://github.com/wmfs/statebox/compare/v1.61.1...v1.62.0) (2020-03-29)
+
+
+### ✨ Features
+
+* Add sendTaskLastHeartbeat ([09c9a7c](https://github.com/wmfs/statebox/commit/09c9a7c9e0fdd6541291fdd9cb6c272bcd4de804))
+
+
+### 🛠 Builds
+
+* **deps:** bump async from 3.1.1 to 3.2.0 ([393929c](https://github.com/wmfs/statebox/commit/393929cd1f5415eedbd14760c1768117bede42ee))
+* **deps:** bump boom from 7.3.0 to [@hapi](https://github.com/hapi)/boom 9.1.0 ([bd1c57d](https://github.com/wmfs/statebox/commit/bd1c57da4faab6608637bfb8e95115acc9e40a7f))
+* **deps:** bump luxon from 1.22.0 to 1.22.2 ([faf821b](https://github.com/wmfs/statebox/commit/faf821b4593e0f9d5091ce699bd4ac32f6be4660))
+* **deps:** bump uuid from 7.0.1 to 7.0.2 ([9e3e1a1](https://github.com/wmfs/statebox/commit/9e3e1a16fc3c1ce1424599a0397aacdb586b27ac))
+* **deps:** Remove request, replace with axios ([f6802ff](https://github.com/wmfs/statebox/commit/f6802ff6f7ed0d11ebd6027d8dd41d1c84115126))
+* **deps-dev:** bump [@semantic-release](https://github.com/semantic-release)/changelog from 5.0.0 to 5.0.1 ([ca41284](https://github.com/wmfs/statebox/commit/ca412844f805e04e76ed784dff7256e7ff085c4e))
+* **deps-dev:** bump mocha from 7.1.0 to 7.1.1 ([95f6232](https://github.com/wmfs/statebox/commit/95f6232c1abd4b6a1d2db663571b22a216bd12df))
+* **deps-dev:** bump standard from 14.3.1 to 14.3.2 ([b5fe9d4](https://github.com/wmfs/statebox/commit/b5fe9d41172a27af2b628480d3f9d8ccf2862c58))
+* **deps-dev:** bump standard from 14.3.2 to 14.3.3 ([791dd9a](https://github.com/wmfs/statebox/commit/791dd9a90a48ece17ca5fda21f6e29ee7881eb28))
+
 ## [1.61.1](https://github.com/wmfs/statebox/compare/v1.61.0...v1.61.1) (2020-03-09)
 
 
