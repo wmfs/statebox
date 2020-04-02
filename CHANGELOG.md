@@ -1,3 +1,15 @@
+# [1.63.0](https://github.com/wmfs/statebox/compare/v1.62.0...v1.63.0) (2020-04-02)
+
+
+### 🛠 Builds
+
+* **deps:** bump uuid from 7.0.2 to 7.0.3 ([9049071](https://github.com/wmfs/statebox/commit/90490715379cf1ee87a860829bf6fb23ae72b3a9))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** add context env var config to config.yml ([74067bd](https://github.com/wmfs/statebox/commit/74067bd55f1208d7400200b3b21f8eff0cdeb2ab))
+
 # [1.62.0](https://github.com/wmfs/statebox/compare/v1.61.1...v1.62.0) (2020-03-29)
 
 
