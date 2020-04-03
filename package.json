@@ -46,7 +46,7 @@
     "dirty-chai": "2.0.1",
     "express": "4.17.1",
     "mocha": "7.1.1",
-    "nyc": "15.0.0",
+    "nyc": "15.0.1",
     "semantic-release": "17.0.4",
     "standard": "14.3.3"
   },
