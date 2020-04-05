@@ -1,3 +1,11 @@
+# [1.64.0](https://github.com/wmfs/statebox/compare/v1.63.0...v1.64.0) (2020-04-05)
+
+
+### 🛠 Builds
+
+* **deps:** bump luxon from 1.22.2 to 1.23.0 ([85d7a1c](https://github.com/wmfs/statebox/commit/85d7a1c7b28138df9f6cc3a95b71af220f886709))
+* **deps-dev:** bump nyc from 15.0.0 to 15.0.1 ([ea1c6dd](https://github.com/wmfs/statebox/commit/ea1c6dd1f02250c63c56955b7c31aa9ed821fc9c))
+
 # [1.63.0](https://github.com/wmfs/statebox/compare/v1.62.0...v1.63.0) (2020-04-02)
 
 
