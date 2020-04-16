@@ -1,9 +1,6 @@
 'use strict'
 
 module.exports = class Failure {
-  init (resourceConfig, env) {
-  }
-
   run (event, context) {
     context.sendTaskFailure(
       {
