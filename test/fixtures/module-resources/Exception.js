@@ -1,10 +1,6 @@
 'use strict'
 
-module.exports = class Failure {
-  init (resourceConfig, env, callback) {
-    callback(null)
-  }
-
+module.exports = class Exception {
   run (event, context) {
     const obj = { }
     try {
