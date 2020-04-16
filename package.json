@@ -24,7 +24,6 @@
   "dependencies": {
     "@hapi/boom": "9.1.0",
     "@wmfs/asl-choice-processor": "1.14.0",
-    "async": "3.2.0",
     "debug": "4.1.1",
     "deepmerge": "4.2.2",
     "dottie": "2.0.2",
