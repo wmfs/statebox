@@ -1,3 +1,30 @@
+## [1.64.1](https://github.com/wmfs/statebox/compare/v1.64.0...v1.64.1) (2020-04-20)
+
+
+### 🐛 Bug Fixes
+
+* Don't pass callback parameter to init methods ([6a43356](https://github.com/wmfs/statebox/commit/6a43356564799dd50c61cba11fdad22e5bcfcf17))
+* Removed unimplemented statebox.listExecutions method ([e2f6395](https://github.com/wmfs/statebox/commit/e2f63955430d35f320b71a7a1c4bb0307694d973))
+* **deps:** Remove async dependency. Not used. ([3e30f54](https://github.com/wmfs/statebox/commit/3e30f547c5e55fd0ebe959fb2cd7f05a5471cccd))
+* **deps:** Removed unused deepmerge dependency ([289c785](https://github.com/wmfs/statebox/commit/289c78591cf94fc2d8b6e6441761aeee35b9c106))
+
+
+### 🛠 Builds
+
+* **deps-dev:** bump semantic-release from 17.0.4 to 17.0.5 ([1e2fd43](https://github.com/wmfs/statebox/commit/1e2fd4342968bf49ad4fbdacff9a8ef281848972))
+* **deps-dev:** bump semantic-release from 17.0.5 to 17.0.6 ([f8d3104](https://github.com/wmfs/statebox/commit/f8d3104470de7ce508fdbe791461f3b7de8245d2))
+
+
+### 📦 Code Refactoring
+
+* Use constant rather than literal ([0d420a4](https://github.com/wmfs/statebox/commit/0d420a4c470c203ec8ef370a84bf910155d9c30e))
+
+
+### 🚨 Tests
+
+* Align class names with state resource filenames ([3f746b1](https://github.com/wmfs/statebox/commit/3f746b19724cf828ebe932a79e7b4d246c43191f))
+* Remove redundant init methods from test state resources ([7d844de](https://github.com/wmfs/statebox/commit/7d844de931631ebc4ba5a91d12be045e57ecd4a4))
+
 # [1.64.0](https://github.com/wmfs/statebox/compare/v1.63.0...v1.64.0) (2020-04-05)
 
 
