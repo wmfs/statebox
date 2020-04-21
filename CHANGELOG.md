@@ -1,3 +1,16 @@
+## [1.64.2](https://github.com/wmfs/statebox/compare/v1.64.1...v1.64.2) (2020-04-21)
+
+
+### 🐛 Bug Fixes
+
+* Content.sendTaskHeartbeat should return the updated execution description. ([68bdef8](https://github.com/wmfs/statebox/commit/68bdef8d651c8b7a8f0558f089a3365754cfd583))
+* Rework StateMachine.runState to eliminate callback ([a9e2c07](https://github.com/wmfs/statebox/commit/a9e2c07f8703634ab1e305d800ace9a56e841793))
+
+
+### 📦 Code Refactoring
+
+* Can make statebox const rather than let ([ae23f0a](https://github.com/wmfs/statebox/commit/ae23f0a50a92d09cb3ae37302fe263be535b21c0))
+
 ## [1.64.1](https://github.com/wmfs/statebox/compare/v1.64.0...v1.64.1) (2020-04-20)
 
 
