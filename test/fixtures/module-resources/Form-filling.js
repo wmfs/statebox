@@ -1,12 +1,10 @@
 module.exports = class FormFilling {
-  async run (event, context, done) {
+  run (event, context) {
     console.log('WAITING FOR SOMEONE TO FILL-IN A FORM!')
-    const executionDescription = await context.sendTaskHeartbeat(
+    context.sendTaskHeartbeat(
       {
         formId: 'fillThisFormInHuman!'
       }
     )
-
-    done(executionDescription)
   }
 }
