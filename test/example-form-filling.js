@@ -17,11 +17,10 @@ describe('Form-filling', () => {
   DaosToTest.forEach(([name, options]) => {
     describe(`Using ${name}`, function () {
       this.timeout(process.env.TIMEOUT || 5000)
-      let statebox
+      const statebox = new Statebox(options)
       let executionName
 
       before('setup statebox', async () => {
-        statebox = new Statebox(options)
         await statebox.ready
         statebox.createModuleResources(moduleResources)
         await Promise.all(
@@ -58,8 +57,7 @@ describe('Form-filling', () => {
             executionName,
             {
               some: 'payload'
-            }, // output
-            {}
+            }
           )
 
           expect(execDesc.status).to.eql('RUNNING')
@@ -220,8 +218,7 @@ describe('Form-filling', () => {
               formData: {
                 name: 'Rupert'
               }
-            }, // output
-            {} // executionOptions
+            } // executionOptions
           )
             .then(() => done(new Error('expected an error')))
             .catch(() => done())
