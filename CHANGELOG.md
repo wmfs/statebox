@@ -1,3 +1,13 @@
+# [1.65.0](https://github.com/wmfs/statebox/compare/v1.64.2...v1.65.0) (2020-05-11)
+
+
+### 🛠 Builds
+
+* **deps:** bump luxon from 1.23.0 to 1.24.1 ([c922867](https://github.com/wmfs/statebox/commit/c9228674cab9e3a5cd5b04c47ed41ebdae76d359))
+* **deps-dev:** bump cz-conventional-changelog from 3.1.0 to 3.2.0 ([6d08614](https://github.com/wmfs/statebox/commit/6d08614575f4e5c100a0844f5f32375e05db464a))
+* **deps-dev:** bump mocha from 7.1.1 to 7.1.2 ([6aa478c](https://github.com/wmfs/statebox/commit/6aa478c441791a85fd9e4a817146f0d7de5b8e7b))
+* **deps-dev:** bump semantic-release from 17.0.6 to 17.0.7 ([5054eb1](https://github.com/wmfs/statebox/commit/5054eb144cf5ed2f639890c0e0fdfadc8cfef96a))
+
 ## [1.64.2](https://github.com/wmfs/statebox/compare/v1.64.1...v1.64.2) (2020-04-21)
 
 
