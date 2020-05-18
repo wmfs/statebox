@@ -38,7 +38,7 @@
     "chai": "4.2.0",
     "chai-string": "1.5.0",
     "chai-subset": "1.6.0",
-    "codecov": "3.6.5",
+    "codecov": "3.7.0",
     "conventional-changelog-metahub": "4.0.1",
     "cz-conventional-changelog": "3.2.0",
     "dirty-chai": "2.0.1",
