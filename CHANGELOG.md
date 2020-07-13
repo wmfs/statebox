@@ -1,3 +1,23 @@
+# [1.66.0](https://github.com/wmfs/statebox/compare/v1.65.0...v1.66.0) (2020-07-13)
+
+
+### 🛠 Builds
+
+* **deps:** bump lodash from 4.17.15 to 4.17.19 ([88f5b33](https://github.com/wmfs/statebox/commit/88f5b337fc29e901027735b39d1d2d236f446c7f))
+* **deps-dev:** bump codecov from 3.6.5 to 3.7.0 ([2427476](https://github.com/wmfs/statebox/commit/2427476cc36564c9b5a4b3bd71470d96646d4bea))
+* **deps-dev:** bump mocha from 7.1.2 to 7.2.0 ([37a89c4](https://github.com/wmfs/statebox/commit/37a89c4ca4627fac345bb2fc15cbc05d153b1762))
+* **deps-dev:** bump mocha from 7.2.0 to 8.0.1 ([0e57fde](https://github.com/wmfs/statebox/commit/0e57fde2d055ad6e6676139196033880ac6b6307))
+* **deps-dev:** bump nyc from 15.0.1 to 15.1.0 ([2d4916d](https://github.com/wmfs/statebox/commit/2d4916d36b7b4b3cd6491ced6b23c9e7646d486f))
+* **deps-dev:** bump semantic-release from 17.0.7 to 17.0.8 ([ebb4a4d](https://github.com/wmfs/statebox/commit/ebb4a4d6f8e4d1a2133eb1581cf62dc1ac896d78))
+* **deps-dev:** bump semantic-release from 17.0.8 to 17.1.0 ([ae6cd1d](https://github.com/wmfs/statebox/commit/ae6cd1d84b80b8c11ea15e6bd273cece1a4b8a3e))
+* **deps-dev:** bump semantic-release from 17.1.0 to 17.1.1 ([f0db8b7](https://github.com/wmfs/statebox/commit/f0db8b7aca286f4bbd63906ea33e308ea306f2bf))
+* **deps-dev:** bump standard from 14.3.3 to 14.3.4 ([399c7e6](https://github.com/wmfs/statebox/commit/399c7e6185074384968c905611a8a06829d6d024))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** use updated circle node image [skip ci] ([ea69aa2](https://github.com/wmfs/statebox/commit/ea69aa21faeaf69884781917a4cbf62310bf4fe8))
+
 # [1.65.0](https://github.com/wmfs/statebox/compare/v1.64.2...v1.65.0) (2020-05-11)
 
 
