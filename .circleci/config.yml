@@ -1,11 +1,11 @@
 version: 2
 jobs:
-  test:
+  unit test:
     docker:
       # use node:lts
       - image: cimg/node:lts
         environment:
-           TZ: "Europe/London"
+          TZ: "Europe/London"
     working_directory: ~/repo
     steps:
       - checkout
@@ -18,6 +18,18 @@ jobs:
       - run:
           name: codecov
           command: npm run coverage
+  lint:
+    docker:
+      - image: cimg/node:lts
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: install standard
+          command: npm install
+      - run:
+          name: lint
+          command: npm run lint
   release:
     docker:
     # use node:lts
@@ -37,12 +49,14 @@ workflows:
   version: 2
   test_and_release:
     jobs:
-    - test:
+    - unit test:
         context: tymly_global
+    - lint
     - release:
         context: tymly_global
         requires:
-        - test
+        - unit test
+        - lint
         filters:
           branches:
             only: master
