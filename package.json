@@ -23,7 +23,7 @@
   "main": "./lib/index.js",
   "dependencies": {
     "@hapi/boom": "9.1.0",
-    "@wmfs/asl-choice-processor": "1.15.0",
+    "@wmfs/asl-choice-processor": "1.16.0",
     "debug": "4.1.1",
     "dottie": "2.0.2",
     "jsonpath": "1.0.2",
