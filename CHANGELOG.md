@@ -1,3 +1,19 @@
+# [1.68.0](https://github.com/wmfs/statebox/compare/v1.67.0...v1.68.0) (2020-08-17)
+
+
+### 🛠 Builds
+
+* **deps:** bump lodash from 4.17.19 to 4.17.20 ([32f79b2](https://github.com/wmfs/statebox/commit/32f79b247351cf30424385b458a30ecbbc6f40fa))
+* **deps-dev:** bump codecov from 3.7.0 to 3.7.1 ([f11b57b](https://github.com/wmfs/statebox/commit/f11b57b64c2cb76c0d32d090b24b8dd2b8469cd5))
+* **deps-dev:** bump codecov from 3.7.1 to 3.7.2 ([9f558b4](https://github.com/wmfs/statebox/commit/9f558b4ccb17b49609b7a5ef5051114bf51430f3))
+* **deps-dev:** bump mocha from 8.0.1 to 8.1.0 ([78c714a](https://github.com/wmfs/statebox/commit/78c714a3a10cd1f643c26e6851f372580c74b386))
+* **deps-dev:** bump mocha from 8.1.0 to 8.1.1 ([92d4c0b](https://github.com/wmfs/statebox/commit/92d4c0b44dd534c8c566f33f40bf4a6f149df844))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** separate lint job [ch1009] ([c5e9a0a](https://github.com/wmfs/statebox/commit/c5e9a0a7046dd4fc2546299151430b99ad96ac24))
+
 # [1.67.0](https://github.com/wmfs/statebox/compare/v1.66.0...v1.67.0) (2020-07-16)
 
 
