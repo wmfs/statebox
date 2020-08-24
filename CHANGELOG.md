@@ -1,3 +1,11 @@
+# [1.69.0](https://github.com/wmfs/statebox/compare/v1.68.0...v1.69.0) (2020-08-24)
+
+
+### 🛠 Builds
+
+* **deps:** bump luxon from 1.24.1 to 1.25.0 ([d2a8725](https://github.com/wmfs/statebox/commit/d2a87255e429625ef0dcecf15e2f9f17f09ee578))
+* **deps-dev:** bump axios from 0.19.2 to 0.20.0 ([41c7892](https://github.com/wmfs/statebox/commit/41c7892210ef55074bf9e28c1a5ca28071f0311e))
+
 # [1.68.0](https://github.com/wmfs/statebox/compare/v1.67.0...v1.68.0) (2020-08-17)
 
 
