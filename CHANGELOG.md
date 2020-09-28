@@ -1,3 +1,15 @@
+# [1.71.0](https://github.com/wmfs/statebox/compare/v1.70.0...v1.71.0) (2020-09-28)
+
+
+### 🛠 Builds
+
+* **deps:** bump debug from 4.1.1 to 4.2.0 ([e578478](https://github.com/wmfs/statebox/commit/e578478c82523c49759f4013d7b1be44a845c88e))
+* **deps-dev:** bump cz-conventional-changelog from 3.2.0 to 3.2.1 ([f9f5ff8](https://github.com/wmfs/statebox/commit/f9f5ff8b36c3ab9cf4b15f317f7009919ef7a15a))
+* **deps-dev:** bump cz-conventional-changelog from 3.2.1 to 3.3.0 ([25c8719](https://github.com/wmfs/statebox/commit/25c8719e10cde369eb19b54d0fb772fe687d6f89))
+* **deps-dev:** bump mocha from 8.1.1 to 8.1.2 ([4151296](https://github.com/wmfs/statebox/commit/41512964d98652b915aa4f211bdd52b651ba42db))
+* **deps-dev:** bump mocha from 8.1.2 to 8.1.3 ([85191aa](https://github.com/wmfs/statebox/commit/85191aa51fea4bf61ac530d633a9f3a37f726d56))
+* **deps-dev:** bump semantic-release from 17.1.1 to 17.1.2 ([07c3d32](https://github.com/wmfs/statebox/commit/07c3d328265374926732c574c1b2897338bdfb64))
+
 # [1.70.0](https://github.com/wmfs/statebox/compare/v1.69.0...v1.70.0) (2020-08-24)
 
 
