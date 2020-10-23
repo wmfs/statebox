@@ -9,6 +9,7 @@ jobs:
         environment:
           TZ: "Europe/London"
     working_directory: ~/repo
+    parallelism: 3
     steps:
       - checkout
       - restore_cache:
@@ -24,7 +25,9 @@ jobs:
             - node_modules
       - run:
           name: test
-          command: npm test
+          command: |
+            TEST=$(circleci tests glob "./test/*.js" | circleci tests split)
+            npm test $TEST
       - run:
           name: codecov
           command: npm run coverage
