@@ -2,16 +2,23 @@ version: 2
 jobs:
   unit test:
     docker:
-      # use node:lts
       - image: cimg/node:lts
         environment:
           TZ: "Europe/London"
     working_directory: ~/repo
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - v1-deps-{{ checksum "package.json" }}
+            - v1-deps-
       - run:
           name: install
           command: npm install
+      - save_cache:
+          key: v1-deps-{{ checksum "package.json" }}
+          paths:
+            - node_modules
       - run:
           name: test
           command: npm test
@@ -32,19 +39,26 @@ jobs:
           command: npm run lint
   release:
     docker:
-    # use node:lts
-    - image: cimg/node:lts
-      environment:
-        TZ: "Europe/London"
+      - image: cimg/node:lts
+        environment:
+          TZ: "Europe/London"
     working_directory: ~/repo
     steps:
-    - checkout
-    - run:
-        name: install
-        command: npm install
-    - run:
-        name: release
-        command: npx semantic-release
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-deps-{{ checksum "package.json" }}
+            - v1-deps-
+      - run:
+          name: install
+          command: npm install
+      - save_cache:
+          key: v1-deps-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: release
+          command: npx semantic-release
 workflows:
   version: 2
   test_and_release:
