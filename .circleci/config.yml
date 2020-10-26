@@ -78,14 +78,14 @@ workflows:
       - unit test:
           context:
             - docker-hub-creds
-            - tymly_global
+            - build-env-vars
       - lint:
           context:
             - docker-hub-creds
       - release:
           context:
             - docker-hub-creds
-            - tymly_global
+            - build-env-vars
           requires:
             - unit test
             - lint
