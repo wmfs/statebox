@@ -42,7 +42,7 @@ jobs:
       - checkout
       - run:
           name: install standard
-          command: npm install
+          command: npm install standard
       - run:
           name: lint
           command: npm run lint
