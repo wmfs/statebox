@@ -13,7 +13,12 @@ describe('States.Format', () => {
     [['insert ->{}<- here', true], 'insert ->true<- here'],
     [['insert ->{}<- here', 1], 'insert ->1<- here'],
     [['insert ->{}<- here', 1452.1212], 'insert ->1452.1212<- here'],
-    [['insert ->{}<- here', null], 'insert ->null<- here']
+    [['insert ->{}<- here', null], 'insert ->null<- here'],
+    [['{}, {}, {}', 'word', 100, true], 'word, 100, true'],
+    [['{}<-at start', 'here'], 'here<-at start'],
+    [['at end->{}','here'], 'at end->here'],
+    [['{}', null], 'null'],
+    [['{}{}', null, null], 'nullnull']
   ]
 
   for (const [args, expected] of formatTests) {
