@@ -22,22 +22,22 @@ describe('Intrinsic Function States', function () {
     [
       'stringToJson',
       { someString: '{"hello":"world"}' },
-      { foo: { hello: 'world' }, someString: '{"hello":"world"}' }
+      { hello: 'world' }
     ],
     [
       'jsonToString',
       { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' },
-      { foo: '{"name":"Foo","year":2020}', someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' }
+      '{"name":"Foo","year":2020}'
     ],
     [
       'format',
       { name: 'Homer' },
-      { foo: 'Your name is Homer, we are in the year 2020', name: 'Homer' }
+      'Your name is Homer, we are in the year 2020'
     ],
     [
       'array',
       { someJson: { random: 'abcdefg' }, zebra: 'stripe' },
-      { foo: ['Foo', 2020, { random: 'abcdefg' }, null], someJson: { random: 'abcdefg' }, zebra: 'stripe' }
+      ['Foo', 2020, { random: 'abcdefg' }, null]
     ]
   ]
 
@@ -63,6 +63,6 @@ function test (statemachine, input, result) {
     expect(executionDescription.status).to.eql('SUCCEEDED')
     expect(executionDescription.stateMachineName).to.eql(statemachine)
     expect(executionDescription.currentResource).to.eql(undefined)
-    expect(executionDescription.ctx).to.eql(result)
+    expect(executionDescription.ctx.foo).to.eql(result)
   }) // it ...
 }
