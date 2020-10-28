@@ -37,7 +37,7 @@ describe('Intrinsic Function States', function () {
     [
       'array',
       { someJson: { random: 'abcdefg' }, zebra: 'stripe' },
-      { foo: ['Foo', 2020, { random: 'abcdefg' }, null], someJson: {random: 'abcdefg'}, zebra: 'stripe' }
+      { foo: ['Foo', 2020, { random: 'abcdefg' }, null], someJson: { random: 'abcdefg' }, zebra: 'stripe' }
     ]
   ]
 
