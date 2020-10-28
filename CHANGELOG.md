@@ -1,3 +1,26 @@
+# [1.72.0](https://github.com/wmfs/statebox/compare/v1.71.0...v1.72.0) (2020-10-28)
+
+
+### 🛠 Builds
+
+* **deps:** bump uuid from 7.0.3 to 8.3.1 ([9f0c463](https://github.com/wmfs/statebox/commit/9f0c463891361170bf55fb7b2823e6f69c81258b))
+* **deps-dev:** bump axios from 0.20.0 to 0.21.0 ([43c1bd7](https://github.com/wmfs/statebox/commit/43c1bd72ec726878dda2ee71b2793c47c4759572))
+* **deps-dev:** bump codecov from 3.7.2 to 3.8.0 ([52f0a89](https://github.com/wmfs/statebox/commit/52f0a89daabcf388784f07248edcfeec3100f1bd))
+* **deps-dev:** bump mocha from 8.1.3 to 8.2.0 ([b0406aa](https://github.com/wmfs/statebox/commit/b0406aaefc6f5289467cc71480c42843b4a38016))
+* **deps-dev:** bump semantic-release from 17.1.2 to 17.2.0 ([3826984](https://github.com/wmfs/statebox/commit/38269848a61ddc5c77fabe0eebc81af1d17f6c5b))
+* **deps-dev:** bump semantic-release from 17.2.0 to 17.2.1 ([60537b4](https://github.com/wmfs/statebox/commit/60537b41c3c0f410f4d2b20c95f6c81cb17ba91b))
+* **deps-dev:** bump standard from 14.3.4 to 15.0.0 ([9542616](https://github.com/wmfs/statebox/commit/95426164f691f9a8c8ebafaaf3242da11d7c17f1))
+* **dev-deps:** Bump standard from 15.0.0 →  15.0.1 ([04a40d4](https://github.com/wmfs/statebox/commit/04a40d4802face6fe88c8a01223dcb2fbfbf2a3d))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** add parallelism for unit tests [ch2766] ([14316b8](https://github.com/wmfs/statebox/commit/14316b83d81aec9795f6829ebc916f7036735720))
+* **circle:** authenticate Docker image pull [ch2767] ([f99234d](https://github.com/wmfs/statebox/commit/f99234dedd079312a47db4844d260e4734a25045))
+* **circle:** cache dependencies [ch2770] ([8a6521c](https://github.com/wmfs/statebox/commit/8a6521c45ac30bbfe77eb9657537cbb2459857dc))
+* **circle:** separate linting job [ch1009] ([b79500e](https://github.com/wmfs/statebox/commit/b79500e26bfe0cc521ee2594f853607abfc78ca4))
+* **circle:** update build environment variable context name [ch2771] ([7f62f1d](https://github.com/wmfs/statebox/commit/7f62f1dd71821b4b02d407d99b58dab2e8a14458))
+
 # [1.71.0](https://github.com/wmfs/statebox/compare/v1.70.0...v1.71.0) (2020-09-28)
 
 
