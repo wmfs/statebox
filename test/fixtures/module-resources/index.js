@@ -2,6 +2,7 @@
 module.exports = {
   formFilling: require('./Form-filling'),
   goodbye: require('./Goodbye'),
+  incrementQuantity: require('./increment-quantity'),
   helloWorld: require('./Hello-world'),
   hello: require('./Hello'),
   world: require('./World'),
