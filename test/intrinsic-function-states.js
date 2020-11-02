@@ -2,67 +2,113 @@
 
 const chai = require('chai')
 const expect = chai.expect
+const _ = require('lodash')
 
+const intrinsicFunctions = require('../lib/state-machines/state-types/instrinsics')
 const intrinsicStateMachines = require('./fixtures/state-machines/intrinsic-function-state')
 
 const Statebox = require('./../lib')
 
-let statebox
-
-describe('Intrinsic Function States', function () {
+describe('Intrinsic Functions', function () {
   this.timeout(process.env.TIMEOUT || 5000)
 
-  before('setup statebox', async () => {
-    statebox = new Statebox()
-    await statebox.ready
-    await statebox.createStateMachines(intrinsicStateMachines, {})
-  })
+  describe('Called from State Machine', () => {
+    let statebox
 
-  const tests = [
-    [
-      'stringToJson',
-      { someString: '{"hello":"world"}' },
-      { hello: 'world' }
-    ],
-    [
-      'jsonToString',
-      { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' },
-      '{"name":"Foo","year":2020}'
-    ],
-    [
-      'format',
-      { name: 'Homer' },
-      'Your name is Homer, we are in the year 2020'
-    ],
-    [
-      'array',
-      { someJson: { random: 'abcdefg' }, zebra: 'stripe' },
-      ['Foo', 2020, { random: 'abcdefg' }, null]
+    before('setup statebox', async () => {
+      statebox = new Statebox()
+      await statebox.ready
+      await statebox.createStateMachines(intrinsicStateMachines, {})
+    })
+
+    const tests = [
+      [
+        'stringToJson',
+        { someString: '{"hello":"world"}' },
+        { hello: 'world' }
+      ],
+      [
+        'jsonToString',
+        { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' },
+        '{"name":"Foo","year":2020}'
+      ],
+      [
+        'format',
+        { name: 'Homer' },
+        'Your name is Homer, we are in the year 2020'
+      ],
+      [
+        'array',
+        { someJson: { random: 'abcdefg' }, zebra: 'stripe' },
+        ['Foo', 2020, { random: 'abcdefg' }, null]
+      ]
     ]
-  ]
 
-  for (const [statemachine, input, result] of tests) {
-    test(
-      statemachine,
-      input,
-      result
-    )
-  }
+    for (const [stateFunction, input, result] of tests) {
+      test(
+        stateFunction,
+        input,
+        result
+      )
+    }
+
+    function test (stateFunction, input, result) {
+      it(_.startCase(stateFunction), async () => {
+        let executionDescription = await statebox.startExecution(
+          Object.assign({}, input),
+          stateFunction,
+          {} // options
+        )
+
+        executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+
+        expect(executionDescription.status).to.eql('SUCCEEDED')
+        expect(executionDescription.stateMachineName).to.eql(stateFunction)
+        expect(executionDescription.currentResource).to.eql(undefined)
+        expect(executionDescription.ctx.foo).to.eql(result)
+      }) // it ...
+    } // test
+  }) // called from state machines
+
+  describe('States.Format', () => {
+    describe('good arguments', () => {
+      const goodFormatTests = [
+        [['test'], 'test'],
+        [['insert ->{}<- here', 'word'], 'insert ->word<- here'],
+        [['insert ->{}<- here', true], 'insert ->true<- here'],
+        [['insert ->{}<- here', 1], 'insert ->1<- here'],
+        [['insert ->{}<- here', 1452.1212], 'insert ->1452.1212<- here'],
+        [['insert ->{}<- here', null], 'insert ->null<- here'],
+        [['{}, {}, {}', 'word', 100, true], 'word, 100, true'],
+        [['{}<-at start', 'here'], 'here<-at start'],
+        [['at end->{}', 'here'], 'at end->here'],
+        [['{}', null], 'null'],
+        [['{}{}', null, null], 'nullnull']
+      ]
+
+      for (const [args, expected] of goodFormatTests) {
+        it(`format(${args.map(a => '"' + a + '"').join(', ')})`, () => {
+          const result = intrinsicFunctions.format(...args)
+          expect(result).to.equal(expected)
+        })
+      }
+    })
+
+    describe('malformed arguments', () => {
+      const badFormatTests = [
+        ['test', 'extra', 'arguments'],
+        ['test {}', 'yes', 'oh dear'],
+        ['too few args {}'],
+        ['still too few {} {} {}', 1, 2]
+      ]
+
+      for (const args of badFormatTests) {
+        const asString = `format(${args.map(a => '"' + a + '"').join(', ')})`
+        it(asString, () => {
+          const test = () => intrinsicFunctions.format(args)
+          expect(test, `${asString} should throw`).to.throw()
+        })
+      }
+    })
+  })
 })
-
-function test (statemachine, input, result) {
-  it(statemachine, async () => {
-    let executionDescription = await statebox.startExecution(
-      Object.assign({}, input),
-      statemachine,
-      {} // options
-    )
-
-    executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
-
-    expect(executionDescription.status).to.eql('SUCCEEDED')
-    expect(executionDescription.stateMachineName).to.eql(statemachine)
-    expect(executionDescription.currentResource).to.eql(undefined)
-    expect(executionDescription.ctx.foo).to.eql(result)
-  }) // it ...
-}
