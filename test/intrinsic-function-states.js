@@ -164,7 +164,7 @@ describe('Intrinsic Functions', function () {
 
     describe('tokenise arguments', () => {
       const args = [
-        ['"a string"', 'a string'],
+        ["'a string'", 'a string'],
         ['123', 123],
         ['123.45', 123.45],
         ['-123', -123],
