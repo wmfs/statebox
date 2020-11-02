@@ -4,7 +4,7 @@
 const chai = require('chai')
 const expect = chai.expect
 
-const intrinsics = require('../lib/state-machines/instrinsics')
+const intrinsics = require('../lib/state-machines/state-types/instrinsics')
 
 describe('States.Format', () => {
   describe('good arguments', () => {
