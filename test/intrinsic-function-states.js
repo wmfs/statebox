@@ -178,6 +178,13 @@ describe('Intrinsic Functions', function () {
         it(token, () => {
           expect(intrinsicFunctions.parseArguments(token)).to.eql([value])
         })
+
+        for (const [token2, value2] of args) {
+          const ts = [token, token2].join()
+          it(ts, () => {
+            expect(intrinsicFunctions.parseArguments(ts)).to.eql([value, value2])
+          })
+        }
       }
     })
 
