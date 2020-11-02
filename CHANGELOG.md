@@ -1,3 +1,25 @@
+# [1.73.0](https://github.com/wmfs/statebox/compare/v1.72.0...v1.73.0) (2020-10-28)
+
+
+### ✨ Features
+
+* attempt at intrinsic functions in Parameters ([b4d68f3](https://github.com/wmfs/statebox/commit/b4d68f3d473c5422061f9acf3e8048dfa32e37f2))
+
+
+### 📦 Code Refactoring
+
+* check if expression is intrinsic function ([21b7c78](https://github.com/wmfs/statebox/commit/21b7c7873e0265a552739de6294fcb178d3f66ff))
+
+
+### 🚨 Tests
+
+* clearer test results ([7344d46](https://github.com/wmfs/statebox/commit/7344d466ecbe4fb8a62a42cb0147f31d97d19714))
+
+
+### 💎 Styles
+
+* standard fix ([9a7e097](https://github.com/wmfs/statebox/commit/9a7e097ae1052e208038b6ffe05b6eaf6e0a734d))
+
 # [1.72.0](https://github.com/wmfs/statebox/compare/v1.71.0...v1.72.0) (2020-10-28)
 
 
