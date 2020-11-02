@@ -186,6 +186,22 @@ describe('Intrinsic Functions', function () {
           })
         }
       }
+
+      const withWhitespace = [
+        ['123, \'happy meal\'', [123, 'happy meal']],
+        ['123 ,\'happy meal\'', [123, 'happy meal']],
+        ['123 , \'happy meal\'', [123, 'happy meal']],
+        ['123,\'happy meal\' ', [123, 'happy meal']],
+        [' 123,\'happy meal\'', [123, 'happy meal']],
+        [' 123 , \'happy meal\' ', [123, 'happy meal']],
+        ['     123    ,    \'  happy meal  \'   ', [123, '  happy meal  ']]
+      ]
+
+      for (const [token, value] of withWhitespace) {
+        it(token, () => {
+          expect(intrinsicFunctions.parseArguments(token)).to.eql(value)
+        })
+      }
     })
 
     describe('parse function call', () => {
