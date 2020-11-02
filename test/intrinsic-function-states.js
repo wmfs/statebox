@@ -162,6 +162,25 @@ describe('Intrinsic Functions', function () {
       })
     })
 
+    describe('tokenise arguments', () => {
+      const args = [
+        ['"a string"', 'a string'],
+        ['123', 123],
+        ['123.45', 123.45],
+        ['-123', -123],
+        ['-123.45', -123.45],
+        ['true', true],
+        ['false', false],
+        ['null', null]
+      ]
+
+      for (const [token, value] of args) {
+        it(token, () => {
+          expect(intrinsicFunctions.parseArguments(token)).to.eql([value])
+        })
+      }
+    })
+
     describe('parse function call', () => {
       it('States.Array', () => {
         const [name, args] = intrinsicFunctions.parseFunctionCall('States.Array()')
