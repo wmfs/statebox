@@ -161,5 +161,14 @@ describe('Intrinsic Functions', function () {
         }
       })
     })
+
+    describe('parse function call', () => {
+      it('States.Array', () => {
+        const [name, args] = intrinsicFunctions.parseFunctionCall('States.Array()')
+
+        expect(name).to.eql('States.Array')
+        expect(args).to.eql([])
+      })
+    })
   })
 })
