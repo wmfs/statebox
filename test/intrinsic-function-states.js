@@ -1,6 +1,7 @@
 /* eslint-env mocha */
 
 const chai = require('chai')
+chai.use(require('dirty-chai'))
 const expect = chai.expect
 const _ = require('lodash')
 
@@ -109,6 +110,56 @@ describe('Intrinsic Functions', function () {
           expect(test, `${asString} should throw`).to.throw()
         })
       }
+    })
+  })
+
+  describe('Function calls', () => {
+    describe('is function call', () => {
+      const goodCalls = [
+        "States.Format('hello {}', 'world')",
+        'States.StringToJson($path)',
+        'States.JsonToString($path)',
+        'States.Array()'
+      ]
+
+      const malformedCalls = [
+        'States.Format()',
+        'States.StringToJson()',
+        'States.JsonToString(1,2,3,4,5)',
+        'States.Array(undefined)'
+      ]
+
+      const notCalls = [
+        "States.Trousers('tied up with string')",
+        'Madeup.Function()',
+        'true',
+        '$.path',
+        '99'
+      ]
+
+      describe('yes', () => {
+        for (const call of goodCalls) {
+          it(call, () => {
+            expect(intrinsicFunctions.isFunctionCall(call)).to.be.true()
+          })
+        }
+      })
+
+      describe('yes, but malformed', () => {
+        for (const call of malformedCalls) {
+          it(call, () => {
+            expect(intrinsicFunctions.isFunctionCall(call)).to.be.true()
+          })
+        }
+      })
+
+      describe('no', () => {
+        for (const call of notCalls) {
+          it(call, () => {
+            expect(intrinsicFunctions.isFunctionCall(call)).to.be.false()
+          })
+        }
+      })
     })
   })
 })
