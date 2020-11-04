@@ -5,7 +5,7 @@
     "First": {
       "Type": "Pass",
       "Parameters": {
-        "foo.$": "States.Format(true)"
+        "foo.$": "States.Format('{}', $)"
       },
       "End": true
     }

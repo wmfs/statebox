@@ -105,45 +105,26 @@ describe('Intrinsic Functions', function () {
   })
 
   describe('States.Format', () => {
-    describe('good arguments', () => {
-      const goodFormatTests = [
-        [['test'], 'test'],
-        [['insert ->{}<- here', 'word'], 'insert ->word<- here'],
-        [['insert ->{}<- here', true], 'insert ->true<- here'],
-        [['insert ->{}<- here', 1], 'insert ->1<- here'],
-        [['insert ->{}<- here', 1452.1212], 'insert ->1452.1212<- here'],
-        [['insert ->{}<- here', null], 'insert ->null<- here'],
-        [['{}, {}, {}', 'word', 100, true], 'word, 100, true'],
-        [['{}<-at start', 'here'], 'here<-at start'],
-        [['at end->{}', 'here'], 'at end->here'],
-        [['{}', null], 'null'],
-        [['{}{}', null, null], 'nullnull']
-      ]
+    const goodFormatTests = [
+      [['test'], 'test'],
+      [['insert ->{}<- here', 'word'], 'insert ->word<- here'],
+      [['insert ->{}<- here', true], 'insert ->true<- here'],
+      [['insert ->{}<- here', 1], 'insert ->1<- here'],
+      [['insert ->{}<- here', 1452.1212], 'insert ->1452.1212<- here'],
+      [['insert ->{}<- here', null], 'insert ->null<- here'],
+      [['{}, {}, {}', 'word', 100, true], 'word, 100, true'],
+      [['{}<-at start', 'here'], 'here<-at start'],
+      [['at end->{}', 'here'], 'at end->here'],
+      [['{}', null], 'null'],
+      [['{}{}', null, null], 'nullnull']
+    ]
 
-      for (const [args, expected] of goodFormatTests) {
-        it(`States.Format(${args.map(a => '"' + a + '"').join(', ')})`, () => {
-          const result = intrinsicFunctions.Format(...args)
-          expect(result).to.equal(expected)
-        })
-      }
-    })
-
-    describe('malformed arguments', () => {
-      const badFormatTests = [
-        ['test', 'extra', 'arguments'],
-        ['test {}', 'yes', 'oh dear'],
-        ['too few args {}'],
-        ['still too few {} {} {}', 1, 2]
-      ]
-
-      for (const args of badFormatTests) {
-        const asString = `States.Format(${args.map(a => '"' + a + '"').join(', ')})`
-        it(asString, () => {
-          const test = () => intrinsicFunctions.Format(args)
-          expect(test, `${asString} should throw`).to.throw()
-        })
-      }
-    })
+    for (const [args, expected] of goodFormatTests) {
+      it(`States.Format(${args.map(a => '"' + a + '"').join(', ')})`, () => {
+        const result = intrinsicFunctions.Format(...args)
+        expect(result).to.equal(expected)
+      })
+    }
   })
 
   describe('States.Array', () => {
@@ -224,7 +205,9 @@ describe('Intrinsic Functions', function () {
         ['everything', null, 'string 100 true null'],
         ['tooManyParams', null, null, false],
         ['notEnoughParams', null, null, false],
-        ['badParameter', { name: 'Homer' }, null, false]
+        ['badParameter', { name: 'Homer' }, null, false],
+        ['noFormatString', null, null, false],
+        ['badFormatString', null, null, false]
       ],
       Array: [
         ['array', {
