@@ -14,64 +14,6 @@ const Statebox = require('./../lib')
 describe('Intrinsic Functions', function () {
   this.timeout(process.env.TIMEOUT || 5000)
 
-  describe('Called from State Machine', () => {
-    let statebox
-
-    before('setup statebox', async () => {
-      statebox = new Statebox()
-      await statebox.ready
-      await statebox.createStateMachines(intrinsicStateMachines, {})
-    })
-
-    const tests = [
-      [
-        'stringToJson',
-        { someString: '{"hello":"world"}' },
-        { hello: 'world' }
-      ],
-      [
-        'jsonToString',
-        { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' },
-        '{"name":"Foo","year":2020}'
-      ],
-      [
-        'format',
-        { name: 'Homer' },
-        'Your name is Homer, we are in the year 2020'
-      ],
-      [
-        'array',
-        { someJson: { random: 'abcdefg' }, zebra: 'stripe' },
-        ['Foo', 2020, { random: 'abcdefg' }, null]
-      ]
-    ]
-
-    for (const [stateFunction, input, result] of tests) {
-      test(
-        stateFunction,
-        input,
-        result
-      )
-    }
-
-    function test (stateFunction, input, result) {
-      it(_.startCase(stateFunction), async () => {
-        let executionDescription = await statebox.startExecution(
-          Object.assign({}, input),
-          stateFunction,
-          {} // options
-        )
-
-        executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
-
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        expect(executionDescription.stateMachineName).to.eql(stateFunction)
-        expect(executionDescription.currentResource).to.eql(undefined)
-        expect(executionDescription.ctx.foo).to.eql(result)
-      }) // it ...
-    } // test
-  }) // called from state machines
-
   describe('Function parsing', () => {
     describe('function call', () => {
       const goodCalls = [
@@ -284,4 +226,58 @@ describe('Intrinsic Functions', function () {
       }
     })
   })
+
+  describe('In State Machines', () => {
+    let statebox
+
+    before('setup statebox', async () => {
+      statebox = new Statebox()
+      await statebox.ready
+      await statebox.createStateMachines(intrinsicStateMachines, {})
+    })
+
+    const functionTests = {
+      StringToJson: [
+        ['stringToJson', { someString: '{"hello":"world"}' }, { hello: 'world' }],
+      ],
+      JsonToString: [
+        ['jsonToString', { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' }, '{"name":"Foo","year":2020}'],
+      ],
+      Format: [
+        ['format', { name: 'Homer' }, 'Your name is Homer, we are in the year 2020']
+      ],
+      Array: [
+        ['array', {
+          someJson: { random: 'abcdefg' },
+          zebra: 'stripe'
+        }, ['Foo', 2020, { random: 'abcdefg' }, null]],
+        ['emptyArray', null, []],
+        ['numbers', null, [1, 2, 3, 4]],
+        ['strings', null, ['one', 'two']]
+      ]
+    }
+
+    for (const [func, tests] of Object.entries(functionTests)) {
+      describe(func, () => {
+        for (const [testName, input, result] of tests) {
+          const stateMachineName = `${func}_${testName}`
+          it(_.startCase(testName), async () => {
+            let executionDescription = await statebox.startExecution(
+              Object.assign({}, input),
+              stateMachineName,
+              {} // options
+            )
+
+            executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+
+            expect(executionDescription.status).to.eql('SUCCEEDED')
+            expect(executionDescription.stateMachineName).to.eql(stateMachineName)
+            expect(executionDescription.currentResource).to.eql(undefined)
+            expect(executionDescription.ctx.foo).to.eql(result)
+          }) // it ...
+        }
+      })
+    }
+  }) // called from state machines
+
 })
