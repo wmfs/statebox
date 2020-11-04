@@ -249,7 +249,8 @@ describe('Intrinsic Functions', function () {
         ['string', { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' }, '"stripe"']
       ],
       Format: [
-        ['format', { name: 'Homer' }, 'Your name is Homer, we are in the year 2020']
+        ['format', { name: 'Homer' }, 'Your name is Homer, we are in the year 2020'],
+        ['everything', null, 'string 100 true null']
       ],
       Array: [
         ['array', {
@@ -284,5 +285,4 @@ describe('Intrinsic Functions', function () {
       })
     }
   }) // called from state machines
-
 })

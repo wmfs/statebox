@@ -8,7 +8,8 @@ module.exports = {
   JsonToString_number: require('./json-to-string/number.json'),
   JsonToString_string: require('./json-to-string/string.json'),
 
-  Format_format: require('./format.json'),
+  Format_format: require('./format/format.json'),
+  Format_everything: require('./format/everything.json'),
 
   Array_array: require('./array/array.json'),
   Array_emptyArray: require('./array/empty-array.json'),
