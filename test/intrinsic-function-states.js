@@ -238,7 +238,6 @@ describe('Intrinsic Functions', function () {
       }
     })
 
-
     describe('malformed arguments', () => {
       const badArgs = [
         [], // no args
@@ -254,6 +253,37 @@ describe('Intrinsic Functions', function () {
         })
       }
     })
+  })
 
+  describe('States.JsonToString', () => {
+    describe('good arguments', () => {
+      const strings = [
+        ['hello', '"hello"'],
+        [99, '99'],
+        [{ fruit: 'basket' }, '{"fruit":"basket"}'],
+        [[1, 2, 3], '[1,2,3]']
+      ]
+
+      for (const [obj, expected] of strings) {
+        it(`States.JsonToString('${obj}')`, () => {
+          const string = intrinsicFunctions.JsonToString(obj)
+          expect(string).to.eql(expected)
+        })
+      }
+    })
+
+    describe('malformed arguments', () => {
+      const badArgs = [
+        [], // no args
+        ['"two"', '"strings"'],
+        [1, 2, 3, 4]
+      ]
+
+      for (const args of badArgs) {
+        it(`States.JsonToString(${args.map(a => a === null ? 'null' : a).join()})`, () => {
+          expect(() => intrinsicFunctions.JsonToString(...args)).to.throw()
+        })
+      }
+    })
   })
 })
