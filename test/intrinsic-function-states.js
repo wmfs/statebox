@@ -238,7 +238,10 @@ describe('Intrinsic Functions', function () {
 
     const functionTests = {
       StringToJson: [
-        ['stringToJson', { someString: '{"hello":"world"}' }, { hello: 'world' }],
+        ['object', { someString: '{"hello":"world"}' }, { hello: 'world' }],
+        ['string', { someString: '"hello"' }, 'hello'],
+        ['number', { someString: '2020' }, 2020],
+        ['boolean', { someString: 'true' }, true]
       ],
       JsonToString: [
         ['object', { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' }, '{"name":"Foo","year":2020}'],
