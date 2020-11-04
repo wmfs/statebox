@@ -12,7 +12,7 @@ const inputPathTokeniser = require('../lib/state-machines/state-types/path-handl
 const Statebox = require('./../lib')
 
 describe('Intrinsic Functions', function () {
-  this.timeout(process.env.TIMEOUT || 5000)
+  // this.timeout(process.env.TIMEOUT || 5000)
 
   describe('Called from State Machine', () => {
     let statebox
@@ -90,7 +90,7 @@ describe('Intrinsic Functions', function () {
 
       for (const [args, expected] of goodFormatTests) {
         it(`format(${args.map(a => '"' + a + '"').join(', ')})`, () => {
-          const result = intrinsicFunctions.format(...args)
+          const result = intrinsicFunctions.Format(...args)
           expect(result).to.equal(expected)
         })
       }
@@ -154,18 +154,16 @@ describe('Intrinsic Functions', function () {
 
     describe('tokenise arguments', () => {
       const args = [
-        ["'a string'", 'a string'],
-        ['123', 123],
-        ['123.45', 123.45],
-        ['-123', -123],
-        ['-123.45', -123.45],
-        ['true', true],
-        ['false', false],
-        ['null', null],
-        ['$.path', 'path value'],
-        ['$.nothing', null],
-        ['$.array[0:2]', ['one', 'two']],
-        ['$.array', ['one', 'two', 'three']]
+        ["'a string'", 'string:a string'],
+        ['123', 'number:123'],
+        ['123.45', 'number:123.45'],
+        ['-123', 'number:-123'],
+        ['-123.45', 'number:-123.45'],
+        ['true', 'boolean:true'],
+        ['false', 'boolean:false'],
+        ['null', 'null:null'],
+        ['$.path', 'path:$.path'],
+        ['$.array[0:2]', 'path:$.array[0:2]']
       ]
 
       const context = {
@@ -173,43 +171,38 @@ describe('Intrinsic Functions', function () {
         array: ['one', 'two', 'three']
       }
 
+      function parseArguments (args) {
+        return inputPathTokeniser(`States.Array(${args})`).parameters.map(tok => `${tok.type}:${tok.value}`)
+      }
+
       for (const [arg, result] of args) {
         it(arg, () => {
-          expect(intrinsicFunctions.parseArguments(arg, context)).to.eql([result])
+          expect(parseArguments(arg, context)).to.eql([result])
         })
 
         for (const [arg2, result2] of args) {
           const ts = [arg, arg2].join()
           it(ts, () => {
-            expect(intrinsicFunctions.parseArguments(ts, context)).to.eql([result, result2])
+            expect(parseArguments(ts, context)).to.eql([result, result2])
           })
         }
       }
 
       const withWhitespace = [
-        ['123, \'happy meal\'', [123, 'happy meal']],
-        ['123 ,\'happy meal\'', [123, 'happy meal']],
-        ['123 , \'happy meal\'', [123, 'happy meal']],
-        ['123,\'happy meal\' ', [123, 'happy meal']],
-        [' 123,\'happy meal\'', [123, 'happy meal']],
-        [' 123 , \'happy meal\' ', [123, 'happy meal']],
-        ['     123    ,    \'  happy meal  \'   ', [123, '  happy meal  ']]
+        ['123, \'happy meal\'', ['number:123', 'string:happy meal']],
+        ['123 ,\'happy meal\'', ['number:123', 'string:happy meal']],
+        ['123 , \'happy meal\'', ['number:123', 'string:happy meal']],
+        ['123,\'happy meal\' ', ['number:123', 'string:happy meal']],
+        [' 123,\'happy meal\'', ['number:123', 'string:happy meal']],
+        [' 123 , \'happy meal\' ', ['number:123', 'string:happy meal']],
+        ['     123    ,    \'  happy meal  \'   ', ['number:123', 'string:  happy meal  ']]
       ]
 
       for (const [token, value] of withWhitespace) {
         it(token, () => {
-          expect(intrinsicFunctions.parseArguments(token)).to.eql(value)
+          expect(parseArguments(token)).to.eql(value)
         })
       }
-    })
-
-    describe('parse function call', () => {
-      it('States.Array', () => {
-        const [name, args] = intrinsicFunctions.parseFunctionCall('States.Array()')
-
-        expect(name).to.eql('States.Array')
-        expect(args).to.eql([])
-      })
     })
   })
 })
