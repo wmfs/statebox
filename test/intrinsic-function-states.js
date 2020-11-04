@@ -241,7 +241,9 @@ describe('Intrinsic Functions', function () {
         ['stringToJson', { someString: '{"hello":"world"}' }, { hello: 'world' }],
       ],
       JsonToString: [
-        ['jsonToString', { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' }, '{"name":"Foo","year":2020}'],
+        ['object', { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' }, '{"name":"Foo","year":2020}'],
+        ['number', { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' }, '2020'],
+        ['string', { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' }, '"stripe"']
       ],
       Format: [
         ['format', { name: 'Homer' }, 'Your name is Homer, we are in the year 2020']
