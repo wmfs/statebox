@@ -120,32 +120,23 @@ describe('Intrinsic Functions', function () {
         "States.Format('hello {}', 'world')",
         'States.StringToJson($path)',
         'States.JsonToString($path)',
-        'States.Array()'
-      ]
-
-      const malformedCalls = [
-        'States.Format()',
-        'States.StringToJson()',
-        'States.JsonToString(1,2,3,4,5)',
-        'States.Array(undefined)'
+        'States.Array()',
+        'States.Array(99)',
+        'States.Array(true)',
+        'States.Array(false)',
+        "States.Array('fridge-freezer')",
+        'States.Array(null)'
       ]
 
       const notCalls = [
         'Madeup.Function()',
         'true',
-        '99'
+        '99',
+        'States.Array(undefined)'
       ]
 
       describe('yes', () => {
         for (const call of goodCalls) {
-          it(call, () => {
-            inputPathTokeniser(call)
-          })
-        }
-      })
-
-      describe('yes, but malformed', () => {
-        for (const call of malformedCalls) {
           it(call, () => {
             inputPathTokeniser(call)
           })
