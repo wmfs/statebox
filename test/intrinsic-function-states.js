@@ -7,6 +7,7 @@ const _ = require('lodash')
 
 const intrinsicFunctions = require('../lib/state-machines/state-types/instrinsics')
 const intrinsicStateMachines = require('./fixtures/state-machines/intrinsic-function-state')
+const inputPathTokeniser = require('../lib/state-machines/state-types/path-handlers/input-path-tokeniser')
 
 const Statebox = require('./../lib')
 
@@ -130,17 +131,15 @@ describe('Intrinsic Functions', function () {
       ]
 
       const notCalls = [
-        "States.Trousers('tied up with string')",
         'Madeup.Function()',
         'true',
-        '$.path',
         '99'
       ]
 
       describe('yes', () => {
         for (const call of goodCalls) {
           it(call, () => {
-            expect(intrinsicFunctions.isFunctionCall(call)).to.be.true()
+            inputPathTokeniser(call)
           })
         }
       })
@@ -148,7 +147,7 @@ describe('Intrinsic Functions', function () {
       describe('yes, but malformed', () => {
         for (const call of malformedCalls) {
           it(call, () => {
-            expect(intrinsicFunctions.isFunctionCall(call)).to.be.true()
+            inputPathTokeniser(call)
           })
         }
       })
@@ -156,7 +155,7 @@ describe('Intrinsic Functions', function () {
       describe('no', () => {
         for (const call of notCalls) {
           it(call, () => {
-            expect(intrinsicFunctions.isFunctionCall(call)).to.be.false()
+            expect(() => inputPathTokeniser(call)).to.throw()
           })
         }
       })
