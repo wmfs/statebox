@@ -12,7 +12,7 @@ const inputPathTokeniser = require('../lib/state-machines/state-types/path-handl
 const Statebox = require('./../lib')
 
 describe('Intrinsic Functions', function () {
-  // this.timeout(process.env.TIMEOUT || 5000)
+  this.timeout(process.env.TIMEOUT || 5000)
 
   describe('Called from State Machine', () => {
     let statebox
@@ -73,7 +73,7 @@ describe('Intrinsic Functions', function () {
   }) // called from state machines
 
   describe('Function parsing', () => {
-    describe('is function call', () => {
+    describe('function call', () => {
       const goodCalls = [
         "States.Format('hello {}', 'world')",
         'States.StringToJson($path)',
@@ -86,6 +86,14 @@ describe('Intrinsic Functions', function () {
         'States.Array(null)'
       ]
 
+      for (const call of goodCalls) {
+        it(call, () => {
+          inputPathTokeniser(call)
+        })
+      }
+    })
+
+    describe('bad function calls', () => {
       const notCalls = [
         'Madeup.Function()',
         'true',
@@ -93,21 +101,11 @@ describe('Intrinsic Functions', function () {
         'States.Array(undefined)'
       ]
 
-      describe('yes', () => {
-        for (const call of goodCalls) {
-          it(call, () => {
-            inputPathTokeniser(call)
-          })
-        }
-      })
-
-      describe('no', () => {
-        for (const call of notCalls) {
-          it(call, () => {
-            expect(() => inputPathTokeniser(call)).to.throw()
-          })
-        }
-      })
+      for (const call of notCalls) {
+        it(call, () => {
+          expect(() => inputPathTokeniser(call)).to.throw()
+        })
+      }
     })
 
     describe('tokenise arguments', () => {
