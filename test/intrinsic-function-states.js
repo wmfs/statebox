@@ -162,37 +162,19 @@ describe('Intrinsic Functions', function () {
   })
 
   describe('States.StringToJson', () => {
-    describe('good arguments', () => {
-      const strings = [
-        ['"hello"', 'hello'],
-        ['99', 99],
-        ['{"fruit": "basket"}', { fruit: 'basket' }],
-        ['[1, 2, 3]', [1, 2, 3]]
-      ]
+    const strings = [
+      ['"hello"', 'hello'],
+      ['99', 99],
+      ['{"fruit": "basket"}', { fruit: 'basket' }],
+      ['[1, 2, 3]', [1, 2, 3]]
+    ]
 
-      for (const [string, expected] of strings) {
-        it(`States.StringToJson('${string}')`, () => {
-          const json = intrinsicFunctions.StringToJson(string)
-          expect(json).to.eql(expected)
-        })
-      }
-    })
-
-    describe('malformed arguments', () => {
-      const badArgs = [
-        [], // no args
-        ['"two"', '"strings"'],
-        [true],
-        [null],
-        [1, 2, 3, 4]
-      ]
-
-      for (const args of badArgs) {
-        it(`States.StringToJson(${args.map(a => a === null ? 'null' : a).join()})`, () => {
-          expect(() => intrinsicFunctions.StringToJson(...args)).to.throw()
-        })
-      }
-    })
+    for (const [string, expected] of strings) {
+      it(`States.StringToJson('${string}')`, () => {
+        const json = intrinsicFunctions.StringToJson(string)
+        expect(json).to.eql(expected)
+      })
+    }
   })
 
   describe('States.JsonToString', () => {
@@ -225,7 +207,9 @@ describe('Intrinsic Functions', function () {
         ['object', { someString: '{"hello":"world"}' }, { hello: 'world' }],
         ['string', { someString: '"hello"' }, 'hello'],
         ['number', { someString: '2020' }, 2020],
-        ['boolean', { someString: 'true' }, true]
+        ['boolean', { someString: 'true' }, true],
+        ['noParams', null, null, false],
+        ['tooManyParams', null, null, false]
       ],
       JsonToString: [
         ['object', { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' }, '{"name":"Foo","year":2020}'],
