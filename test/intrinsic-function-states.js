@@ -214,10 +214,46 @@ describe('Intrinsic Functions', function () {
     ]
 
     for (const array of arrays) {
-      it (`States.Array(${array.map(a => JSON.stringify(a)).join()})`, () => {
+      it(`States.Array(${array.map(a => JSON.stringify(a)).join()})`, () => {
         const result = intrinsicFunctions.Array(...array)
         expect(result).to.eql(array)
       })
     }
+  })
+
+  describe('States.StringToJson', () => {
+    describe('good arguments', () => {
+      const strings = [
+        ['"hello"', 'hello'],
+        ['99', 99],
+        ['{"fruit": "basket"}', { fruit: 'basket' }],
+        ['[1, 2, 3]', [1, 2, 3]]
+      ]
+
+      for (const [string, expected] of strings) {
+        it(`States.StringToJson('${string}')`, () => {
+          const json = intrinsicFunctions.StringToJson(string)
+          expect(json).to.eql(expected)
+        })
+      }
+    })
+
+
+    describe('malformed arguments', () => {
+      const badArgs = [
+        [], // no args
+        ['"two"', '"strings"'],
+        [true],
+        [null],
+        [1, 2, 3, 4]
+      ]
+
+      for (const args of badArgs) {
+        it(`States.StringToJson(${args.map(a => a === null ? 'null' : a).join()})`, () => {
+          expect(() => intrinsicFunctions.StringToJson(...args)).to.throw()
+        })
+      }
+    })
+
   })
 })
