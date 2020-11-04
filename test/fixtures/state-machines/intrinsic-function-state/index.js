@@ -10,6 +10,9 @@ module.exports = {
 
   Format_format: require('./format/format.json'),
   Format_everything: require('./format/everything.json'),
+  Format_tooManyParams: require('./format/too-many-params.json'),
+  Format_notEnoughParams: require('./format/not-enough-params.json'),
+  Format_badParameter: require('./format/bad-parameter.json'),
 
   Array_array: require('./array/array.json'),
   Array_emptyArray: require('./array/empty-array.json'),

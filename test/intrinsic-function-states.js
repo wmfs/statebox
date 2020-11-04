@@ -250,7 +250,10 @@ describe('Intrinsic Functions', function () {
       ],
       Format: [
         ['format', { name: 'Homer' }, 'Your name is Homer, we are in the year 2020'],
-        ['everything', null, 'string 100 true null']
+        ['everything', null, 'string 100 true null'],
+        ['tooManyParams', null, null, false],
+        ['notEnoughParams', null, null, false],
+        ['badParameter', { name: 'Homer' }, null, false]
       ],
       Array: [
         ['array', {
@@ -265,7 +268,7 @@ describe('Intrinsic Functions', function () {
 
     for (const [func, tests] of Object.entries(functionTests)) {
       describe(func, () => {
-        for (const [testName, input, result] of tests) {
+        for (const [testName, input, result, good = true] of tests) {
           const stateMachineName = `${func}_${testName}`
           it(_.startCase(testName), async () => {
             let executionDescription = await statebox.startExecution(
@@ -276,10 +279,15 @@ describe('Intrinsic Functions', function () {
 
             executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
 
-            expect(executionDescription.status).to.eql('SUCCEEDED')
-            expect(executionDescription.stateMachineName).to.eql(stateMachineName)
-            expect(executionDescription.currentResource).to.eql(undefined)
-            expect(executionDescription.ctx.foo).to.eql(result)
+            if (good) {
+              expect(executionDescription.status).to.eql('SUCCEEDED')
+              expect(executionDescription.stateMachineName).to.eql(stateMachineName)
+              expect(executionDescription.currentResource).to.eql(undefined)
+              expect(executionDescription.ctx.foo).to.eql(result)
+            } else {
+              expect(executionDescription.status).to.eql('FAILED')
+              expect(executionDescription.errorCode).to.eql('States.IntrinsicFailure')
+            }
           }) // it ...
         }
       })
