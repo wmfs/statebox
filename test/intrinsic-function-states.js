@@ -171,18 +171,27 @@ describe('Intrinsic Functions', function () {
         ['-123.45', -123.45],
         ['true', true],
         ['false', false],
-        ['null', null]
+        ['null', null],
+        ['$.path', 'path value'],
+        ['$.nothing', null],
+        ['$.array[0:2]', ['one', 'two']],
+        ['$.array', ['one', 'two', 'three']]
       ]
 
-      for (const [token, value] of args) {
-        it(token, () => {
-          expect(intrinsicFunctions.parseArguments(token)).to.eql([value])
+      const context = {
+        path: 'path value',
+        array: ['one', 'two', 'three']
+      }
+
+      for (const [arg, result] of args) {
+        it(arg, () => {
+          expect(intrinsicFunctions.parseArguments(arg, context)).to.eql([result])
         })
 
-        for (const [token2, value2] of args) {
-          const ts = [token, token2].join()
+        for (const [arg2, result2] of args) {
+          const ts = [arg, arg2].join()
           it(ts, () => {
-            expect(intrinsicFunctions.parseArguments(ts)).to.eql([value, value2])
+            expect(intrinsicFunctions.parseArguments(ts, context)).to.eql([result, result2])
           })
         }
       }
