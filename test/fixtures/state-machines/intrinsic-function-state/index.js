@@ -7,6 +7,9 @@ module.exports = {
   JsonToString_object: require('./json-to-string/object.json'),
   JsonToString_number: require('./json-to-string/number.json'),
   JsonToString_string: require('./json-to-string/string.json'),
+  JsonToString_paramIsNotAPath: require('./json-to-string/param-is-not-a-path.json'),
+  JsonToString_noParams: require('./json-to-string/no-params.json'),
+  JsonToString_tooManyParams: require('./json-to-string/too-many-params.json'),
 
   Format_format: require('./format/format.json'),
   Format_everything: require('./format/everything.json'),

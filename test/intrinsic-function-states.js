@@ -196,35 +196,19 @@ describe('Intrinsic Functions', function () {
   })
 
   describe('States.JsonToString', () => {
-    describe('good arguments', () => {
-      const strings = [
-        ['hello', '"hello"'],
-        [99, '99'],
-        [{ fruit: 'basket' }, '{"fruit":"basket"}'],
-        [[1, 2, 3], '[1,2,3]']
-      ]
+    const strings = [
+      ['hello', '"hello"'],
+      [99, '99'],
+      [{ fruit: 'basket' }, '{"fruit":"basket"}'],
+      [[1, 2, 3], '[1,2,3]']
+    ]
 
-      for (const [obj, expected] of strings) {
-        it(`States.JsonToString('${obj}')`, () => {
-          const string = intrinsicFunctions.JsonToString(obj)
-          expect(string).to.eql(expected)
-        })
-      }
-    })
-
-    describe('malformed arguments', () => {
-      const badArgs = [
-        [], // no args
-        ['"two"', '"strings"'],
-        [1, 2, 3, 4]
-      ]
-
-      for (const args of badArgs) {
-        it(`States.JsonToString(${args.map(a => a === null ? 'null' : a).join()})`, () => {
-          expect(() => intrinsicFunctions.JsonToString(...args)).to.throw()
-        })
-      }
-    })
+    for (const [obj, expected] of strings) {
+      it(`States.JsonToString('${obj}')`, () => {
+        const string = intrinsicFunctions.JsonToString(obj)
+        expect(string).to.eql(expected)
+      })
+    }
   })
 
   describe('In State Machines', () => {
@@ -246,7 +230,10 @@ describe('Intrinsic Functions', function () {
       JsonToString: [
         ['object', { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' }, '{"name":"Foo","year":2020}'],
         ['number', { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' }, '2020'],
-        ['string', { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' }, '"stripe"']
+        ['string', { someJson: { name: 'Foo', year: 2020 }, zebra: 'stripe' }, '"stripe"'],
+        ['paramIsNotAPath', null, null, false],
+        ['noParams', null, null, false],
+        ['tooManyParams', null, null, false]
       ],
       Format: [
         ['format', { name: 'Homer' }, 'Your name is Homer, we are in the year 2020'],
