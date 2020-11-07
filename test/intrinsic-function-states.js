@@ -25,7 +25,11 @@ describe('Intrinsic Functions', function () {
         'States.Array(true)',
         'States.Array(false)',
         "States.Array('fridge-freezer')",
-        'States.Array(null)'
+        'States.Array(null)',
+        'States.Array(States.Array(1, 2))',
+        'States.Array(1, 2, States.Array(3, 4))',
+        'States.Array(States.Array(1, 2), 3, 4)',
+        'States.Array(1, 2, States.Array(3, 4), 5, 6)'
       ]
 
       for (const call of goodCalls) {
@@ -217,7 +221,7 @@ describe('Intrinsic Functions', function () {
         ['emptyArray', null, []],
         ['numbers', null, [1, 2, 3, 4]],
         ['strings', null, ['one', 'two']],
-        ['nestedStatesArray', null, ['one', 'two', 'three', 'four', 'five', 'six']]
+        ['nestedStatesArray', null, ['one', 'two', ['three', 'four', 'five'], 'six']]
       ]
     }
 
