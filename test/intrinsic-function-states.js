@@ -6,7 +6,7 @@ const expect = chai.expect
 const _ = require('lodash')
 
 const intrinsicFunctions = require('../lib/state-machines/state-types/instrinsics')
-const intrinsicStateMachines = require('./fixtures/state-machines/intrinsic-function-state')
+const intrinsicStateMachines = require('./fixtures/state-machines/intrinsic-functions')
 const inputPathTokeniser = require('../lib/state-machines/state-types/path-handlers/input-path-tokeniser')
 
 const Statebox = require('./../lib')
