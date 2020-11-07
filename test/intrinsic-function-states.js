@@ -216,7 +216,8 @@ describe('Intrinsic Functions', function () {
         }, ['Foo', 2020, { random: 'abcdefg' }, null]],
         ['emptyArray', null, []],
         ['numbers', null, [1, 2, 3, 4]],
-        ['strings', null, ['one', 'two']]
+        ['strings', null, ['one', 'two']],
+        ['nestedStatesArray', null, ['one', 'two', 'three', 'four', 'five', 'six']]
       ]
     }
 
