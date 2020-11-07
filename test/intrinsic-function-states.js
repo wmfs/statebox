@@ -12,7 +12,7 @@ const inputPathTokeniser = require('../lib/state-machines/state-types/path-handl
 const Statebox = require('./../lib')
 
 describe('Intrinsic Functions', function () {
-  this.timeout(process.env.TIMEOUT || 5000)
+  //this.timeout(process.env.TIMEOUT || 5000)
 
   describe('Function parsing', () => {
     describe('function call', () => {
@@ -57,7 +57,7 @@ describe('Intrinsic Functions', function () {
     describe('tokenise arguments', () => {
       const args = [
         ["'a string'", 'string:a string'],
-        ['123', 'number:123'],
+        /*['123', 'number:123'],
         ['123.45', 'number:123.45'],
         ['-123', 'number:-123'],
         ['-123.45', 'number:-123.45'],
@@ -65,7 +65,12 @@ describe('Intrinsic Functions', function () {
         ['false', 'boolean:false'],
         ['null', 'null:null'],
         ['$.path', 'path:$.path'],
-        ['$.array[0:2]', 'path:$.array[0:2]']
+        ['$.array[0:2]', 'path:$.array[0:2]'],
+        ["'\\''", "string:\\'"],
+        ["'\\}'", 'string:\\}'],
+        ["'\\{'", 'string:\\{'],*/
+        ["'\\\\'", 'string:\\\\'],
+        ["'embedded \\{\\'hello\\'\\}'", "string:embedded \\{\\'hello\\'\\}"]
       ]
 
       const context = {
