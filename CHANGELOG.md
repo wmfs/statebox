@@ -1,3 +1,78 @@
+# [1.74.0](https://github.com/wmfs/statebox/compare/v1.73.0...v1.74.0) (2020-11-09)
+
+
+### ✨ Features
+
+* **instrinsic-functions:** States.Array ([d724019](https://github.com/wmfs/statebox/commit/d724019e48ae5cb0ff81ab3f32d040b9c4369594))
+* **instrinsics:** Start of States.Format function ([cb48f07](https://github.com/wmfs/statebox/commit/cb48f0711897cdf109824fbcbe2105ea6a9a66be))
+* **instrinsics:** States.JsonToString ([d84ddef](https://github.com/wmfs/statebox/commit/d84ddef4e4b5d502c5ea21fa3cf59bf60c0edbf7))
+* **instrinsics:** States.StringToJson ([ecb74fe](https://github.com/wmfs/statebox/commit/ecb74fea8c270f8e16dc1f6961e43ff95f1a9ca4))
+* **instrinsics:** States.StringToJson done ([f0fb332](https://github.com/wmfs/statebox/commit/f0fb332e3faa83dc996192f87c44d7bc4c3d3942))
+* **intrinsics:** States.Format error conditions ([7c735d5](https://github.com/wmfs/statebox/commit/7c735d565eb4a112d7ac3e1c8e93c12f911de741))
+* Argument parsing ([51d8710](https://github.com/wmfs/statebox/commit/51d8710ae72aa297fdf075c3c78c6ec7f3cf20ed))
+* More rigourous call checking ([76fcec2](https://github.com/wmfs/statebox/commit/76fcec2cef7e4c29cf1b123872d2d95f42fd917e))
+* Start on function argument parsing ([6af3243](https://github.com/wmfs/statebox/commit/6af32431a9aa68320c63f09e50bcc2b2ac2fa384))
+
+
+### 🐛 Bug Fixes
+
+* **input-path-handler:** Parse out and start to evaluate intrinsic functions ([f38f920](https://github.com/wmfs/statebox/commit/f38f920170bd670763cd760b4c25d266bbd627bd))
+* **input-path-handler:** Starting to extend tokeniser to handle instrinsics ([cec942b](https://github.com/wmfs/statebox/commit/cec942b30a2081aa0b18a6e8ea7beea3b680fbdf))
+* **input-path-handler:** tokenise functions with a single parameter ([99ccfbe](https://github.com/wmfs/statebox/commit/99ccfbeb29603f7df7003db217bdca847cbb48de))
+* **input-path-handler:** tokenise functions with multiple parameters ([b372981](https://github.com/wmfs/statebox/commit/b3729817d81de1ade255fa98047a49eb4e1ed2d6))
+* **instrinsics:** corrected string regex ([6e8eddb](https://github.com/wmfs/statebox/commit/6e8eddb3518296a20adef5739b45c91103a1323c))
+* **instrinsics:** Extend parameter parsing to evaluate path expressions ([7be262f](https://github.com/wmfs/statebox/commit/7be262ffda423654ffd26be3bb112135fdd67598))
+* **instrinsics:** Tweak instrinsic function rule, so they can appear in the parameter list ([502c150](https://github.com/wmfs/statebox/commit/502c15078a6511c9b64d202cc2edc97726b29c80))
+* **intrinsics:** Escape sequences in States.Format ([65335c4](https://github.com/wmfs/statebox/commit/65335c4fafdb1d595d505c2dd918d0d0dd611505))
+* **intrinsics:** JsonToString parameter validation ([e25c123](https://github.com/wmfs/statebox/commit/e25c12386b22f38e80724047eeb5806197b81548))
+* **intrinsics:** Tokenise strings with escape sequences correctly ([3fca040](https://github.com/wmfs/statebox/commit/3fca0405d51002c53e6c5cc92ec7b13437b11abf))
+* Format null values ([5916eb3](https://github.com/wmfs/statebox/commit/5916eb3199f4107abe879a39dcef48c55c0bc09e))
+* More work on argument parsing ([643ca39](https://github.com/wmfs/statebox/commit/643ca39110b874b2f02c792694c8d2e7540e1834))
+* Multiple substitutions, substitution at start and at end ([d059584](https://github.com/wmfs/statebox/commit/d0595845f57c77c8b7bd7d4daa831242d608ae92))
+* Parse multiple arguments separated by , ([2c892d4](https://github.com/wmfs/statebox/commit/2c892d4185a293278417be493b6e55034c734773))
+* Strip extraneous whitespace while tokenising arguments ([c75d406](https://github.com/wmfs/statebox/commit/c75d4066c0cbf117d08a59465605fe29ef7fc2d2))
+* **State.Format:** more wrong number of arguments tests ([f1419a2](https://github.com/wmfs/statebox/commit/f1419a2399d4331eb5fbd0982c959f3bd09035d3))
+* **States.Format:** validate number of arguments ([bc9e68f](https://github.com/wmfs/statebox/commit/bc9e68f5b0c3c2710d123672128bf52ea6b7045d))
+* Simple value substitution ([2d06029](https://github.com/wmfs/statebox/commit/2d0602928b5c6e6e33c298502f9c04eebe4143b0))
+
+
+### 🛠 Builds
+
+* **deps-dev:** bump codecov from 3.8.0 to 3.8.1 ([2560e3a](https://github.com/wmfs/statebox/commit/2560e3a5d2545577cf670b02568b56a048fbbbd6))
+* **deps-dev:** bump mocha from 8.2.0 to 8.2.1 ([2ac8e6e](https://github.com/wmfs/statebox/commit/2ac8e6e275ee877642d3833d076adbc31c6a533a))
+* **deps-dev:** bump semantic-release from 17.2.1 to 17.2.2 ([cbcc88f](https://github.com/wmfs/statebox/commit/cbcc88f0c8ba13b4ce8436d89e941d47b1807f4c))
+* **deps-dev:** bump standard from 15.0.1 to 16.0.0 ([d7bb9d5](https://github.com/wmfs/statebox/commit/d7bb9d5f15da4885c46fe054a69d0819b30f505a))
+* **deps-dev:** bump standard from 16.0.0 to 16.0.1 ([ad043ba](https://github.com/wmfs/statebox/commit/ad043ba92f43ca4e6a8ddccb4a85fb4eecda1dc2))
+
+
+### 📦 Code Refactoring
+
+* Changed intrinsic-function fixture name ([1930afb](https://github.com/wmfs/statebox/commit/1930afb81527d53930f6cb090495618a873becd6))
+* **input-path-handler:** Use tokenizr when evaluating Path expressions ([f7d227f](https://github.com/wmfs/statebox/commit/f7d227f1174d3dc9597b7be77262352dcc5934b1))
+* **input-path-selector:** Renamed ctx to input - matches spec text better ([fc3e681](https://github.com/wmfs/statebox/commit/fc3e68191ca360bdabe2644e137f6c3c5c9f9fd0))
+* **instrinsics:** Convert strings to values after tokenisation, instead of during ([16bc45f](https://github.com/wmfs/statebox/commit/16bc45f2a3da0df8316417bee207d143a20ea422))
+* **instrinsics:** jiggled test descriptions a little ([2fe5cdf](https://github.com/wmfs/statebox/commit/2fe5cdfe7ae80ba327da2d0c3f177101b8817f0b))
+* **intrinsics:** States.Format error handling ([c4d893a](https://github.com/wmfs/statebox/commit/c4d893a39c10920d1f4dd191ed8fc4e32e10bcd7))
+* **intrinsics:** StringToJson parameter validation ([b14391e](https://github.com/wmfs/statebox/commit/b14391e0f96b530eaf62811d2ae5ac75864630c3))
+* Hook States.Format implementation into input path handler ([944018b](https://github.com/wmfs/statebox/commit/944018b6945d4a4fe9da3eaf8f26ce1aaab1b20a))
+* Move instrinics subdirectory under state-types ([92207a6](https://github.com/wmfs/statebox/commit/92207a692ef68fba394d78090e364f6fa54943f2))
+
+
+### 🚨 Tests
+
+* **failing:** Nested instrinsic tokenising tests ([9103b64](https://github.com/wmfs/statebox/commit/9103b64d80b1d22abee7520c686ff5aa6cf2e0e4))
+* **failing:** Nested intrinsic function calls ([9eb38f4](https://github.com/wmfs/statebox/commit/9eb38f4406c9027a2d335583ad2053d706cd63b7))
+* **intrinsics:** Extra JsonToString state machine tests ([00a9f48](https://github.com/wmfs/statebox/commit/00a9f48fde41d514918430aa3da0cfaf5be00b04))
+* **intrinsics:** More State.Format tests ([41b1ca5](https://github.com/wmfs/statebox/commit/41b1ca5af17dc6727650ad48bc8159968abdc729))
+* **intrinsics:** States.Array state machine tests ([c374b5b](https://github.com/wmfs/statebox/commit/c374b5bd0c20741f4f293b899b04095366171836))
+* **intrinsics:** States.JsonToString state machine tests ([cbad475](https://github.com/wmfs/statebox/commit/cbad475d81d509aa18ccad961fcc115147dfc67b))
+* Combine instrinsics tests into a single test file ([a6106ae](https://github.com/wmfs/statebox/commit/a6106aed41878b14963f8797d9ce009f0ff2d07d))
+
+
+### 💎 Styles
+
+* Lint fix ([63b4ae4](https://github.com/wmfs/statebox/commit/63b4ae496e458653f8a3e380365ecdc35fe20d38))
+
 # [1.73.0](https://github.com/wmfs/statebox/compare/v1.72.0...v1.73.0) (2020-10-28)
 
 
