@@ -1,0 +1,13 @@
+{
+  "Comment": "Example of the Intrinsic Function State",
+  "StartAt": "First",
+  "States": {
+    "First": {
+      "Type": "Pass",
+      "Parameters": {
+        "foo.$": "States.Array('one', 'two', States.Array('three', 'four', 'five'), 'six')"
+      },
+      "End": true
+    }
+  }
+}

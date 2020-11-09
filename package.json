@@ -29,6 +29,7 @@
     "jsonpath": "1.0.2",
     "lodash": "4.17.20",
     "luxon": "1.25.0",
+    "tokenizr": "^1.6.1",
     "uuid": "8.3.1"
   },
   "devDependencies": {
