@@ -1,3 +1,10 @@
+# [1.75.0](https://github.com/wmfs/statebox/compare/v1.74.0...v1.75.0) (2020-11-12)
+
+
+### 🛠 Builds
+
+* **deps:** bump [@wmfs](https://github.com/wmfs)/asl-choice-processor from 1.16.0 to 1.17.0 ([c5bfaf0](https://github.com/wmfs/statebox/commit/c5bfaf0dedec8626fc059e4df8ab299d6072ade9))
+
 # [1.74.0](https://github.com/wmfs/statebox/compare/v1.73.0...v1.74.0) (2020-11-09)
 
 
