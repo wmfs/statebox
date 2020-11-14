@@ -23,12 +23,13 @@
   "main": "./lib/index.js",
   "dependencies": {
     "@hapi/boom": "9.1.0",
-    "@wmfs/asl-choice-processor": "1.16.0",
+    "@wmfs/asl-choice-processor": "1.17.0",
     "debug": "4.2.0",
     "dottie": "2.0.2",
     "jsonpath": "1.0.2",
     "lodash": "4.17.20",
     "luxon": "1.25.0",
+    "tokenizr": "^1.6.1",
     "uuid": "8.3.1"
   },
   "devDependencies": {
@@ -38,15 +39,15 @@
     "chai": "4.2.0",
     "chai-string": "1.5.0",
     "chai-subset": "1.6.0",
-    "codecov": "3.8.0",
+    "codecov": "3.8.1",
     "conventional-changelog-metahub": "4.0.1",
     "cz-conventional-changelog": "3.3.0",
     "dirty-chai": "2.0.1",
     "express": "4.17.1",
-    "mocha": "8.2.0",
+    "mocha": "8.2.1",
     "nyc": "15.1.0",
     "semantic-release": "17.2.2",
-    "standard": "16.0.1"
+    "standard": "16.0.2"
   },
   "scripts": {
     "lint": "standard",
