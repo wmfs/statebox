@@ -10,7 +10,7 @@ const Statebox = require('./../lib')
 
 let statebox
 
-describe('Intrinsic Function States', function () {
+describe('Map State', function () {
   this.timeout(process.env.TIMEOUT || 5000)
 
   before('setup statebox', async () => {
