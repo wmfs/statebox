@@ -23,7 +23,7 @@
   "main": "./lib/index.js",
   "dependencies": {
     "@hapi/boom": "9.1.0",
-    "@wmfs/asl-choice-processor": "1.16.0",
+    "@wmfs/asl-choice-processor": "1.17.0",
     "debug": "4.2.0",
     "dottie": "2.0.2",
     "jsonpath": "1.0.2",
@@ -47,7 +47,7 @@
     "mocha": "8.2.1",
     "nyc": "15.1.0",
     "semantic-release": "17.2.2",
-    "standard": "16.0.1"
+    "standard": "16.0.2"
   },
   "scripts": {
     "lint": "standard",
