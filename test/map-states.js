@@ -40,7 +40,19 @@ describe('Map State', function () {
               ]
             }
           },
-          {}
+          {
+            'ship-date': '2016-03-14T01:59:00Z',
+            detail: {
+              'delivery-partner': 'UQS',
+              shipped: [
+                { prod: 'R31', 'dest-code': 9511, quantity: 1345 },
+                { prod: 'S39', 'dest-code': 9511, quantity: 41 },
+                { prod: 'R31', 'dest-code': 9833, quantity: 13 },
+                { prod: 'R40', 'dest-code': 9860, quantity: 888 },
+                { prod: 'R40', 'dest-code': 9511, quantity: 1221 }
+              ]
+            }
+          }
         ]
       ]
 
@@ -58,12 +70,7 @@ describe('Map State', function () {
           expect(executionDescription.stateMachineName).to.eql(statemachine)
           expect(executionDescription.currentResource).to.eql(undefined)
 
-          // Quantity incremented by 1
-          expect(executionDescription.ctx.detail.shipped[0].quantity).to.eql(1345)
-          expect(executionDescription.ctx.detail.shipped[1].quantity).to.eql(41)
-          expect(executionDescription.ctx.detail.shipped[2].quantity).to.eql(13)
-          expect(executionDescription.ctx.detail.shipped[3].quantity).to.eql(888)
-          expect(executionDescription.ctx.detail.shipped[4].quantity).to.eql(1221)
+          expect(executionDescription.ctx).to.eql(result)
         }) // it ...
       }
     })
