@@ -1,0 +1,24 @@
+{
+  "Comment": "Example of the Map State",
+  "StartAt": "Validate-All",
+  "States": {
+    "Validate-All": {
+      "Type": "Map",
+      "InputPath": "$.detail",
+      "ItemsPath": "$.shipped",
+      "MaxConcurrency": 0,
+      "Iterator": {
+        "StartAt": "Validate",
+        "States": {
+          "Validate": {
+            "Type": "Task",
+            "Resource": "module:incrementQuantity",
+            "End": true
+          }
+        }
+      },
+      "ResultPath": "$.detail.shipped",
+      "End": true
+    }
+  }
+}
