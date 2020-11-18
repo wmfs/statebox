@@ -31,6 +31,15 @@ describe('Task State', function () {
       georefOf: 'Home',
       where: { georefOf: 'Home' }
     },
+    taskWithResultSelector: {
+      georefOf: 'Home',
+      'x-datum': 0,
+      'y-datum': 600
+    },
+    taskWithDynamicResultSelector: {
+      georefOf: 'Home',
+      place: 'Home'
+    },
     taskWithResultSelectorAndResultPath: {
       georefOf: 'Home',
       coords: {
@@ -38,7 +47,14 @@ describe('Task State', function () {
         'y-datum': 600
       }
     },
+    taskWithDynamicResultSelectorAndResultPath: {
+      georefOf: 'Home',
+      where: {
+        place: 'Home'
+      }
+    },
     taskWithResultSelectorAndNullResultPath: georefOf,
+    taskWithDynamicResultSelectorAndNullResultPath: georefOf,
     taskWithInputPath: 'Home',
     taskWithInputPathAndResultPath: {
       georefOf: 'Home',
@@ -50,9 +66,13 @@ describe('Task State', function () {
       place: { }
     },
     taskWithResultSelectorAndNullOutputPath: { },
+    taskWithDynamicResultSelectorAndNullOutputPath: { },
     taskWithResultSelectorResultPathAndOutputPath: {
       'x-datum': 0,
       'y-datum': 600
+    },
+    taskWithDynamicResultSelectorResultPathAndOutputPath: {
+      place: 'Home'
     },
     taskWithFixedParameters: {
       georefOf: 'Home',
@@ -64,11 +84,23 @@ describe('Task State', function () {
       'x-datum': 1000,
       'y-datum': 1600
     },
+    taskWithFixedParametersAndDynamicResultSelector: {
+      georefOf: 'Home',
+      'x-datum': 0,
+      'y-datum': 1600
+    },
     taskWithFixedParametersAndResultSelectorResultPath: {
       georefOf: 'Home',
       place: {
         'x-datum': 1000,
         'y-datum': 1600
+      }
+    },
+    taskWithFixedParametersAndDynamicResultSelectorResultPath: {
+      georefOf: 'Home',
+      place: {
+        'x-datum': 0,
+        'y-datum': 600
       }
     },
     taskWithFixedParametersAndNullOutputPath: { },
@@ -87,6 +119,14 @@ describe('Task State', function () {
       'x-datum': 1000,
       'y-datum': 1600
     },
+    taskWithFixedParametersDynamicResultSelectorResultPathAndOutputPath: {
+      'x-datum': 0,
+      'y-datum': 600
+    },
+    taskWithFixedParametersDynamicResultSelectorAndOutputPath: {
+      'x-datum': 0,
+      'y-datum': 600
+    },
     taskWithDynamicParameters: {
       georefOf: 'Home',
       'x-datum': 0,
@@ -100,11 +140,23 @@ describe('Task State', function () {
       'x-datum': 1000,
       'y-datum': 1600
     },
+    taskWithDynamicParametersAndDynamicResultSelector: {
+      georefOf: 'Home',
+      'x-datum': 0,
+      'y-datum': 600
+    },
     taskWithDynamicParametersAndResultSelectorResultPath: {
       georefOf: 'Home',
       place: {
         'x-datum': 1000,
         'y-datum': 1600
+      }
+    },
+    taskWithDynamicParametersAndDynamicResultSelectorResultPath: {
+      georefOf: 'Home',
+      place: {
+        'x-datum': 0,
+        'y-datum': 600
       }
     },
     taskWithDynamicParametersAndNullOutputPath: { },
@@ -126,6 +178,16 @@ describe('Task State', function () {
     taskWithDynamicParametersResultSelectorResultPathAndOutputPath: {
       'x-datum': 1000,
       'y-datum': 1600
+    },
+    taskWithDynamicParametersDynamicResultSelectorResultPathAndOutputPath: {
+      place: 'Home'
+    },
+    taskWithDynamicParametersDynamicResultSelectorAndOutputPath: {
+      place: 'Home',
+      coords: {
+        x: 0,
+        y: 600
+      }
     }
   }
 
