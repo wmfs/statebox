@@ -95,7 +95,7 @@ describe('Task State', function () {
         where: 'Home'
       }
     },
-    taskWithDynamicParametersAndResult: {
+    taskWithDynamicParametersAndResultSelector: {
       georefOf: 'Home',
       'x-datum': 1000,
       'y-datum': 1600
