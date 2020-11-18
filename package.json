@@ -46,8 +46,8 @@
     "express": "4.17.1",
     "mocha": "8.2.1",
     "nyc": "15.1.0",
-    "semantic-release": "17.2.2",
-    "standard": "16.0.2"
+    "semantic-release": "17.2.3",
+    "standard": "16.0.3"
   },
   "scripts": {
     "lint": "standard",

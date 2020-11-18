@@ -1,3 +1,36 @@
+# [1.76.0](https://github.com/wmfs/statebox/compare/v1.75.0...v1.76.0) (2020-11-16)
+
+
+### ✨ Features
+
+* start of Map state (similar to Parallel) ([24eb848](https://github.com/wmfs/statebox/commit/24eb8487a5212ac7fb242c3f85159b14cb0255d2))
+
+
+### 🐛 Bug Fixes
+
+* It was possible for parallel and map parents states to complete more than once. This would be b ([3a4740b](https://github.com/wmfs/statebox/commit/3a4740bd28183dcdbe388dd113cecbfc016a56f4))
+* Process task failure if parallel/map launch fails. ([d12b58d](https://github.com/wmfs/statebox/commit/d12b58d8c0fa0867ad06d83f1977efd6015c36fc))
+
+
+### 🛠 Builds
+
+* **deps-dev:** bump standard from 16.0.1 to 16.0.2 ([ee698ac](https://github.com/wmfs/statebox/commit/ee698ac0b14253eaf8b72a208ec639d6cdf1dba4))
+
+
+### 📦 Code Refactoring
+
+* Aligning Map and Parallel ([42662c9](https://github.com/wmfs/statebox/commit/42662c9b42262905b21e5ca3f1d04070a1dadc16))
+* Corrected test names ([845278e](https://github.com/wmfs/statebox/commit/845278e4b787dc4b7815bfdaad4e4ae5fa4a263b))
+* Minor require tweaking ([f2b1cf0](https://github.com/wmfs/statebox/commit/f2b1cf08a281e918769273d5d21bfb880d25812a))
+* Move process out of Map and Parallel into the base and we're done. ([46583e7](https://github.com/wmfs/statebox/commit/46583e75ef63707ac1d053d930943b4ddf900d71))
+* Starting to pull out common base for Map and Parallel ([fbcfd58](https://github.com/wmfs/statebox/commit/fbcfd58d9b171905934b773a7c4fff347875ae5c))
+* Tweak the map test so the linter passes ([b654469](https://github.com/wmfs/statebox/commit/b6544692d3f56e96f0866b53c28bb85123348166))
+
+
+### 🚨 Tests
+
+* Extend Map test to use all available Daos ([53c0dcb](https://github.com/wmfs/statebox/commit/53c0dcb21532a55a5e1bd861ff06cd727e489a67))
+
 # [1.75.0](https://github.com/wmfs/statebox/compare/v1.74.0...v1.75.0) (2020-11-12)
 
 
