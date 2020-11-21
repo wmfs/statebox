@@ -164,7 +164,8 @@ describe('Task State', function () {
       georefOf: 'Home',
       theOtherGeorefOf: { georefOf: 'Work' },
       'x-datum': 0,
-      'y-datum': 600
+      'y-datum': 600,
+      place: 'Home'
     },
     taskWithDynamicParametersAndResultSelectorResultPath: {
       georefOf: 'Home',
@@ -212,6 +213,31 @@ describe('Task State', function () {
       coords: {
         x: 0,
         y: 600
+      }
+    },
+    taskWithInputPathAndDynamicParameters: {
+      georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
+      'x-datum': 0,
+      'y-datum': 600,
+      input: {
+        where: 'Work'
+      }
+    },
+    taskWithInputPathDynamicParametersAndDynamicResultSelector: {
+      georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
+      'x-datum': 0,
+      'y-datum': 600,
+      place: 'Work'
+    },
+    taskWithInputPathDynamicParametersDynamicResultSelectorAndResultPath: {
+      georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
+      place: {
+        'x-datum': 0,
+        'y-datum': 600,
+        place: 'Work'
       }
     }
   }

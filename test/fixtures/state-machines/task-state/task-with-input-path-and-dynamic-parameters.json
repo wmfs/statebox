@@ -5,15 +5,13 @@
     "TaskState": {
       "Type": "Task",
       "Resource": "module:passThrough",
+      "InputPath": "$.theOtherGeorefOf",
       "Parameters": {
         "x-datum": 0,
         "y-datum": 600,
-        "where.$": "$.georefOf"
-      },
-      "ResultSelector": {
-        "x-datum.$": "$['x-datum']",
-        "y-datum.$": "$['y-datum']",
-        "place.$": "$.where"
+        "input": {
+          "where.$": "$.georefOf"
+        }
       },
       "End": true
     }
