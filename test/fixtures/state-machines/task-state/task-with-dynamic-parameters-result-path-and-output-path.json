@@ -1,0 +1,18 @@
+{
+  "Comment": "Example of the Pass State",
+  "StartAt": "TaskState",
+  "States": {
+    "TaskState": {
+      "Type": "Task",
+      "Resource": "module:passThrough",
+      "Parameters": {
+        "x-datum": 0,
+        "y-datum": 600,
+        "where.$": "$.georefOf"
+      },
+      "ResultPath": "$.place",
+      "OutputPath": "$.place",
+      "End": true
+    }
+  }
+}

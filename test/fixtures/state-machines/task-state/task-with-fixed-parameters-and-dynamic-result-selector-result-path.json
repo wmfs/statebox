@@ -1,0 +1,20 @@
+{
+  "Comment": "Example of the Pass State",
+  "StartAt": "TaskState",
+  "States": {
+    "TaskState": {
+      "Type": "Task",
+      "Resource": "module:passThrough",
+      "Parameters": {
+        "x-datum": 0,
+        "y-datum": 600
+      },
+      "ResultSelector": {
+        "x-datum.$": "$['x-datum']",
+        "y-datum.$": "$['y-datum']"
+      },
+      "ResultPath": "$.place",
+      "End": true
+    }
+  }
+}

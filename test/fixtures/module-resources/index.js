@@ -14,5 +14,6 @@ module.exports = {
   failure: require('./Failure'),
   failWithError: require('./FailWithError'),
   stuttery: require('./Stuttery'),
-  ilive: require('./Ilive')
+  ilive: require('./Ilive'),
+  passThrough: require('./PassThrough')
 }
