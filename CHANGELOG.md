@@ -1,3 +1,34 @@
+# [1.77.0](https://github.com/wmfs/statebox/compare/v1.76.0...v1.77.0) (2020-11-21)
+
+
+### ✨ Features
+
+* **result-selector:** Last load of tests, confirming result selector operation ([64ac646](https://github.com/wmfs/statebox/commit/64ac64626adb4fccf0770e215db421e8caebf033))
+
+
+### 🐛 Bug Fixes
+
+* Extend findResultPathHandler to take resultSelector ([870a920](https://github.com/wmfs/statebox/commit/870a92059f885ebd063237cb008f55d62eb21296))
+* Hook in resultSelector ([e4f84e4](https://github.com/wmfs/statebox/commit/e4f84e48470d25a11d1d5626e27fcaeb3a6da622))
+
+
+### 🛠 Builds
+
+* **deps-dev:** bump semantic-release from 17.2.2 to 17.2.3 ([3d64c2f](https://github.com/wmfs/statebox/commit/3d64c2fc10190baa47fcd4808a98da75317c8efe))
+* **deps-dev:** bump standard from 16.0.2 to 16.0.3 ([f22354e](https://github.com/wmfs/statebox/commit/f22354e6dbb7f74900ac4c86573f62f572e7035f))
+
+
+### 📦 Code Refactoring
+
+* Corrected test file name ([e2ad05c](https://github.com/wmfs/statebox/commit/e2ad05cdb51a7e5db3a696bf6934cf5807633c12))
+* Pull all the parameter handler code out into its own file ([f4b9fd6](https://github.com/wmfs/statebox/commit/f4b9fd69f932ba606fe9e27a5a045e8f17474009))
+
+
+### 🚨 Tests
+
+* Fixed test state machine name ([05f6c49](https://github.com/wmfs/statebox/commit/05f6c4930e58cc71a370defecd81623613fc8d1f))
+* **result-selector:** Task tests with combinations of input, parameters, result selector, result, a ([e28fb63](https://github.com/wmfs/statebox/commit/e28fb63abd731f2dc1b71aa2c20ef0c1be0cd2f3))
+
 # [1.76.0](https://github.com/wmfs/statebox/compare/v1.75.0...v1.76.0) (2020-11-16)
 
 
