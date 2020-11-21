@@ -19,7 +19,12 @@ describe('Task State', function () {
     await statebox.createStateMachines(taskStateMachines, {})
   })
 
-  const georefOf = { georefOf: 'Home' }
+  const georefOf = {
+    georefOf: 'Home',
+    theOtherGeorefOf: {
+      georefOf: 'Work'
+    }
+  }
 
   const taskStates = {
     task: georefOf,
@@ -29,19 +34,23 @@ describe('Task State', function () {
     // },
     taskWithResultPath: {
       georefOf: 'Home',
-      where: { georefOf: 'Home' }
+      theOtherGeorefOf: { georefOf: 'Work' },
+      where: { georefOf: 'Home', theOtherGeorefOf: { georefOf: 'Work' } }
     },
     taskWithResultSelector: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       'x-datum': 0,
       'y-datum': 600
     },
     taskWithDynamicResultSelector: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       place: 'Home'
     },
     taskWithResultSelectorAndResultPath: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       coords: {
         'x-datum': 0,
         'y-datum': 600
@@ -49,6 +58,7 @@ describe('Task State', function () {
     },
     taskWithDynamicResultSelectorAndResultPath: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       where: {
         place: 'Home'
       }
@@ -58,11 +68,13 @@ describe('Task State', function () {
     taskWithInputPath: 'Home',
     taskWithInputPathAndResultPath: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       place: 'Home'
     },
     // taskWithNullInputPath: { },
     taskWithNullInputPathAndResultPath: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       place: { }
     },
     taskWithResultSelectorAndNullOutputPath: { },
@@ -76,21 +88,25 @@ describe('Task State', function () {
     },
     taskWithFixedParameters: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       'x-datum': 0,
       'y-datum': 600
     },
     taskWithFixedParametersAndResultSelector: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       'x-datum': 1000,
       'y-datum': 1600
     },
     taskWithFixedParametersAndDynamicResultSelector: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       'x-datum': 0,
       'y-datum': 1600
     },
     taskWithFixedParametersAndResultSelectorResultPath: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       place: {
         'x-datum': 1000,
         'y-datum': 1600
@@ -98,6 +114,7 @@ describe('Task State', function () {
     },
     taskWithFixedParametersAndDynamicResultSelectorResultPath: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       place: {
         'x-datum': 0,
         'y-datum': 600
@@ -106,6 +123,7 @@ describe('Task State', function () {
     taskWithFixedParametersAndNullOutputPath: { },
     taskWithFixedParametersAndResultPath: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       place: {
         'x-datum': 0,
         'y-datum': 600
@@ -129,6 +147,7 @@ describe('Task State', function () {
     },
     taskWithDynamicParameters: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       'x-datum': 0,
       'y-datum': 600,
       input: {
@@ -137,16 +156,19 @@ describe('Task State', function () {
     },
     taskWithDynamicParametersAndResultSelector: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       'x-datum': 1000,
       'y-datum': 1600
     },
     taskWithDynamicParametersAndDynamicResultSelector: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       'x-datum': 0,
       'y-datum': 600
     },
     taskWithDynamicParametersAndResultSelectorResultPath: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       place: {
         'x-datum': 1000,
         'y-datum': 1600
@@ -154,6 +176,7 @@ describe('Task State', function () {
     },
     taskWithDynamicParametersAndDynamicResultSelectorResultPath: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       place: {
         'x-datum': 0,
         'y-datum': 600
@@ -162,11 +185,13 @@ describe('Task State', function () {
     taskWithDynamicParametersAndNullOutputPath: { },
     taskWithDynamicParametersAndResultPath: {
       georefOf: 'Home',
+      theOtherGeorefOf: { georefOf: 'Work' },
       place: {
         'x-datum': 0,
         'y-datum': 600,
         where: {
-          georefOf: 'Home'
+          georefOf: 'Home',
+          theOtherGeorefOf: { georefOf: 'Work' }
         }
       }
     },
