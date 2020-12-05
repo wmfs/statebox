@@ -36,5 +36,8 @@ module.exports = {
   taskWithDynamicParametersResultPathAndOutputPath: require('./task-with-dynamic-parameters-result-path-and-output-path'),
   taskWithDynamicParametersResultSelectorResultPathAndOutputPath: require('./task-with-dynamic-parameters-result-selector-result-path-and-output-path'),
   taskWithDynamicParametersDynamicResultSelectorResultPathAndOutputPath: require('./task-with-dynamic-parameters-dynamic-result-selector-result-path-and-output-path'),
-  taskWithDynamicParametersDynamicResultSelectorAndOutputPath: require('./task-with-dynamic-parameters-dynamic-result-selector-and-output-path')
+  taskWithDynamicParametersDynamicResultSelectorAndOutputPath: require('./task-with-dynamic-parameters-dynamic-result-selector-and-output-path'),
+  taskWithInputPathAndDynamicParameters: require('./task-with-input-path-and-dynamic-parameters.json'),
+  taskWithInputPathDynamicParametersAndDynamicResultSelector: require('./task-with-input-path-dynamic-parameters-and-dynamic-result-selector.json'),
+  taskWithInputPathDynamicParametersDynamicResultSelectorAndResultPath: require('./task-with-input-path-dynamic-parameters-dynamic-result-selector-and-result-path.json')
 }
