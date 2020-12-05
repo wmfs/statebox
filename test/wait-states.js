@@ -86,7 +86,7 @@ describe('Wait States', function () {
       const startedAt = DateTime.fromISO(executionDescription.startDate)
       const now = DateTime.local()
       const diff = now.diff(startedAt).as('seconds')
-      expect(diff).to.be.above(delay)
+      expect(diff).to.be.above(delay - 0.1) // fiddle the delay a smidge because of timing jitter
       expect(executionDescription.status).to.eql('SUCCEEDED')
     })
   } // for ...
