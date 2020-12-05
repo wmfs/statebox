@@ -1,3 +1,20 @@
+# [1.78.0](https://github.com/wmfs/statebox/compare/v1.77.0...v1.78.0) (2020-12-05)
+
+
+### ✨ Features
+
+* States can have both InputPath and Parameters ([992e05d](https://github.com/wmfs/statebox/commit/992e05d1cd60a93178ad945a48c733276ff00c0d))
+
+
+### 🛠 Builds
+
+* **deps-dev:** bump semantic-release from 17.2.3 to 17.3.0 ([f1982d7](https://github.com/wmfs/statebox/commit/f1982d7a011925a1ac649d9e73de52e8474857aa))
+
+
+### 🚨 Tests
+
+* Slightly more complex input to Task state tests ([2b1005e](https://github.com/wmfs/statebox/commit/2b1005e5b389a2f0ac7635f30286ac863e47d298))
+
 # [1.77.0](https://github.com/wmfs/statebox/compare/v1.76.0...v1.77.0) (2020-11-21)
 
 
