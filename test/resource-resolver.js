@@ -3,7 +3,7 @@
 const chai = require('chai')
 const expect = chai.expect
 
-const Resources = require('../lib/resources')
+const Resources = require('../lib/resources')()
 
 describe('Resource Resolver', () => {
   for (const p of [undefined, null, '']) {
