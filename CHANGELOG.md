@@ -1,3 +1,32 @@
+# [1.79.0](https://github.com/wmfs/statebox/compare/v1.78.0...v1.79.0) (2020-12-12)
+
+
+### 🐛 Bug Fixes
+
+* State.run hasn't used the optionalCallback parameter for ages. Removed. ([9733a34](https://github.com/wmfs/statebox/commit/9733a34041e9cec2e1b20137a0324dfdf5d806b4))
+
+
+### 🛠 Builds
+
+* **deps:** bump debug from 4.2.0 to 4.3.1 ([787552e](https://github.com/wmfs/statebox/commit/787552e01d5c2f286173c0df3c6de1fdc4724082))
+* **deps:** bump uuid from 8.3.1 to 8.3.2 ([4fb45ba](https://github.com/wmfs/statebox/commit/4fb45ba50df2c335e69c51c2c208f7300d253c55))
+
+
+### 📦 Code Refactoring
+
+* Convert Modules from global singleton to a class ([922a4c2](https://github.com/wmfs/statebox/commit/922a4c29d76d0e5b00c95b5895d22c1b25fff4de))
+* Fold executioner into StateBox ([5baad3e](https://github.com/wmfs/statebox/commit/5baad3e2ea2a178a2223690015faad26c4a82ffc))
+* Made StateMachines into an object used as a member of Statebox ([0f0cf04](https://github.com/wmfs/statebox/commit/0f0cf045e713ec6d50cdb102f54b7a8aba79e64e))
+* Make Resources into a class, rather than a global singleton. ([aa9c164](https://github.com/wmfs/statebox/commit/aa9c16467738cda505c15cedb2dbb1a749e2e103))
+* Move dao setup code out of the Statebox class. ([8943d76](https://github.com/wmfs/statebox/commit/8943d760d381292bdc7b6a938f591cf38111af3b))
+* Rework waitUntilStoppedRunning from polling to trigger ([78d78b6](https://github.com/wmfs/statebox/commit/78d78b69f9d43c4916f6275b5918f38f4878dffa))
+* Simplify StateBox.startExecution ([99ddbf6](https://github.com/wmfs/statebox/commit/99ddbf6d0bdf577a3995f08b934f22f29848155a))
+
+
+### 🚨 Tests
+
+* Add a little bit of margin on the wait tests to prevent false negatives ([f946a09](https://github.com/wmfs/statebox/commit/f946a09447e845d235e241fd2ad9ac1cb7897677))
+
 # [1.78.0](https://github.com/wmfs/statebox/compare/v1.77.0...v1.78.0) (2020-12-05)
 
 
