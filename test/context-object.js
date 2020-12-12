@@ -21,7 +21,16 @@ describe('Context Object', () => {
   const contextObjectStates = {
     NonExistantProperty: { oops: null },
     DayOfWeek: { day: today },
-    FormattedDayOfWeek: { day: `Today is ${today}` }
+    FormattedDayOfWeek: { day: `Today is ${today}` },
+    StartTime: eD => { return { startedAt: eD.startDate } },
+    Time: eD => {
+      expect(eD.ctx.time).to.match(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/)
+      return eD.ctx
+    },
+    Date: eD => {
+      expect(eD.ctx.date).to.match(/^\d\d\/\d\d\/\d\d\d\d$/)
+      return eD.ctx
+    }
   }
 
   for (const [name, result] of Object.entries(contextObjectStates)) {
@@ -36,7 +45,9 @@ function test (statemachine, result) {
     expect(executionDescription.status).to.eql('SUCCEEDED')
     expect(executionDescription.stateMachineName).to.eql(statemachine)
     expect(executionDescription.currentResource).to.eql(undefined)
-    expect(executionDescription.ctx).to.eql(result)
+
+    const expected = (typeof result !== 'function') ? result : result(executionDescription)
+    expect(executionDescription.ctx).to.eql(expected)
   }) // it ...
 }
 

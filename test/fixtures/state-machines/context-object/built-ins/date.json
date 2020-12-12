@@ -1,0 +1,12 @@
+{
+  "StartAt": "First",
+  "States": {
+    "First": {
+      "Type": "Pass",
+      "Parameters": {
+        "date.$": "$$.Date"
+      },
+      "End": true
+    }
+  }
+}
