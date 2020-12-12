@@ -21,7 +21,7 @@ describe('Context Object', () => {
   const contextObjectStates = {
     NonExistantProperty: { oops: null },
     DayOfWeek: { day: today },
-    FormattedDayOfWeek: { day: `The day is ${today}` }
+    FormattedDayOfWeek: { day: `Today is ${today}` }
   }
 
   for (const [name, result] of Object.entries(contextObjectStates)) {
