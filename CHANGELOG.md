@@ -1,3 +1,12 @@
+# [1.80.0](https://github.com/wmfs/statebox/compare/v1.79.0...v1.80.0) (2021-01-05)
+
+
+### 🛠 Builds
+
+* **deps:** bump [@hapi](https://github.com/hapi)/boom from 9.1.0 to 9.1.1 ([dd8708d](https://github.com/wmfs/statebox/commit/dd8708df20e0a03fe53ea3cdfd9d81ac8bfb956f))
+* **deps-dev:** bump axios from 0.21.0 to 0.21.1 ([39c3786](https://github.com/wmfs/statebox/commit/39c378639ffc2f82d335b2a1ca399379008f27f7))
+* **deps-dev:** bump semantic-release from 17.3.0 to 17.3.1 ([7accbec](https://github.com/wmfs/statebox/commit/7accbec059a4f14c77e92825cc6f8300ed82ed21))
+
 # [1.79.0](https://github.com/wmfs/statebox/compare/v1.78.0...v1.79.0) (2020-12-12)
 
 
