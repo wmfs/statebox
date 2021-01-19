@@ -1,3 +1,12 @@
+# [1.81.0](https://github.com/wmfs/statebox/compare/v1.80.0...v1.81.0) (2021-01-19)
+
+
+### 🛠 Builds
+
+* **deps:** bump jsonpath from 1.0.2 to 1.1.0 ([40682c9](https://github.com/wmfs/statebox/commit/40682c9e49f7702262a83e10519fcf76e340c2ed))
+* **deps-dev:** bump semantic-release from 17.3.1 to 17.3.2 ([6376c18](https://github.com/wmfs/statebox/commit/6376c1815afc32ec06d168ca11170d5f4186e52b))
+* **deps-dev:** bump semantic-release from 17.3.2 to 17.3.3 ([7d40894](https://github.com/wmfs/statebox/commit/7d40894b18761f6ef6b8101934e90004ee67981a))
+
 # [1.80.0](https://github.com/wmfs/statebox/compare/v1.79.0...v1.80.0) (2021-01-05)
 
 
