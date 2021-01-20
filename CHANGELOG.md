@@ -1,3 +1,11 @@
+# [1.82.0](https://github.com/wmfs/statebox/compare/v1.81.0...v1.82.0) (2021-01-20)
+
+
+### 🛠 Builds
+
+* **deps:** bump [@wmfs](https://github.com/wmfs)/asl-choice-processor from 1.17.0 to 1.18.0 ([de15801](https://github.com/wmfs/statebox/commit/de1580196cc443b53b89c725f888fcf40de622b8))
+* **deps-dev:** bump semantic-release from 17.3.3 to 17.3.4 ([81307b0](https://github.com/wmfs/statebox/commit/81307b044a91b79628aebe2a518055064276c23d))
+
 # [1.81.0](https://github.com/wmfs/statebox/compare/v1.80.0...v1.81.0) (2021-01-19)
 
 
