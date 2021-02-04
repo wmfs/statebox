@@ -36,7 +36,7 @@
     "@semantic-release/changelog": "5.0.1",
     "@semantic-release/git": "9.0.0",
     "axios": "0.21.1",
-    "chai": "4.2.0",
+    "chai": "4.3.0",
     "chai-string": "1.5.0",
     "chai-subset": "1.6.0",
     "codecov": "3.8.1",
