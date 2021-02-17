@@ -1,3 +1,17 @@
+# [1.83.0](https://github.com/wmfs/statebox/compare/v1.82.0...v1.83.0) (2021-02-17)
+
+
+### 🛠 Builds
+
+* **deps:** bump luxon from 1.25.0 to 1.26.0 ([4b8a774](https://github.com/wmfs/statebox/commit/4b8a774de3b6dfa3effa44e227c279e05a9c8af8))
+* **deps-dev:** bump chai from 4.2.0 to 4.3.0 ([b36b758](https://github.com/wmfs/statebox/commit/b36b75890680c664d756936a6cb064a1c3acc9ac))
+* **deps-dev:** bump mocha from 8.2.1 to 8.3.0 ([365f7f1](https://github.com/wmfs/statebox/commit/365f7f1169a26b43b2a9a493bbb1e8d59f076b96))
+* **deps-dev:** bump semantic-release from 17.3.4 to 17.3.5 ([a029524](https://github.com/wmfs/statebox/commit/a029524ec8c9d943572ab90e68dd50023246d0ca))
+* **deps-dev:** bump semantic-release from 17.3.5 to 17.3.6 ([62b0eff](https://github.com/wmfs/statebox/commit/62b0eff10732ac95984be7ecc32e6e90472385e3))
+* **deps-dev:** bump semantic-release from 17.3.6 to 17.3.7 ([7f1cec9](https://github.com/wmfs/statebox/commit/7f1cec9da097d4302d601ec194e8a9fd35b5a741))
+* **deps-dev:** bump semantic-release from 17.3.7 to 17.3.8 ([143e1c3](https://github.com/wmfs/statebox/commit/143e1c3aef38721b23e9a0a4a7884e8fc800c64b))
+* **deps-dev:** bump semantic-release from 17.3.8 to 17.3.9 ([a8525ef](https://github.com/wmfs/statebox/commit/a8525efea3b5f2ed8a24200f165107e5628c44c7))
+
 # [1.82.0](https://github.com/wmfs/statebox/compare/v1.81.0...v1.82.0) (2021-01-20)
 
 
