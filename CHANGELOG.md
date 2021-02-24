@@ -1,3 +1,10 @@
+# [1.84.0](https://github.com/wmfs/statebox/compare/v1.83.0...v1.84.0) (2021-02-24)
+
+
+### 🛠 Builds
+
+* **deps:** bump lodash from 4.17.20 to 4.17.21 ([4927ac0](https://github.com/wmfs/statebox/commit/4927ac08d415e39b0902a4ea77463b6752f72efa))
+
 # [1.83.0](https://github.com/wmfs/statebox/compare/v1.82.0...v1.83.0) (2021-02-17)
 
 
