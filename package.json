@@ -44,7 +44,7 @@
     "cz-conventional-changelog": "3.3.0",
     "dirty-chai": "2.0.1",
     "express": "4.17.1",
-    "mocha": "8.3.0",
+    "mocha": "8.3.1",
     "nyc": "15.1.0",
     "semantic-release": "17.4.1",
     "standard": "16.0.3"
