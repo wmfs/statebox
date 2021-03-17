@@ -1,3 +1,19 @@
+# [1.86.0](https://github.com/wmfs/statebox/compare/v1.85.0...v1.86.0) (2021-03-17)
+
+
+### 🛠 Builds
+
+* **deps:** bump [@hapi](https://github.com/hapi)/boom from 9.1.1 to 9.1.2 ([398b034](https://github.com/wmfs/statebox/commit/398b034a3a195d5c8cfb73f52bb885a4e1f03880))
+* **deps-dev:** bump chai from 4.3.0 to 4.3.1 ([d0d4c94](https://github.com/wmfs/statebox/commit/d0d4c941083b63f770f56f15043db228a41f7b59))
+* **deps-dev:** bump chai from 4.3.1 to 4.3.2 ([4f4a34d](https://github.com/wmfs/statebox/commit/4f4a34dd3e117af6ae9a38ca4f92a566e27004ba))
+* **deps-dev:** bump chai from 4.3.2 to 4.3.3 ([3ec4ad9](https://github.com/wmfs/statebox/commit/3ec4ad9af9d768b775ba4c141c6ca15398290446))
+* **deps-dev:** bump chai from 4.3.3 to 4.3.4 ([d2af61c](https://github.com/wmfs/statebox/commit/d2af61cf86517a5ed3001a3f83a5b0862aa89dca))
+* **deps-dev:** bump mocha from 8.3.0 to 8.3.1 ([51a5653](https://github.com/wmfs/statebox/commit/51a5653ae9cab91b86fd265393854a19c6f19646))
+* **deps-dev:** bump mocha from 8.3.1 to 8.3.2 ([ba726b0](https://github.com/wmfs/statebox/commit/ba726b0d7dbe2320a5670eaa93cc3e423e0de817))
+* **deps-dev:** bump semantic-release from 17.3.9 to 17.4.0 ([bd94a7c](https://github.com/wmfs/statebox/commit/bd94a7cd5322e1fd5cdc8d1b2229d5cfbe9d4d83))
+* **deps-dev:** bump semantic-release from 17.4.0 to 17.4.1 ([13946d9](https://github.com/wmfs/statebox/commit/13946d92689b9c7dc77006b03f0c60ce281ec110))
+* **deps-dev:** bump semantic-release from 17.4.1 to 17.4.2 ([895245b](https://github.com/wmfs/statebox/commit/895245bf89c0e5d385f1392813dc0a5bcf4ac902))
+
 # [1.85.0](https://github.com/wmfs/statebox/compare/v1.84.0...v1.85.0) (2021-02-24)
 
 
