@@ -8,8 +8,12 @@
       "ItemsPath": "$.shipped",
       "MaxConcurrency": 0,
       "Iterator": {
-        "StartAt": "Validate",
+        "StartAt": "Pass",
         "States": {
+          "Pass": {
+            "Type": "Pass",
+            "Next": "Validate"
+          },
           "Validate": {
             "Type": "Task",
             "Resource": "module:incrementQuantity",
