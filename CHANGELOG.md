@@ -1,3 +1,15 @@
+## [1.86.1](https://github.com/wmfs/statebox/compare/v1.86.0...v1.86.1) (2021-03-18)
+
+
+### 🐛 Bug Fixes
+
+* 🐛 Make sure executionOptions are passed to children ([83497c0](https://github.com/wmfs/statebox/commit/83497c046d23b83e55d81f896bbb75895ebced78))
+
+
+### 🚨 Tests
+
+* 💍 Extend Map test with two states in the branch ([09d278b](https://github.com/wmfs/statebox/commit/09d278bc28bb3da751c1a5452e77e796370a8d9f))
+
 # [1.86.0](https://github.com/wmfs/statebox/compare/v1.85.0...v1.86.0) (2021-03-17)
 
 
