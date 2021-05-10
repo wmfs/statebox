@@ -1,3 +1,10 @@
+# [1.88.0](https://github.com/wmfs/statebox/compare/v1.87.0...v1.88.0) (2021-05-10)
+
+
+### 🛠 Builds
+
+* **deps:** use master branch for wmfs/jsonpath [ch6167] ([83856d4](https://github.com/wmfs/statebox/commit/83856d48afeb1ff8059f81029f829f41ea71a025))
+
 # [1.87.0](https://github.com/wmfs/statebox/compare/v1.86.1...v1.87.0) (2021-05-10)
 
 
