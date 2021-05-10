@@ -1,3 +1,12 @@
+# [1.87.0](https://github.com/wmfs/statebox/compare/v1.86.1...v1.87.0) (2021-05-10)
+
+
+### 🛠 Builds
+
+* **deps:** bump jsonpath from 1.1.0 to 1.1.1 ([08905dc](https://github.com/wmfs/statebox/commit/08905dc57023aad7374db7eb68f6c7667996c101))
+* **deps-dev:** bump codecov from 3.8.1 to 3.8.2 ([0aea1a9](https://github.com/wmfs/statebox/commit/0aea1a9486823436f370066ca4a647d608bce455))
+* **deps-dev:** bump mocha from 8.3.2 to 8.4.0 ([0741ea4](https://github.com/wmfs/statebox/commit/0741ea4f13956a9cecbce0a4a75495186434cef1))
+
 ## [1.86.1](https://github.com/wmfs/statebox/compare/v1.86.0...v1.86.1) (2021-03-18)
 
 
