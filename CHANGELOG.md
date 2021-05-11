@@ -1,3 +1,10 @@
+# [1.90.0](https://github.com/wmfs/statebox/compare/v1.89.0...v1.90.0) (2021-05-11)
+
+
+### 🛠 Builds
+
+* **deps:** revert jsonpath to 1.1.1 [ch6167] ([075f9c0](https://github.com/wmfs/statebox/commit/075f9c049b3fb7473194ca64365d18c82072adfd))
+
 # [1.89.0](https://github.com/wmfs/statebox/compare/v1.88.0...v1.89.0) (2021-05-10)
 
 
