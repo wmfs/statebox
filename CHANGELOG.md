@@ -1,3 +1,11 @@
+# [1.92.0](https://github.com/wmfs/statebox/compare/v1.91.0...v1.92.0) (2021-05-26)
+
+
+### 🛠 Builds
+
+* **deps:** bump luxon from 1.26.0 to 1.27.0 ([922e4d5](https://github.com/wmfs/statebox/commit/922e4d58181f25a2c105f04e68ca36b1e312c5dd))
+* **deps-dev:** bump semantic-release from 17.4.2 to 17.4.3 ([e7c07ad](https://github.com/wmfs/statebox/commit/e7c07ad0b8ab2130cbe3ad843aac9a2633de7047))
+
 # [1.91.0](https://github.com/wmfs/statebox/compare/v1.90.0...v1.91.0) (2021-05-11)
 
 
