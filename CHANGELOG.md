@@ -1,3 +1,14 @@
+# [1.93.0](https://github.com/wmfs/statebox/compare/v1.92.0...v1.93.0) (2021-07-09)
+
+
+### 🛠 Builds
+
+* **deps:** bump debug from 4.3.1 to 4.3.2 ([99ee3a6](https://github.com/wmfs/statebox/commit/99ee3a6220998df3bae0d9b199648c9752b6dbef))
+* **deps-dev:** bump mocha from 8.4.0 to 9.0.0 ([b0ac739](https://github.com/wmfs/statebox/commit/b0ac739a8f7c94e6dac9748a9d4ed99112320427))
+* **deps-dev:** bump mocha from 9.0.0 to 9.0.1 ([cf34f46](https://github.com/wmfs/statebox/commit/cf34f4653b45243b4f32d656ae90abcd170d3517))
+* **deps-dev:** bump mocha from 9.0.1 to 9.0.2 ([0621277](https://github.com/wmfs/statebox/commit/06212779e15bc9c9306541e28bd27ce8046c5c63))
+* **deps-dev:** bump semantic-release from 17.4.3 to 17.4.4 ([d65168b](https://github.com/wmfs/statebox/commit/d65168bebceb59ed4ea5ca476f40f3c3a51d2a67))
+
 # [1.92.0](https://github.com/wmfs/statebox/compare/v1.91.0...v1.92.0) (2021-05-26)
 
 
