@@ -1,3 +1,10 @@
+## [1.93.1](https://github.com/wmfs/statebox/compare/v1.93.0...v1.93.1) (2021-07-15)
+
+
+### 🐛 Bug Fixes
+
+* change use of defaultsDeep to mergeWith, as defaultsDeep doesn't work so well with array Issue [#361](https://github.com/wmfs/statebox/issues/361) ([8136e9a](https://github.com/wmfs/statebox/commit/8136e9adb4233fcb1a096ad9d5b13cf576fbae86))
+
 # [1.93.0](https://github.com/wmfs/statebox/compare/v1.92.0...v1.93.0) (2021-07-09)
 
 
