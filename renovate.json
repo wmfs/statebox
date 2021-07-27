@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "dependencyDashboard": true,
+  "enabledManagers": ["npm"],
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true,
+      "semanticCommitType": "build",
+      "semanticCommitScope": "deps-dev",
+      "labels": ["devDependencies"]
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "semanticCommitType": "build",
+      "semanticCommitScope": "deps",
+      "labels": ["dependencies"],
+      "reviewers": ["team:tymly-reviewers"]
+    }
+  ],
+    "vulnerabilityAlerts": {
+    "labels": ["security"]
+  }
+}
