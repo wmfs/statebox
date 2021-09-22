@@ -33,7 +33,7 @@
     "uuid": "8.3.2"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "5.0.1",
+    "@semantic-release/changelog": "6.0.0",
     "@semantic-release/git": "10.0.0",
     "axios": "0.21.4",
     "chai": "4.3.4",
