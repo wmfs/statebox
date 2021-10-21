@@ -1,3 +1,38 @@
+## [1.93.2](https://github.com/wmfs/statebox/compare/v1.93.1...v1.93.2) (2021-10-21)
+
+
+### 🐛 Bug Fixes
+
+* add indexes to execution model ([03df6ac](https://github.com/wmfs/statebox/commit/03df6ac950d363061ebce185ee1ac64671c96550))
+
+
+### 🛠 Builds
+
+* **deps-dev:** bump mocha from 9.0.2 to 9.0.3 ([1aeeb33](https://github.com/wmfs/statebox/commit/1aeeb333621237e31bc6471b0f32838c58360b21))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6 ([0407d40](https://github.com/wmfs/statebox/commit/0407d40f4dfb8f546f286c7c344f7005543b64dc))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/git to v10 ([7be21fa](https://github.com/wmfs/statebox/commit/7be21fa2f68065db8683763949f2662dbbba6742))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/git to v9.0.1 ([73b1a7e](https://github.com/wmfs/statebox/commit/73b1a7e8d5e515d97e0c91373c37adacee5c44a1))
+* **deps-dev:** update dependency axios to v0.21.2 ([bedde78](https://github.com/wmfs/statebox/commit/bedde78d680f1d2cb4d0453a02de0c7ddb0c2567))
+* **deps-dev:** update dependency axios to v0.21.3 ([9ce46f5](https://github.com/wmfs/statebox/commit/9ce46f54a5a851656ae683d2a5630b3c355860e3))
+* **deps-dev:** update dependency axios to v0.21.4 ([35e4693](https://github.com/wmfs/statebox/commit/35e469323c30ed2731ecfa71b4b1c2c643948bc7))
+* **deps-dev:** update dependency axios to v0.22.0 ([f4d95f3](https://github.com/wmfs/statebox/commit/f4d95f37ca2f5031bd996541ab8ab921474649de))
+* **deps-dev:** update dependency axios to v0.23.0 ([b2fbbc2](https://github.com/wmfs/statebox/commit/b2fbbc2cb581781e0e934acf693e873f3fbedd84))
+* **deps-dev:** update dependency codecov to v3.8.3 ([64dd0d5](https://github.com/wmfs/statebox/commit/64dd0d5b63a11d10a0c8ddd0363527804ebdf029))
+* **deps-dev:** update dependency mocha to v9.1.0 ([3bf3545](https://github.com/wmfs/statebox/commit/3bf35457ea830485b812de878a3e7e242c913147))
+* **deps-dev:** update dependency mocha to v9.1.1 ([eb0b894](https://github.com/wmfs/statebox/commit/eb0b894664bc8f8e17cb929f03b9d6f27801105f))
+* **deps-dev:** update dependency mocha to v9.1.2 ([c678b35](https://github.com/wmfs/statebox/commit/c678b35c037218d7003c6fdc6764335639e961a9))
+* **deps-dev:** update dependency mocha to v9.1.3 ([331b50e](https://github.com/wmfs/statebox/commit/331b50eb72b8973e49212ae7f2d995af8efd077b))
+* **deps-dev:** update dependency semantic-release to v17.4.5 ([6647844](https://github.com/wmfs/statebox/commit/66478442c1ee2f36c6164b9eaedfb0c5da914775))
+* **deps-dev:** update dependency semantic-release to v17.4.6 ([400190c](https://github.com/wmfs/statebox/commit/400190cbbd4ea00f762d173e310b807525c4c12b))
+* **deps-dev:** update dependency semantic-release to v17.4.7 ([d209730](https://github.com/wmfs/statebox/commit/d209730c0029987f19a5ae1682094047fc3fc533))
+* **deps-dev:** update dependency semantic-release to v18 ([cb3d72d](https://github.com/wmfs/statebox/commit/cb3d72dab3aaf8b626ad9957c5d568cf758bf381))
+* **deps-dev:** update dependency standard to v16.0.4 ([a4e1c69](https://github.com/wmfs/statebox/commit/a4e1c69418d98f19af0b42650169285cee3ff178))
+
+
+### ♻️ Chores
+
+* add renovate config [ch6600] ([e1382ef](https://github.com/wmfs/statebox/commit/e1382ef5fe2c9223b34d2f70c74df29385977f69))
+
 ## [1.93.1](https://github.com/wmfs/statebox/compare/v1.93.0...v1.93.1) (2021-07-15)
 
 
