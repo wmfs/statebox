@@ -1,3 +1,22 @@
+# [1.94.0](https://github.com/wmfs/statebox/compare/v1.93.2...v1.94.0) (2022-02-15)
+
+
+### 🐛 Bug Fixes
+
+* handle undefined/null values when evaluating jsonpath ([fee51c2](https://github.com/wmfs/statebox/commit/fee51c22ea687269fb8e7da3eca2748e8031909b))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency axios to v0.24.0 ([7d241bf](https://github.com/wmfs/statebox/commit/7d241bf94713db42a3b22875714ba923e0e38816))
+* **deps:** update dependency [@hapi](https://github.com/hapi)/boom to v9.1.4 ([d92be2d](https://github.com/wmfs/statebox/commit/d92be2dff4dc3720c9a630eaffd8b57a9742e417))
+* **deps:** update dependency luxon to v1.28.0 ([c0185d2](https://github.com/wmfs/statebox/commit/c0185d283bff314cc1667be93ecbf35959eda055))
+
+
+### 🚨 Tests
+
+* amend expect for missing property ([79f0c75](https://github.com/wmfs/statebox/commit/79f0c75863f0dd96c2e76660342902511bc4f772))
+
 ## [1.93.2](https://github.com/wmfs/statebox/compare/v1.93.1...v1.93.2) (2021-10-21)
 
 
