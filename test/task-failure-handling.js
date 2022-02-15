@@ -68,12 +68,12 @@ describe('Task failure handling', () => {
       it('error: string, cause: Error', async () => {
         const executionDescription = await run('errorCodeAndErrorObject')
 
+        // Don't check error message because it can be either:
+        // Cannot read properties of null (reading 'oh_dear')
+        // Cannot read property 'oh_dear' of null
+
         expect(executionDescription.errorCode).to.eql('ExceptionHandler')
-        expect(executionDescription.errorMessage).to.eql('Cannot read property \'oh_dear\' of null')
-        expect(executionDescription.executionOptions.error).contains({
-          error: 'ExceptionHandler',
-          cause: 'Cannot read property \'oh_dear\' of null'
-        })
+        expect(executionDescription.executionOptions.error.error).contains('ExceptionHandler')
         expect(executionDescription.executionOptions.error.stack).exist()
       })
 
