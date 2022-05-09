@@ -1,3 +1,26 @@
+## [1.94.1](https://github.com/wmfs/statebox/compare/v1.94.0...v1.94.1) (2022-05-09)
+
+
+### 🐛 Bug Fixes
+
+* describe execution has option to update timestamp ([93f628f](https://github.com/wmfs/statebox/commit/93f628fb7e14482c51563d1847eb2d5c2ac97a52))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency axios to v0.26.0 ([f0016e1](https://github.com/wmfs/statebox/commit/f0016e1807b96cdc0e969a966cab9487574ad00c))
+* **deps-dev:** update dependency axios to v0.26.1 ([7251d90](https://github.com/wmfs/statebox/commit/7251d9087d312b6ad448f0af9d0209e78725ba4d))
+* **deps-dev:** update dependency chai to v4.3.6 ([bcfda41](https://github.com/wmfs/statebox/commit/bcfda413c54d52bda525b58efdaf432639f78a27))
+* **deps-dev:** update dependency express to v4.17.3 ([db9f792](https://github.com/wmfs/statebox/commit/db9f79285ea6fef1a6f9ec2a904898d651f2d3f9))
+* **deps-dev:** update dependency express to v4.18.0 ([dae26e2](https://github.com/wmfs/statebox/commit/dae26e229a851f7447cef54901df76c74e5da232))
+* **deps-dev:** update dependency express to v4.18.1 ([0c893bf](https://github.com/wmfs/statebox/commit/0c893bfedb128d1298d6eb922b0a9173cd522ff6))
+* **deps-dev:** update dependency mocha to v10 ([2f0417e](https://github.com/wmfs/statebox/commit/2f0417eeea76d0df818c2e37ff9855424ad13137))
+* **deps-dev:** update dependency mocha to v9.2.1 ([d7bac02](https://github.com/wmfs/statebox/commit/d7bac023a5ed07b9068f1df28514fe1e3af7790d))
+* **deps-dev:** update dependency mocha to v9.2.2 ([8bec36e](https://github.com/wmfs/statebox/commit/8bec36e6a8f77f67ecb167e5fcd2c9d9e7eaad37))
+* **deps-dev:** update dependency semantic-release to v19 ([2b253a5](https://github.com/wmfs/statebox/commit/2b253a58a1b3d3b837144a34768c043037ef68b2))
+* **deps-dev:** update dependency standard to v17 ([fecc14c](https://github.com/wmfs/statebox/commit/fecc14c9e667115f61208e420648360adf698c1b))
+* **deps-dev:** update semantic-release monorepo ([ae96122](https://github.com/wmfs/statebox/commit/ae96122d55f9a557048983c8243aa30b293c971f))
+
 # [1.94.0](https://github.com/wmfs/statebox/compare/v1.93.2...v1.94.0) (2022-02-15)
 
 
