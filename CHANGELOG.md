@@ -1,3 +1,10 @@
+## [1.94.2](https://github.com/wmfs/statebox/compare/v1.94.1...v1.94.2) (2022-05-10)
+
+
+### 🐛 Bug Fixes
+
+* check update last described is true ([48bbb04](https://github.com/wmfs/statebox/commit/48bbb04fe95edcf13cecfe5c66881eb548038c50))
+
 ## [1.94.1](https://github.com/wmfs/statebox/compare/v1.94.0...v1.94.1) (2022-05-09)
 
 
