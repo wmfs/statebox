@@ -1,3 +1,11 @@
+# [1.95.0](https://github.com/wmfs/statebox/compare/v1.94.2...v1.95.0) (2022-10-11)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency semantic-release to v19.0.3 ([1e9ff73](https://github.com/wmfs/statebox/commit/1e9ff737d38298181024a00974cc7d4bc4a1f12e))
+* **deps:** update dependency [@wmfs](https://github.com/wmfs)/asl-choice-processor to v1.24.0 ([89c2d0a](https://github.com/wmfs/statebox/commit/89c2d0a23b48cc11c769706e6b82e7b5693c75ce))
+
 ## [1.94.2](https://github.com/wmfs/statebox/compare/v1.94.1...v1.94.2) (2022-05-10)
 
 
