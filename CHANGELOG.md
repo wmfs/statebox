@@ -1,3 +1,13 @@
+# [1.96.0](https://github.com/wmfs/statebox/compare/v1.95.0...v1.96.0) (2022-11-01)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency express to v4.18.2 ([d34b658](https://github.com/wmfs/statebox/commit/d34b6580e385a6ff23144599204f05daa472d879))
+* **deps-dev:** update dependency mocha to v10.1.0 ([57d8b07](https://github.com/wmfs/statebox/commit/57d8b071eda8aca63fdd18f0a41797e747d14ece))
+* **deps-dev:** update dependency semantic-release to v19.0.5 ([d37bd97](https://github.com/wmfs/statebox/commit/d37bd97cf3e78458d7663dd3a6ce5de0541b92e4))
+* **deps:** update dependency uuid to v9 ([915e982](https://github.com/wmfs/statebox/commit/915e9828440a2f1ee02df75495fe889598da996f))
+
 # [1.95.0](https://github.com/wmfs/statebox/compare/v1.94.2...v1.95.0) (2022-10-11)
 
 
