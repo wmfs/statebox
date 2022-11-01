@@ -91,8 +91,8 @@ describe('Task failure handling', () => {
       it('StatusCodeError - HTTP not found', async () => {
         const executionDescription = await run('errorHttpNotFound')
 
-        expect(executionDescription.errorCode).to.eql('Error')
-        expect(executionDescription.errorMessage).to.contain('404')
+        expect(executionDescription.errorCode).to.eql('AxiosError')
+        expect(executionDescription.errorMessage).to.contain('Request failed with status code 404')
       })
       it('StatusCodeError - HTTP can\'t connect', async () => {
         const executionDescription = await run('errorHttpCantConnect')
