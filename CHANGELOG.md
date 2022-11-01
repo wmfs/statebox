@@ -1,3 +1,10 @@
+# [1.98.0](https://github.com/wmfs/statebox/compare/v1.97.0...v1.98.0) (2022-11-01)
+
+
+### 🛠 Builds
+
+* **deps:** update all deps ([4eea29f](https://github.com/wmfs/statebox/commit/4eea29f12bf8cfe487fd5c22b65e93a3cb8055ea))
+
 # [1.97.0](https://github.com/wmfs/statebox/compare/v1.96.0...v1.97.0) (2022-11-01)
 
 
