@@ -1,3 +1,30 @@
+# [1.99.0](https://github.com/wmfs/statebox/compare/v1.98.0...v1.99.0) (2023-02-17)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6.0.2 ([021f5bc](https://github.com/wmfs/statebox/commit/021f5bcbe594a25922dcac4bb2b390786426fde6))
+* **deps-dev:** update dependency axios to v1.2.0 ([b493da7](https://github.com/wmfs/statebox/commit/b493da7bc7ac2bc97d9fb09d8d539c2e36eca3e2))
+* **deps-dev:** update dependency axios to v1.2.1 ([258423a](https://github.com/wmfs/statebox/commit/258423a16f830e85464883cb80566d8206096792))
+* **deps-dev:** update dependency axios to v1.2.2 ([98adefa](https://github.com/wmfs/statebox/commit/98adefa30cabdd4a8594b52001762532bef6b458))
+* **deps-dev:** update dependency axios to v1.2.3 ([3f9ead1](https://github.com/wmfs/statebox/commit/3f9ead12f140e15a641705a600aa35b2e6a8523e))
+* **deps-dev:** update dependency axios to v1.2.4 ([332f796](https://github.com/wmfs/statebox/commit/332f796f92dd7240565c465deba509b97527fd83))
+* **deps-dev:** update dependency axios to v1.2.5 ([d60fa5d](https://github.com/wmfs/statebox/commit/d60fa5d8152b6923faac7baf633643ff3ce7d859))
+* **deps-dev:** update dependency axios to v1.2.6 ([720c825](https://github.com/wmfs/statebox/commit/720c825a2d6ad10296a34285b79a532380961399))
+* **deps-dev:** update dependency axios to v1.3.0 ([c6ad229](https://github.com/wmfs/statebox/commit/c6ad2292873eefcddd43f8af79e8e7286b3601b0))
+* **deps-dev:** update dependency axios to v1.3.1 ([ce694ae](https://github.com/wmfs/statebox/commit/ce694aec6276ad42d74d585aca32e7add0675d77))
+* **deps-dev:** update dependency axios to v1.3.2 ([4fc006a](https://github.com/wmfs/statebox/commit/4fc006a65b350845020309ba2115bee97d96837b))
+* **deps-dev:** update dependency axios to v1.3.3 ([92f9f03](https://github.com/wmfs/statebox/commit/92f9f03828e254d18b21fe541ccf0c39481b781b))
+* **deps-dev:** update dependency chai to v4.3.7 ([bc7fc12](https://github.com/wmfs/statebox/commit/bc7fc127fcbc979a6ac5238fbef1e1a8a6ba8c89))
+* **deps-dev:** update dependency mocha to v10.2.0 ([e2f1f89](https://github.com/wmfs/statebox/commit/e2f1f89bc5e196e688edaeffbdb54ebdd6740bcf))
+* **deps-dev:** update dependency semantic-release to v20 ([13476d9](https://github.com/wmfs/statebox/commit/13476d91e3227058d85b596e0f728209945de9d9))
+* **deps-dev:** update dependency semantic-release to v20.0.1 ([1731bac](https://github.com/wmfs/statebox/commit/1731bac6d6b30c2aa2687fd5ef6ebf99ea6b9af8))
+* **deps-dev:** update dependency semantic-release to v20.0.2 ([62a3567](https://github.com/wmfs/statebox/commit/62a35678916a8b631bad316dc5603f9d1095d834))
+* **deps-dev:** update dependency semantic-release to v20.0.3 ([c284775](https://github.com/wmfs/statebox/commit/c284775545033f4688c9ef3116c4af3e50dafda9))
+* **deps-dev:** update dependency semantic-release to v20.0.4 ([cde3edb](https://github.com/wmfs/statebox/commit/cde3edb70b83d3f72addb1e42b79a172d19f5cea))
+* **deps-dev:** update dependency semantic-release to v20.1.0 ([c161940](https://github.com/wmfs/statebox/commit/c16194042aae322b51e57b3c7ac58f549da0582a))
+* **deps:** update dependency luxon to v3.2.1 [security] ([07fc7c4](https://github.com/wmfs/statebox/commit/07fc7c4cda30b0cf970b22e9768a490d6cc712e2))
+
 # [1.98.0](https://github.com/wmfs/statebox/compare/v1.97.0...v1.98.0) (2022-11-01)
 
 
