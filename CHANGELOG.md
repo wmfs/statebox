@@ -1,3 +1,10 @@
+# [1.101.0](https://github.com/wmfs/statebox/compare/v1.100.0...v1.101.0) (2023-03-13)
+
+
+### 🛠 Builds
+
+* **deps:** update dependency luxon to v3.3.0 ([91684f1](https://github.com/wmfs/statebox/commit/91684f1312c6de1a973dfb4b2b08ca03826350ba))
+
 # [1.100.0](https://github.com/wmfs/statebox/compare/v1.99.0...v1.100.0) (2023-03-13)
 
 
