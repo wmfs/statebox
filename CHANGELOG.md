@@ -1,3 +1,10 @@
+# [1.102.0](https://github.com/wmfs/statebox/compare/v1.101.0...v1.102.0) (2023-03-13)
+
+
+### 🛠 Builds
+
+* **deps:** update dependency [@hapi](https://github.com/hapi)/boom to v10.0.1 ([d12e92e](https://github.com/wmfs/statebox/commit/d12e92e5199e913b73e8b537f0e68c10668b2c2e))
+
 # [1.101.0](https://github.com/wmfs/statebox/compare/v1.100.0...v1.101.0) (2023-03-13)
 
 
