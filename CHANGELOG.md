@@ -1,3 +1,12 @@
+# [1.100.0](https://github.com/wmfs/statebox/compare/v1.99.0...v1.100.0) (2023-03-13)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency axios to v1.3.4 ([0a9503b](https://github.com/wmfs/statebox/commit/0a9503b3afd4d51e3b6c9a3d09ca47fa9dba1a14))
+* **deps-dev:** update dependency semantic-release to v20.1.1 ([98e0a2b](https://github.com/wmfs/statebox/commit/98e0a2bf83af4d0f181111f1bb060e464d4ec48a))
+* **deps:** update dependency dottie to v2.0.3 ([f32eda5](https://github.com/wmfs/statebox/commit/f32eda5daad46c15793098afe229885029d5a560))
+
 # [1.99.0](https://github.com/wmfs/statebox/compare/v1.98.0...v1.99.0) (2023-02-17)
 
 
