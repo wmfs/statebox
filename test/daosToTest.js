@@ -23,7 +23,7 @@ function DaosToTest () {
   try {
     const MemoryStorageServiceClass = require('../../tymly-core/lib/plugin/components/services/storage/index').serviceClass
     const memoryStorageService = new MemoryStorageServiceClass()
-    memoryStorageService.boot({ blueprintComponents: {}, messages: messages }, () => {})
+    memoryStorageService.boot({ blueprintComponents: {}, messages }, () => {})
     daos.push([
       'memory storage service', null, memoryStorageService
     ])
@@ -33,7 +33,7 @@ function DaosToTest () {
   try {
     const PGStorageServiceClass = require('../../../plugins/tymly-pg-plugin/lib/components/services/storage/index').serviceClass
     const pgStorageService = new PGStorageServiceClass()
-    pgStorageService.boot({ blueprintComponents: {}, messages: messages, config: {} }, () => {})
+    pgStorageService.boot({ blueprintComponents: {}, messages, config: {} }, () => {})
     daos.push([
       'Postgres storage service', null, pgStorageService
     ])
@@ -50,7 +50,7 @@ process.on('unhandledRejection', error => {
 
 module.exports = DaosToTest().map(([name, dao, storageService]) => {
   return [name, {
-    dao: dao,
+    dao,
     bootedServices: {
       storage: storageService
     }
