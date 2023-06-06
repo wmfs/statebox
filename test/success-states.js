@@ -24,7 +24,7 @@ describe('Success State', function () {
   const blobOfStuff = {
     person: {
       name: 'Bill',
-      address: address
+      address
     }
   }
 
