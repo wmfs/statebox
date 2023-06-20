@@ -1,3 +1,10 @@
+# [1.104.0](https://github.com/wmfs/statebox/compare/v1.103.0...v1.104.0) (2023-06-20)
+
+
+### 🛠 Builds
+
+* **deps:** update dependency dottie to v2.0.6 ([15a43a5](https://github.com/wmfs/statebox/commit/15a43a599b1cc2500a58db14efac8413501175d9))
+
 # [1.103.0](https://github.com/wmfs/statebox/compare/v1.102.0...v1.103.0) (2023-06-20)
 
 
