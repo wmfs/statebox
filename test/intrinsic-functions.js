@@ -155,6 +155,22 @@ describe('Intrinsic Functions', function () {
     }
   })
 
+  describe('States.ArrayGetItem', () => {
+    const tests = [
+      [[1,2,3,4], 3, 4],
+      [['a', 'b', 'c'], 0, 'a'],
+      [['a', 'b', 'c'], -3, undefined],
+      [['a', 'b', 'c'], 5, undefined]
+    ]
+
+    for (const [array, index, expected] of tests) {
+      it(`States.ArrayGetItem(States.Array(${array.map(a => JSON.stringify(a)).join()}), ${index})`, () => {
+        const result = intrinsicFunctions.ArrayGetItem(array, index)
+        expect(result).to.equal(expected)
+      })
+    }
+  })
+
   describe('States.StringToJson', () => {
     const strings = [
       ['"hello"', 'hello'],
@@ -231,6 +247,11 @@ describe('Intrinsic Functions', function () {
         ['numbers', null, [1, 2, 3, 4]],
         ['strings', null, ['one', 'two']],
         ['nestedStatesArray', null, ['one', 'two', ['three', 'four', 'five'], 'six']]
+      ],
+      ArrayGetItem: [
+        ['strings', { array: ['a', 'b', 'c'], index: 0 }, 'a' ],
+        ['strings', { array: ['hello', 'bye', 'hola'], index: 1 }, 'bye' ],
+        ['strings', { array: ['hello', 'bye', 'hola'], index: -2 }, undefined ],
       ]
     }
 
