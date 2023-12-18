@@ -12,7 +12,7 @@
     "@semantic-release/git"
   ],
   "generateNotes": {
-    "preset": "metahub"
+    "preset": "angular"
   },
   "prepare": [
     {
