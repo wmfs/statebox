@@ -43,7 +43,7 @@
     "conventional-changelog-metahub": "4.0.1",
     "cz-conventional-changelog": "3.3.0",
     "dirty-chai": "2.0.1",
-    "express": "4.19.0",
+    "express": "4.19.1",
     "mocha": "10.3.0",
     "nyc": "15.1.0",
     "semantic-release": "23.0.5",
