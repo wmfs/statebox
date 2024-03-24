@@ -46,7 +46,7 @@
     "express": "4.19.1",
     "mocha": "10.3.0",
     "nyc": "15.1.0",
-    "semantic-release": "23.0.5",
+    "semantic-release": "23.0.6",
     "standard": "17.1.0"
   },
   "scripts": {
