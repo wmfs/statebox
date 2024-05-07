@@ -129,7 +129,8 @@ describe('Intrinsic Functions', function () {
       [['{}', '\\{\\}'], '{}'],
       [["\\\\\\{\\'Socks\\'\\}\\\\"], "\\{'Socks'}\\"],
       [['{}', "\\\\\\{\\'Socks\\'\\}\\\\"], "\\{'Socks'}\\"],
-      [['\\\\\\{{}\\}\\\\', "\\'Socks\\'"], "\\{'Socks'}\\"]
+      [['\\\\\\{{}\\}\\\\', "\\'Socks\\'"], "\\{'Socks'}\\"],
+      [['TEST{}/{}', 1, 2022], 'TEST1/2022']
     ]
 
     for (const [args, expected] of goodFormatTests) {
@@ -214,7 +215,7 @@ describe('Intrinsic Functions', function () {
         ['tooManyParams', null, null, false]
       ],
       Format: [
-        ['format', { name: 'Homer' }, 'Your name is Homer, we are in the year 2020'],
+        ['format', { name: 'Homer', year: 2024 }, 'Your name is Homer, we are in the year 2024'],
         ['everything', null, 'string 100 true null'],
         ['tooManyParams', null, null, false],
         ['notEnoughParams', null, null, false],

@@ -5,7 +5,7 @@
     "First": {
       "Type": "Pass",
       "Parameters": {
-        "foo.$": "States.Format('Your name is {}, we are in the year {}', $.name, 2020)"
+        "foo.$": "States.Format('Your name is {}, we are in the year {}', $.name, $.year)"
       },
       "End": true
     }
