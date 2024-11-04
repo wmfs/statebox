@@ -1,3 +1,5 @@
+# [1.108.0](https://github.com/wmfs/statebox/compare/v1.107.0...v1.108.0) (2024-11-04)
+
 # [1.107.0](https://github.com/wmfs/statebox/compare/v1.106.0...v1.107.0) (2024-11-04)
 
 # [1.106.0](https://github.com/wmfs/statebox/compare/v1.105.0...v1.106.0) (2024-06-17)
