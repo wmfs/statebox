@@ -166,12 +166,12 @@ function test (label, statemachine, input, result) {
   }) // it ...
 }
 
-async function runStateMachine (statemachine, input) {
-  const executionDescription = await statebox.startExecution(
+function runStateMachine (statemachine, input) {
+  return statebox.startExecution(
     Object.assign({}, input),
     statemachine,
-    {} // options
+    {
+      sendResponse: 'COMPLETE'
+    } // options
   )
-
-  return statebox.waitUntilStoppedRunning(executionDescription.executionName)
 }
