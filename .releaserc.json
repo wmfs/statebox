@@ -1,5 +1,5 @@
 {
-   "branch": "master",
+  "branch": "master",
   "analyzeCommits": {
     "preset": "angular",
     "releaseRules": [
