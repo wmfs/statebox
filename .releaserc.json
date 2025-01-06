@@ -12,7 +12,56 @@
     "@semantic-release/git"
   ],
   "generateNotes": {
-    "preset": "angular"
+    "preset": "conventionalcommits",
+    "presetConfig": {
+      "types": [
+        {
+          "breaking": true,
+          "type": "feat!",
+          "section": "BREAKING"
+        },
+        {
+          "type": "feat",
+          "section": "New Feature(s) :rocket:"
+        },
+        {
+          "type": "fix",
+          "section": "Bug Fix(es) :bug:"
+        },
+        {
+          "type": "docs",
+          "section": "Documentation Changes :memo:"
+        },
+        {
+          "type": "refactor",
+          "section": "Code Refactor :recycle:"
+        },
+        {
+          "type": "test",
+          "section": "Tests :alembic:"
+        },
+        {
+          "type": "perf",
+          "section": "Performance Improvement(s) :zap:"
+        },
+        {
+          "type": "build",
+          "section": "Build system dependencies :hammer:"
+        },
+        {
+          "type": "chore",
+          "section": "Chores :pencil2:"
+        },
+        {
+          "type": "ci",
+          "section": "CICD Configuration Changes :construction_worker:"
+        },
+        {
+          "type": "style",
+          "section": "Code Styling :art:"
+        }
+      ]
+    }
   },
   "prepare": [
     {
