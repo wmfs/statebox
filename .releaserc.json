@@ -1,6 +1,7 @@
 {
-  "branch": "master",
-  "preset": "angular",
+   "branch": "master",
+  "analyzeCommits": {
+    "preset": "angular",
     "releaseRules": [
       {"type": "build", "scope":"deps", "release": "minor"}
     ]
