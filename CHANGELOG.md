@@ -1,3 +1,11 @@
+## [1.112.0](https://github.com/wmfs/statebox/compare/v1.111.0...v1.112.0) (2025-01-06)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** [sc-29160] Resolve issue with semantic-release changelog notes ([#556](https://github.com/wmfs/statebox/issues/556)) ([148b4a8](https://github.com/wmfs/statebox/commit/148b4a82b924d431f1f12ee15d668ed94a201f8c))
+* **deps-dev:** update dependency semantic-release to v24.2.1 ([#555](https://github.com/wmfs/statebox/issues/555)) ([c2d5630](https://github.com/wmfs/statebox/commit/c2d56307c4d04a83d66468064156a099a9601d82))
+* **deps:** update dependency uuid to v11.0.4 ([#554](https://github.com/wmfs/statebox/issues/554)) ([09360c5](https://github.com/wmfs/statebox/commit/09360c586b2321c8e4a99bc97712483bee0aed49))
+
 # [1.111.0](https://github.com/wmfs/statebox/compare/v1.110.0...v1.111.0) (2024-12-09)
 
 # [1.110.0](https://github.com/wmfs/statebox/compare/v1.109.0...v1.110.0) (2024-11-12)
