@@ -1,3 +1,12 @@
+## [1.114.0](https://github.com/wmfs/statebox/compare/v1.113.0...v1.114.0) (2025-02-20)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency mocha to v11.1.0 ([#558](https://github.com/wmfs/statebox/issues/558)) ([fe2c18c](https://github.com/wmfs/statebox/commit/fe2c18c5fe89d180de41aa67d8383bf827a056a1))
+* **deps-dev:** update dependency semantic-release to v24.2.2 ([#559](https://github.com/wmfs/statebox/issues/559)) ([f1533b1](https://github.com/wmfs/statebox/commit/f1533b16f563d337af67df230a4f1a1206fe849b))
+* **deps-dev:** update dependency semantic-release to v24.2.3 ([#560](https://github.com/wmfs/statebox/issues/560)) ([4e56f5c](https://github.com/wmfs/statebox/commit/4e56f5c177de8dfb87c311048e70a6df25d28067))
+* **deps:** update dependency uuid to v11.1.0 ([#561](https://github.com/wmfs/statebox/issues/561)) ([34a299c](https://github.com/wmfs/statebox/commit/34a299c999a8073b62cd5b08530303d343da8920))
+
 ## [1.113.0](https://github.com/wmfs/statebox/compare/v1.112.0...v1.113.0) (2025-01-10)
 
 ### Build system dependencies :hammer:
