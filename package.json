@@ -38,7 +38,7 @@
     "@semantic-release/git": "10.0.1",
     "axios": "1.8.1",
     "chai": "4.5.0",
-    "chai-string": "1.5.0",
+    "chai-string": "2.0.0",
     "chai-subset": "1.6.0",
     "codecov": "3.8.3",
     "conventional-changelog-conventionalcommits": "8.0.0",
