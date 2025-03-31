@@ -1,3 +1,14 @@
+## [1.115.0](https://github.com/wmfs/statebox/compare/v1.114.0...v1.115.0) (2025-03-31)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency axios to v1.8.1 ([#562](https://github.com/wmfs/statebox/issues/562)) ([f9b9138](https://github.com/wmfs/statebox/commit/f9b91381382e64f6b81a6edaa0a9350d57b1b830))
+* **deps-dev:** update dependency axios to v1.8.2 ([#564](https://github.com/wmfs/statebox/issues/564)) ([b9e140b](https://github.com/wmfs/statebox/commit/b9e140b31528a8872806bfd74bb31211987f3ac6))
+* **deps-dev:** update dependency axios to v1.8.3 ([#566](https://github.com/wmfs/statebox/issues/566)) ([b96e8d4](https://github.com/wmfs/statebox/commit/b96e8d4da317f96a2187d91dbbb680b59e925780))
+* **deps-dev:** update dependency axios to v1.8.4 ([#567](https://github.com/wmfs/statebox/issues/567)) ([e9fa3aa](https://github.com/wmfs/statebox/commit/e9fa3aa5495df577a3bf6acad04ecf23989f3918))
+* **deps-dev:** update dependency chai-string to v1.6.0 ([#565](https://github.com/wmfs/statebox/issues/565)) ([d1fec04](https://github.com/wmfs/statebox/commit/d1fec044c68601799983d0af39478afe910cd599))
+* **deps:** update dependency luxon to v3.6.0 ([#568](https://github.com/wmfs/statebox/issues/568)) ([601ec82](https://github.com/wmfs/statebox/commit/601ec823c2c9de441acb9d47caf6935061a98387))
+
 ## [1.114.0](https://github.com/wmfs/statebox/compare/v1.113.0...v1.114.0) (2025-02-20)
 
 ### Build system dependencies :hammer:
