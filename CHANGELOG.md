@@ -1,3 +1,10 @@
+## [1.116.0](https://github.com/wmfs/statebox/compare/v1.115.0...v1.116.0) (2025-04-01)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency express to v5 ([#569](https://github.com/wmfs/statebox/issues/569)) ([e7eb2c3](https://github.com/wmfs/statebox/commit/e7eb2c30bb304a9d4d011139add32f2cf57f1247))
+* **deps:** update dependency luxon to v3.6.1 ([#570](https://github.com/wmfs/statebox/issues/570)) ([42171f1](https://github.com/wmfs/statebox/commit/42171f1584c0cb73cb4148b73de9104e68c299f8))
+
 ## [1.115.0](https://github.com/wmfs/statebox/compare/v1.114.0...v1.115.0) (2025-03-31)
 
 ### Build system dependencies :hammer:
