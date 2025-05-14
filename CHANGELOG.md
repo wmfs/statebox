@@ -1,3 +1,11 @@
+## [1.117.0](https://github.com/wmfs/statebox/compare/v1.116.0...v1.117.0) (2025-05-14)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency axios to v1.9.0 ([#571](https://github.com/wmfs/statebox/issues/571)) ([60844a1](https://github.com/wmfs/statebox/commit/60844a150cc05a1747656ff8568437f0ecb89158))
+* **deps-dev:** update dependency mocha to v11.2.2 ([#572](https://github.com/wmfs/statebox/issues/572)) ([1558cf4](https://github.com/wmfs/statebox/commit/1558cf42e38ea8e4ba54dd15e317882c5a04eec2))
+* **deps:** update dependency debug to v4.4.1 ([#573](https://github.com/wmfs/statebox/issues/573)) ([5da7571](https://github.com/wmfs/statebox/commit/5da7571b9ba8d5b7f46bc8383f9e90fd768271a9))
+
 ## [1.116.0](https://github.com/wmfs/statebox/compare/v1.115.0...v1.116.0) (2025-04-01)
 
 ### Build system dependencies :hammer:
