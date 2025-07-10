@@ -1,3 +1,20 @@
+## [1.118.0](https://github.com/wmfs/statebox/compare/v1.117.0...v1.118.0) (2025-07-10)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency axios to v1.10.0 ([#581](https://github.com/wmfs/statebox/issues/581)) ([ac74ae7](https://github.com/wmfs/statebox/commit/ac74ae79e2a4d0c9aa5562cd6a8330f7ce518958))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v9 ([#577](https://github.com/wmfs/statebox/issues/577)) ([12c6388](https://github.com/wmfs/statebox/commit/12c6388399c18a1a927f3ef31da8a92da0a3e36d))
+* **deps-dev:** update dependency mocha to v11.3.0 ([#574](https://github.com/wmfs/statebox/issues/574)) ([725a204](https://github.com/wmfs/statebox/commit/725a2048fc1664f67b0f0c00cc3f0261cc3cca00))
+* **deps-dev:** update dependency mocha to v11.4.0 ([#576](https://github.com/wmfs/statebox/issues/576)) ([f1fd74b](https://github.com/wmfs/statebox/commit/f1fd74b7ed3645471a41bf7b0c2b5df5e7a7205b))
+* **deps-dev:** update dependency mocha to v11.5.0 ([#579](https://github.com/wmfs/statebox/issues/579)) ([82af3be](https://github.com/wmfs/statebox/commit/82af3be9d207657737b1b3016a246b0230a943a6))
+* **deps-dev:** update dependency mocha to v11.6.0 ([#580](https://github.com/wmfs/statebox/issues/580)) ([e51c232](https://github.com/wmfs/statebox/commit/e51c232e329d14f1e386c4b71d49b833cde4519a))
+* **deps-dev:** update dependency mocha to v11.7.0 ([#582](https://github.com/wmfs/statebox/issues/582)) ([50d4a5a](https://github.com/wmfs/statebox/commit/50d4a5a7357f247e9c54578c10aa909b13aff580))
+* **deps-dev:** update dependency mocha to v11.7.1 ([#583](https://github.com/wmfs/statebox/issues/583)) ([538defc](https://github.com/wmfs/statebox/commit/538defc056cba14e78a6a6831a32f8f8712f61cd))
+* **deps-dev:** update dependency semantic-release to v24.2.4 ([#575](https://github.com/wmfs/statebox/issues/575)) ([f419026](https://github.com/wmfs/statebox/commit/f419026e602749e61e5193b444c46e2a41261f7d))
+* **deps-dev:** update dependency semantic-release to v24.2.5 ([#578](https://github.com/wmfs/statebox/issues/578)) ([428e694](https://github.com/wmfs/statebox/commit/428e694da3129177b1492af4033f8d2089c207e2))
+* **deps-dev:** update dependency semantic-release to v24.2.6 ([#584](https://github.com/wmfs/statebox/issues/584)) ([512662e](https://github.com/wmfs/statebox/commit/512662e9e00cd5571546ca9b054513cdb4994b81))
+* **deps:** update dependency luxon to v3.7.1 ([#585](https://github.com/wmfs/statebox/issues/585)) ([1897ce3](https://github.com/wmfs/statebox/commit/1897ce36e4b525df26f9cb562bd925bae5eee68e))
+
 ## [1.117.0](https://github.com/wmfs/statebox/compare/v1.116.0...v1.117.0) (2025-05-14)
 
 ### Build system dependencies :hammer:
