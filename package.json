@@ -41,7 +41,7 @@
     "chai-string": "1.6.0",
     "chai-subset": "1.6.0",
     "codecov": "3.8.3",
-    "conventional-changelog-conventionalcommits": "9.0.0",
+    "conventional-changelog-conventionalcommits": "9.1.0",
     "cz-conventional-changelog": "3.3.0",
     "dirty-chai": "2.0.1",
     "express": "5.1.0",
