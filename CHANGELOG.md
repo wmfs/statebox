@@ -1,3 +1,11 @@
+## [1.119.0](https://github.com/wmfs/statebox/compare/v1.118.0...v1.119.0) (2025-07-23)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v9.1.0 ([#586](https://github.com/wmfs/statebox/issues/586)) ([dfc49a7](https://github.com/wmfs/statebox/commit/dfc49a769b5ebe0c12cd8a66c0d59d43090088ec))
+* **deps-dev:** update dependency semantic-release to v24.2.7 ([#587](https://github.com/wmfs/statebox/issues/587)) ([a98bb10](https://github.com/wmfs/statebox/commit/a98bb10519583568106c21ff45de20be194faa4c))
+* **deps:** update axios from 1.10.0 to 1.11.0 ([024e9af](https://github.com/wmfs/statebox/commit/024e9af1908895269e3421a6e8b2de3829855d37))
+
 ## [1.118.0](https://github.com/wmfs/statebox/compare/v1.117.0...v1.118.0) (2025-07-10)
 
 ### Build system dependencies :hammer:
