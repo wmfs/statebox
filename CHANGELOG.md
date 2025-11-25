@@ -1,3 +1,24 @@
+## [1.120.0](https://github.com/wmfs/statebox/compare/v1.119.0...v1.120.0) (2025-11-25)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @semantic-release/release-notes-generator to v14.1.0 ([#593](https://github.com/wmfs/statebox/issues/593)) ([e40750c](https://github.com/wmfs/statebox/commit/e40750cb9b3c80862de7a2849a343039aa589c83))
+* **deps-dev:** update dependency axios to v1.12.1 ([#597](https://github.com/wmfs/statebox/issues/597)) ([0769540](https://github.com/wmfs/statebox/commit/076954019d17cde52de9a74226d5e1bc66905eac))
+* **deps-dev:** update dependency axios to v1.12.2 ([#598](https://github.com/wmfs/statebox/issues/598)) ([aa45519](https://github.com/wmfs/statebox/commit/aa4551943d24f3fb73236e6a7a1b22c878409e3e))
+* **deps-dev:** update dependency axios to v1.13.0 ([#605](https://github.com/wmfs/statebox/issues/605)) ([a945a23](https://github.com/wmfs/statebox/commit/a945a235677bdaadf1a5f6c1df5f59ad0d5484fa))
+* **deps-dev:** update dependency axios to v1.13.1 ([#606](https://github.com/wmfs/statebox/issues/606)) ([f748693](https://github.com/wmfs/statebox/commit/f748693f1080f4d3663b054c8471f6946694292c))
+* **deps-dev:** update dependency axios to v1.13.2 ([#607](https://github.com/wmfs/statebox/issues/607)) ([1b103c0](https://github.com/wmfs/statebox/commit/1b103c06cc16abc7dfc37f6c41d0b852c7c3fa82))
+* **deps-dev:** update dependency mocha to v11.7.2 ([#590](https://github.com/wmfs/statebox/issues/590)) ([69aafe7](https://github.com/wmfs/statebox/commit/69aafe72996816597426e221f62f774dfe0d823a))
+* **deps-dev:** update dependency mocha to v11.7.3 ([#600](https://github.com/wmfs/statebox/issues/600)) ([4e217db](https://github.com/wmfs/statebox/commit/4e217dbc779c15fcc4b16965fb2701e59490ca6d))
+* **deps-dev:** update dependency mocha to v11.7.4 ([#601](https://github.com/wmfs/statebox/issues/601)) ([771f9d0](https://github.com/wmfs/statebox/commit/771f9d01cf9cc54b84c9c3738c60754327cba5ab))
+* **deps-dev:** update dependency mocha to v11.7.5 ([#608](https://github.com/wmfs/statebox/issues/608)) ([f6be85b](https://github.com/wmfs/statebox/commit/f6be85b3f8b3c2a048d908a65585c49c1fd32247))
+* **deps-dev:** update dependency semantic-release to v24.2.8 ([#595](https://github.com/wmfs/statebox/issues/595)) ([5bbbacb](https://github.com/wmfs/statebox/commit/5bbbacb99a877954e1be1e73aaec4cbc1b3343d8))
+* **deps-dev:** update dependency semantic-release to v24.2.9 ([#599](https://github.com/wmfs/statebox/issues/599)) ([1d2b69f](https://github.com/wmfs/statebox/commit/1d2b69fe1c88ce908daab4827ade08ef3a83df8d))
+* **deps-dev:** update dependency semantic-release to v25 ([#602](https://github.com/wmfs/statebox/issues/602)) ([104369f](https://github.com/wmfs/statebox/commit/104369f7ccb95fae73370681704c29f930b5dd14))
+* **deps-dev:** update dependency semantic-release to v25.0.1 ([#603](https://github.com/wmfs/statebox/issues/603)) ([d0754ce](https://github.com/wmfs/statebox/commit/d0754ce4b2fe7f6c2a943ee6e6f9b9af33922075))
+* **deps-dev:** update dependency semantic-release to v25.0.2 ([#609](https://github.com/wmfs/statebox/issues/609)) ([ad006bf](https://github.com/wmfs/statebox/commit/ad006bfef0b82ac6be5c34bdf0b984aff540a904))
+* **deps:** update dependency @wmfs/asl-choice-processor to v1.25.0 ([#604](https://github.com/wmfs/statebox/issues/604)) ([4f68e5d](https://github.com/wmfs/statebox/commit/4f68e5d18987b22f830209be5017c9c9b4238319))
+
 ## [1.119.0](https://github.com/wmfs/statebox/compare/v1.118.0...v1.119.0) (2025-07-23)
 
 ### Build system dependencies :hammer:
