@@ -30,7 +30,7 @@
     "lodash": "4.17.21",
     "luxon": "3.7.1",
     "tokenizr": "^1.6.7",
-    "uuid": "11.1.0"
+    "uuid": "13.0.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
