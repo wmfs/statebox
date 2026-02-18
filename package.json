@@ -26,7 +26,7 @@
     "@wmfs/asl-choice-processor": "1.25.0",
     "debug": "4.4.1",
     "dottie": "2.0.6",
-    "jsonpath": "1.1.1",
+    "jsonpath": "1.2.0",
     "lodash": "4.17.21",
     "luxon": "3.7.1",
     "tokenizr": "^1.6.7",
