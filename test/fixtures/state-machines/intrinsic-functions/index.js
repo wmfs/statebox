@@ -25,5 +25,7 @@ module.exports = {
   Array_emptyArray: require('./array/empty-array.json'),
   Array_numbers: require('./array/numbers.json'),
   Array_strings: require('./array/strings.json'),
-  Array_nestedStatesArray: require('./array/nested-states-array.json')
+  Array_nestedStatesArray: require('./array/nested-states-array.json'),
+
+  UUID: require('./uuid.json')
 }
