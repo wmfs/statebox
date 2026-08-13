@@ -1,3 +1,5 @@
+## [1.120.1](https://github.com/wmfs/statebox/compare/v1.120.0...v1.120.1) (2026-08-13)
+
 ## [1.120.0](https://github.com/wmfs/statebox/compare/v1.119.0...v1.120.0) (2025-11-25)
 
 ### Build system dependencies :hammer:
