@@ -1,6 +1,6 @@
-version: 2
+version: 2.1
 jobs:
-  unit test:
+  unit-test:
     docker:
       - image: cimg/node:lts
         auth:
@@ -72,10 +72,9 @@ jobs:
           name: release
           command: npx semantic-release
 workflows:
-  version: 2
   test_and_release:
     jobs:
-      - unit test:
+      - unit-test:
           context:
             - docker-hub-creds
             - build-env-vars
@@ -87,7 +86,7 @@ workflows:
             - docker-hub-creds
             - build-env-vars
           requires:
-            - unit test
+            - unit-test
             - lint
           filters:
             branches:
