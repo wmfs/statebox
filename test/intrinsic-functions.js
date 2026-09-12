@@ -17,14 +17,14 @@ describe('Intrinsic Functions', function () {
   describe('Function parsing', () => {
     describe('function call', () => {
       const goodCalls = [
-        "States.Format('hello {}', 'world')",
+        'States.Format(\'hello {}\', \'world\')',
         'States.StringToJson($path)',
         'States.JsonToString($path)',
         'States.Array()',
         'States.Array(99)',
         'States.Array(true)',
         'States.Array(false)',
-        "States.Array('fridge-freezer')",
+        'States.Array(\'fridge-freezer\')',
         'States.Array(null)',
         'States.Array(States.Array(1, 2))',
         'States.Array(1, 2, States.Array(3, 4))',
@@ -56,7 +56,7 @@ describe('Intrinsic Functions', function () {
 
     describe('tokenise arguments', () => {
       const args = [
-        ["'a string'", 'string:a string'],
+        ['\'a string\'', 'string:a string'],
         ['123', 'number:123'],
         ['123.45', 'number:123.45'],
         ['-123', 'number:-123'],
@@ -66,11 +66,11 @@ describe('Intrinsic Functions', function () {
         ['null', 'null:null'],
         ['$.path', 'path:$.path'],
         ['$.array[0:2]', 'path:$.array[0:2]'],
-        ["'\\''", "string:\\'"],
-        ["'\\}'", 'string:\\}'],
-        ["'\\{'", 'string:\\{'],
-        ["'\\\\'", 'string:\\\\'],
-        ["'embedded \\{\\'hello\\'\\}'", "string:embedded \\{\\'hello\\'\\}"]
+        ['\'\\\'\'', 'string:\\\''],
+        ['\'\\}\'', 'string:\\}'],
+        ['\'\\{\'', 'string:\\{'],
+        ['\'\\\\\'', 'string:\\\\'],
+        ['\'embedded \\{\\\'hello\\\'\\}\'', 'string:embedded \\{\\\'hello\\\'\\}']
       ]
 
       const context = {
@@ -127,9 +127,9 @@ describe('Intrinsic Functions', function () {
       [['{}', null], 'null'],
       [['{}{}', null, null], 'nullnull'],
       [['{}', '\\{\\}'], '{}'],
-      [["\\\\\\{\\'Socks\\'\\}\\\\"], "\\{'Socks'}\\"],
-      [['{}', "\\\\\\{\\'Socks\\'\\}\\\\"], "\\{'Socks'}\\"],
-      [['\\\\\\{{}\\}\\\\', "\\'Socks\\'"], "\\{'Socks'}\\"]
+      [['\\\\\\{\\\'Socks\\\'\\}\\\\'], '\\{\'Socks\'}\\'],
+      [['{}', '\\\\\\{\\\'Socks\\\'\\}\\\\'], '\\{\'Socks\'}\\'],
+      [['\\\\\\{{}\\}\\\\', '\\\'Socks\\\''], '\\{\'Socks\'}\\']
     ]
 
     for (const [args, expected] of goodFormatTests) {
@@ -185,6 +185,13 @@ describe('Intrinsic Functions', function () {
         expect(string).to.eql(expected)
       })
     }
+  })
+
+  describe('States.UUID', () => {
+    it('States.UUID()', () => {
+      const uuid = intrinsicFunctions.UUID()
+      expect(uuid).to.be.a('string')
+    })
   })
 
   describe('In State Machines', () => {
@@ -260,5 +267,24 @@ describe('Intrinsic Functions', function () {
         }
       })
     }
+
+    describe('UUID', () => {
+      it('UUID', async () => {
+        const stateMachineName = 'UUID'
+
+        let executionDescription = await statebox.startExecution(
+          {},
+          stateMachineName,
+          {} // options
+        )
+
+        executionDescription = await statebox.waitUntilStoppedRunning(executionDescription.executionName)
+
+        expect(executionDescription.status).to.eql('SUCCEEDED')
+        expect(executionDescription.stateMachineName).to.eql(stateMachineName)
+        expect(executionDescription.currentResource).to.eql(undefined)
+        expect(executionDescription.ctx.foo).to.be.a('string')
+      })
+    })
   }) // called from state machines
 })
