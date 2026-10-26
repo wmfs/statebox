@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  gh-app: wmfs/github-app-token@1.0.0
 jobs:
   unit-test:
     docker:
@@ -68,6 +70,7 @@ jobs:
           key: v1-deps-{{ checksum "package.json" }}
           paths:
             - node_modules
+      - gh-app/mint
       - run:
           name: release
           command: npx semantic-release
@@ -85,6 +88,7 @@ workflows:
           context:
             - docker-hub-creds
             - build-env-vars
+            - github-app
           requires:
             - unit-test
             - lint
