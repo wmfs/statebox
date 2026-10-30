@@ -1,3 +1,27 @@
+## [1.121.0](https://github.com/wmfs/statebox/compare/v1.120.1...v1.121.0) (2026-10-30)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** fix conventionalcommit versions [sc-34125] ([7ff8eee](https://github.com/wmfs/statebox/commit/7ff8eee9656c317d2e233c9fd5ef4b1b6b585349))
+* **deps-dev:** update dependency axios to v1.20.0 ([#669](https://github.com/wmfs/statebox/issues/669)) ([bcf60dc](https://github.com/wmfs/statebox/commit/bcf60dc5c9b2acfc85fe00b3eaaed3778c288a39))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v10.4.0 ([#670](https://github.com/wmfs/statebox/issues/670)) ([149a65c](https://github.com/wmfs/statebox/commit/149a65c04b08db289c261202fdf51e617a05bb26))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v10.4.1 ([#673](https://github.com/wmfs/statebox/issues/673)) ([dfa7f87](https://github.com/wmfs/statebox/commit/dfa7f8727f6429d9669bf8afcb0aaee4617a78ef))
+* **deps-dev:** update dependency express to v5.3.0 ([#674](https://github.com/wmfs/statebox/issues/674)) ([0c8a245](https://github.com/wmfs/statebox/commit/0c8a245580e1ee2dd33f3df6dc14f7c9a56b3076))
+* **deps-dev:** update dependency mocha to v12 ([#671](https://github.com/wmfs/statebox/issues/671)) ([6daa825](https://github.com/wmfs/statebox/commit/6daa825d2656ace39b9cddb14695b63ffae471f2))
+* **deps-dev:** update dependency mocha to v12.0.3 ([#672](https://github.com/wmfs/statebox/issues/672)) ([ff06660](https://github.com/wmfs/statebox/commit/ff06660b89c3b1fb3eec4dd2f8f2339c2c9878d0))
+* **deps:** update dependency dottie to v2.0.7 [security] ([#628](https://github.com/wmfs/statebox/issues/628)) ([699e00c](https://github.com/wmfs/statebox/commit/699e00cad919406f500ae1ccbca0d9bec27b0651))
+* **deps:** update dependency jsonpath to v1.3.0 [security] ([#621](https://github.com/wmfs/statebox/issues/621)) ([8112afa](https://github.com/wmfs/statebox/commit/8112afa989b2f2b2a0a2a5ce036ad1e55194103e))
+* **deps:** update dependency lodash to v4.18.1 [security] ([#615](https://github.com/wmfs/statebox/issues/615)) ([986cdd3](https://github.com/wmfs/statebox/commit/986cdd3249c7d9f1de0bdfd268a47be8c9947c8b))
+* **deps:** update dependency uuid to v11.1.1 [security] ([#644](https://github.com/wmfs/statebox/issues/644)) ([5490383](https://github.com/wmfs/statebox/commit/5490383c0b5c657e197e1c7e8802ffdf5c5b81b2))
+
+### Chores :pencil2:
+
+* [sc-34117] Switch all repos' renovate.json to extend the shared preset ([#675](https://github.com/wmfs/statebox/issues/675)) ([88e7731](https://github.com/wmfs/statebox/commit/88e7731a9a633de097b60d6e8a00100f6da65062))
+
+### CICD Configuration Changes :construction_worker:
+
+* use github-app-token orb for release token [sc-34101] ([#677](https://github.com/wmfs/statebox/issues/677)) ([ab063ed](https://github.com/wmfs/statebox/commit/ab063ed4731143f840012a637e0c4d3b7e7fb097))
+
 ## [1.120.1](https://github.com/wmfs/statebox/compare/v1.120.0...v1.120.1) (2026-08-13)
 
 ## [1.120.0](https://github.com/wmfs/statebox/compare/v1.119.0...v1.120.0) (2025-11-25)
