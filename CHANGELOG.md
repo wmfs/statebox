@@ -1,3 +1,9 @@
+## [1.123.0](https://github.com/wmfs/statebox/compare/v1.122.0...v1.123.0) (2026-11-02)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency debug to v4.4.3 ([#596](https://github.com/wmfs/statebox/issues/596)) ([4c1c02a](https://github.com/wmfs/statebox/commit/4c1c02a83906d4e6e5f0994d926b906c900231d9))
+
 ## [1.122.0](https://github.com/wmfs/statebox/compare/v1.121.0...v1.122.0) (2026-11-02)
 
 ### Build system dependencies :hammer:
