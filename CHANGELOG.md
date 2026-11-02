@@ -1,3 +1,10 @@
+## [1.122.0](https://github.com/wmfs/statebox/compare/v1.121.0...v1.122.0) (2026-11-02)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency axios to v1.21.0 ([#678](https://github.com/wmfs/statebox/issues/678)) ([35422e9](https://github.com/wmfs/statebox/commit/35422e91d366837ac5103c0d188f8ecca074c7ce))
+* **deps:** update dependency @wmfs/asl-choice-processor to v1.26.0 ([#676](https://github.com/wmfs/statebox/issues/676)) ([9269fe9](https://github.com/wmfs/statebox/commit/9269fe948c556b3bb7446367c052dcc5decb56d1))
+
 ## [1.121.0](https://github.com/wmfs/statebox/compare/v1.120.1...v1.121.0) (2026-10-30)
 
 ### Build system dependencies :hammer:
