@@ -1,3 +1,9 @@
+## [1.124.0](https://github.com/wmfs/statebox/compare/v1.123.0...v1.124.0) (2026-11-03)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency luxon to v3.7.2 ([#591](https://github.com/wmfs/statebox/issues/591)) ([26d1112](https://github.com/wmfs/statebox/commit/26d11129ddd1622b1ec3547f94595eaa6703d73a))
+
 ## [1.123.0](https://github.com/wmfs/statebox/compare/v1.122.0...v1.123.0) (2026-11-02)
 
 ### Build system dependencies :hammer:
