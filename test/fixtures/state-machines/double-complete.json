@@ -1,0 +1,10 @@
+{
+  "StartAt": "Twice",
+  "States": {
+    "Twice": {
+      "Type": "Task",
+      "Resource": "module:doubleComplete",
+      "End": true
+    }
+  }
+}

@@ -13,5 +13,8 @@ module.exports = {
   helloFailButLiveAgain: require('./hello-fail-but-live-again'),
   calculator: require('./calculator.json'),
   calculatorWithInputPaths: require('./calculator-with-input-paths.json'),
-  choice: require('./choice-state/choice.json')
+  choice: require('./choice-state/choice.json'),
+  errorAsyncException: require('./error-async-exception.json'),
+  errorAsyncExceptionCaught: require('./error-async-exception-caught.json'),
+  doubleComplete: require('./double-complete.json')
 }
