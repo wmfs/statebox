@@ -15,5 +15,7 @@ module.exports = {
   failWithError: require('./FailWithError'),
   stuttery: require('./Stuttery'),
   ilive: require('./Ilive'),
-  passThrough: require('./PassThrough')
+  passThrough: require('./PassThrough'),
+  asyncException: require('./AsyncException'),
+  doubleComplete: require('./DoubleComplete')
 }
