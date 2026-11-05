@@ -1,3 +1,9 @@
+## [1.125.0](https://github.com/wmfs/statebox/compare/v1.124.0...v1.125.0) (2026-11-05)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency uuid to v14 ([#680](https://github.com/wmfs/statebox/issues/680)) ([d57bf74](https://github.com/wmfs/statebox/commit/d57bf747187e16e6180abdab20979f96dfe73279))
+
 ## [1.124.0](https://github.com/wmfs/statebox/compare/v1.123.0...v1.124.0) (2026-11-03)
 
 ### Build system dependencies :hammer:
