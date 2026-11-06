@@ -1,3 +1,9 @@
+## [1.126.0](https://github.com/wmfs/statebox/compare/v1.125.0...v1.126.0) (2026-11-06)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency tokenizr to v2 ([#589](https://github.com/wmfs/statebox/issues/589)) ([657f36a](https://github.com/wmfs/statebox/commit/657f36a5caa22fa794cb07e0d17c6c9ad5b31435))
+
 ## [1.125.0](https://github.com/wmfs/statebox/compare/v1.124.0...v1.125.0) (2026-11-05)
 
 ### Build system dependencies :hammer:
