@@ -1,0 +1,10 @@
+{
+  "StartAt": "Boom",
+  "States": {
+    "Boom": {
+      "Type": "Task",
+      "Resource": "module:asyncException",
+      "End": true
+    }
+  }
+}

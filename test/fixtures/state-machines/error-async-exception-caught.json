@@ -1,0 +1,25 @@
+{
+  "StartAt": "Boom",
+  "States": {
+    "Boom": {
+      "Type": "Task",
+      "Resource": "module:asyncException",
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "Next": "Recovered"
+        }
+      ],
+      "End": true
+    },
+    "Recovered": {
+      "Type": "Pass",
+      "Result": {
+        "recovered": true
+      },
+      "End": true
+    }
+  }
+}

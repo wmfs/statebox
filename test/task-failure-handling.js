@@ -100,6 +100,25 @@ describe('Task failure handling', () => {
         expect(executionDescription.errorCode).to.eql('Error')
         expect(executionDescription.errorMessage).to.eql('connect ECONNREFUSED 127.0.0.1:9999')
       })
+
+      it('async error after an await fails the execution (instead of hanging)', async () => {
+        const executionDescription = await run('errorAsyncException')
+        expect(executionDescription.errorCode).to.eql('States.TaskFailed')
+        expect(executionDescription.errorMessage).to.contain('TypeError')
+      })
+
+      it('async error is caught by a Catch handler', async () => {
+        const executionDescription = await statebox.startExecution(
+          {}, 'errorAsyncExceptionCaught', { sendResponse: 'COMPLETE' }
+        )
+        expect(executionDescription.status).to.eql('SUCCEEDED')
+        expect(executionDescription.ctx.recovered).to.eql(true)
+      })
+
+      it('only the first completion of a task counts', async () => {
+        const executionDescription = await run('doubleComplete')
+        expect(executionDescription.errorCode).to.eql('FirstOutcome')
+      })
     })
   })
 })
