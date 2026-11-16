@@ -1,3 +1,9 @@
+## [1.126.1](https://github.com/wmfs/statebox/compare/v1.126.0...v1.126.1) (2026-11-16)
+
+### Bug Fix(es) :bug:
+
+* statebox errors thrown in async task resources [sc-34182] ([#679](https://github.com/wmfs/statebox/issues/679)) ([57870ff](https://github.com/wmfs/statebox/commit/57870ffed05c736c8e6a2caa2c853ae977fa9e9b))
+
 ## [1.126.0](https://github.com/wmfs/statebox/compare/v1.125.0...v1.126.0) (2026-11-06)
 
 ### Build system dependencies :hammer:
