@@ -1,3 +1,9 @@
+## [1.127.0](https://github.com/wmfs/statebox/compare/v1.126.2...v1.127.0) (2026-11-17)
+
+### New Feature(s) :rocket:
+
+* [sc-34522] statebox: implement remaining States Language intrinsic functions ([#682](https://github.com/wmfs/statebox/issues/682)) ([ee6446f](https://github.com/wmfs/statebox/commit/ee6446fc05a29cf2e9642edc9f90d1b5c593feec))
+
 ## [1.126.2](https://github.com/wmfs/statebox/compare/v1.126.1...v1.126.2) (2026-11-17)
 
 ### Bug Fix(es) :bug:
