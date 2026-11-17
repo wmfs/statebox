@@ -1,4 +1,6 @@
 module.exports = {
+  ...require('./extended'),
+
   StringToJson_object: require('./string-to-json/string-to-json.json'),
   StringToJson_string: require('./string-to-json/string-to-json.json'),
   StringToJson_number: require('./string-to-json/string-to-json.json'),
