@@ -1,3 +1,9 @@
+## [1.126.2](https://github.com/wmfs/statebox/compare/v1.126.1...v1.126.2) (2026-11-17)
+
+### Bug Fix(es) :bug:
+
+* [sc-34529] statebox: ResultPath not set when a task result is 0 or another falsy value (GitHub [#406](https://github.com/wmfs/statebox/issues/406)) ([bf02308](https://github.com/wmfs/statebox/commit/bf0230837d00b6ffa6cf067dccd95d36d2e1024b))
+
 ## [1.126.1](https://github.com/wmfs/statebox/compare/v1.126.0...v1.126.1) (2026-11-16)
 
 ### Bug Fix(es) :bug:
