@@ -1,0 +1,12 @@
+{
+  "StartAt": "First",
+  "States": {
+    "First": {
+      "Type": "Pass",
+      "Parameters": {
+        "day.$": "States.Format('Today is {}', $$.DayOfWeek)"
+      },
+      "End": true
+    }
+  }
+}
