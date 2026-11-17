@@ -32,31 +32,30 @@ $ npm install @wmfs/statebox --save
 const Statebox = require('@wmfs/statebox')
 const statebox = new Statebox({})
 
-const main = async
-
-function() {
+async function main () {
+  await statebox.ready
 
   // STEP 1:
   // Create some 'module' resources (i.e. Javascript
   // classes with 'run' and optional 'init' methods)
   // that state machines can then refer to...
   // -------------------------------------------------
-  await statebox.ready
   statebox.createModuleResources({
     // Simple module to add two numbers together
     add: class Add {
-      run(event, context) {
+      run (event, context) {
         context.sendTaskSuccess(event.number1 + event.number2)
       }
     },
     // Simple module to subtract one number from another
     subtract: class Subtract {
-      // Init methods are optional, but all allow
-      // resource-instances to be configured...
-      init(resourceConfig, env, callback) {
-        callback(null)
+      // Init methods are optional, but allow
+      // resource-instances to be configured.
+      // They can be async, and are awaited...
+      async init (resourceConfig, env) {
       }
-      run(event, context) {
+
+      run (event, context) {
         context.sendTaskSuccess(event.number1 - event.number2)
       }
     }
@@ -66,22 +65,26 @@ function() {
   // Next create a new 'calculator' state
   // machine using Amazon States Language...
   // ---------------------------------------
-  await statebox.createStateMachines({
-      'calculator': {
+  await statebox.createStateMachines(
+    {
+      calculator: {
         Comment: 'A simple calculator',
         StartAt: 'OperatorChoice',
         States: {
           OperatorChoice: {
             Type: 'Choice',
-            Choices: [{
-              Variable: '$.operator',
-              StringEquals: '+',
-              Next: 'Add'
-            }, {
-              Variable: '$.operator',
-              StringEquals: '-',
-              Next: 'Subtract'
-            }]
+            Choices: [
+              {
+                Variable: '$.operator',
+                StringEquals: '+',
+                Next: 'Add'
+              },
+              {
+                Variable: '$.operator',
+                StringEquals: '-',
+                Next: 'Subtract'
+              }
+            ]
           },
           Add: {
             Type: 'Task',
@@ -99,13 +102,15 @@ function() {
           }
         }
       }
-    }, {}, // 'env': An environment/context/sandbox
+    },
+    {} // 'env': An environment/context/sandbox
   )
 
   // STEP 3:
   // Start a new execution on a state machine
   // ----------------------------------------
-  const executionDescription = await statebox.startExecution({
+  const execution = await statebox.startExecution(
+    {
       numbers: {
         number1: 3,
         number2: 2
@@ -117,6 +122,12 @@ function() {
   )
 
   // STEP 4:
+  // Executions run asynchronously, so wait
+  // for this one to finish...
+  // --------------------------------------
+  const executionDescription = await statebox.waitUntilStoppedRunning(execution.executionName)
+
+  // STEP 5:
   // Look at the results...
   // ----------------------
   console.log(executionDescription)
@@ -124,23 +135,25 @@ function() {
   //  -------------
   // {
   //   executionName: '...',
+  //   status: 'SUCCEEDED',
   //   ctx: {
-  //     numbers': {
+  //     numbers: {
   //       number1: 3,
   //       number2: 2
   //     },
   //     operator: '-',
   //     result: 1 <--- The important bit :-)
   //   },
-  //   currentStateName:'Subtract',
-  //   currentResource:'module:subtract',
-  //   stateMachineName:'calculator',
-  //   startDate: '2018-09-03T21:58:04.287Z'
+  //   currentStateName: 'Subtract',
+  //   currentResource: 'module:subtract',
+  //   stateMachineName: 'calculator',
+  //   startDate: '2018-09-03T21:58:04.287Z',
+  //   ...
   // }
 }
 
 if (require.main === module) {
-  main();
+  main()
 }
 ```
 
