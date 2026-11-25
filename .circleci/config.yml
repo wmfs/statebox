@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   gh-app: wmfs/github-app-token@1.0.0
-  tymly: wmfs/tymly-ci@1.0.0
+  tymly: wmfs/tymly-ci@1
 jobs:
   unit-test:
     docker:
